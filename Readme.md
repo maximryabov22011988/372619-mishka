@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Макс Рябов](https://up.htmlacademy.ru/adaptive/13/user/372619).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Ахметвалиев](https://htmlacademy.ru/profile/id530961).
 
 ---
 
