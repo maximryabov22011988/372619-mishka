@@ -56,6 +56,139 @@
             <span class="order-form__info">Бесплатная доставка по России</span>
             <h1 class="order-form__title">Вязание на заказ</h1>
           </div>
+          <div class="form">
+            <h2 class="form__title">Форма заказа</h2>
+            <div class="form__wrapper">
+              <p class="form__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+            </div>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <div class="form-type  form__group">
+                <div class="form-type__wrapper">
+                  <div class="form-type__title">Тип</div>
+                  <ul class="type-options  form-type__options">
+                    <li class="type-options__item">
+                      <label class="type-options__value">
+                        <input class="type-options__input" type="radio" name="type" value="interior-accessory" checked>
+                        <span class="type-options__radio"></span>
+                        <span class="type-options__text">Аксессуар для интерьера</span>
+                      </label>
+                    </li>
+                    <li class="type-options__item">
+                      <label class="type-options__value">
+                        <input class="type-options__input" type="radio" name="type" value="childrens-toy">
+                        <span class="type-options__radio"></span>
+                        <span class="type-options__text">Детская игрушка</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-color  form__group  form__group--bg-gray">
+                <div class="form-color__wrapper">
+                  <div class="form-color__title">Цвет</div>
+                  <ul class="color-options  form-color__options">
+                    <li class="color-options__item">
+                      <label class="color-options__value">
+                        <input class="color-options__input" type="checkbox" name="color" value="white" checked>
+                        <span class="color-options__checkbox"></span>
+                        <span class="color-options__text">Белый</span>
+                      </label>
+                    </li>
+                    <li class="color-options__item">
+                      <label class="color-options__value">
+                        <input class="color-options__input" type="checkbox" name="color" value="gray" checked>
+                        <span class="color-options__checkbox"></span>
+                        <span class="color-options__text">Серый</span>
+                      </label>
+                    </li>
+                    <li class="color-options__item">
+                      <label class="color-options__value">
+                        <input class="color-options__input" type="checkbox" name="color" value="tiffany">
+                        <span class="color-options__checkbox"></span>
+                        <span class="color-options__text">«Тиффани»</span>
+                      </label>
+                    </li>
+                    <li class="color-options__item">
+                      <label class="color-options__value">
+                        <input class="color-options__input" type="checkbox" name="color" value="black">
+                        <span class="color-options__checkbox"></span>
+                        <span class="color-options__text">Черный</span>
+                      </label>
+                    </li>
+                    <li class="color-options__item">
+                      <label class="color-options__value">
+                        <input class="color-options__input" type="checkbox" name="color" value="pink">
+                        <span class="color-options__checkbox"></span>
+                        <span class="color-options__text">Розовый</span>
+                      </label>
+                    </li>
+                    <li class="color-options__item">
+                      <label class="color-options__value">
+                        <input class="color-options__input" type="checkbox" name="color" value="orange">
+                        <span class="color-options__checkbox"></span>
+                        <span class="color-options__text">Оранжевый</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-username  form__group">
+                <div class="form-username__wrapper">
+                  <div class="form-username__title">ФИО</div>
+                  <ul class="form-username__list">
+                    <li class="form-username__item">
+                      <label class="form-username__field">
+                        <span class="form-username__text">Имя:</span>
+                        <input class="field  field--text" type="text" name="name" placeholder="Введите ваше имя *" required>
+                      </label>
+                    </li>
+                    <li class="form-username__item">
+                      <label class="form-username__field">
+                        <span class="form-username__text">Фамилия:</span>
+                        <input class="field  field--text" type="text" name="surname" placeholder="Укажите фамилию *" required>
+                      </label>
+                    </li>
+                    <li class="form-username__item">
+                      <label class="form-username__field">
+                        <span class="form-username__text">Отчество:</span>
+                        <input class="field  field--text" type="text" name="patronymic" placeholder="Отчество, если желаете">
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-contacts  form__group  form__group--bg-gray">
+                <div class="form-contacts__wrapper">
+                  <ul class="form-contacts__list">
+                    <li class="form-contacts__item">
+                      <label class="form-contacts__title" for="phone">Тел</label>
+                      <div class="form-contacts__field">
+                        <input class="field  field--text" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ *" required>
+                      </div>
+                    </li>
+                    <li class="form-contacts__item">
+                      <label class="form-contacts__title" for="email">E-mail</label>
+                      <div class="form-contacts__field">
+                        <input class="field  field--text" type="email" name="email" id="email" placeholder="Ваш Email *" required>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-message  form__group">
+                <div class="form-message__wrapper">
+                  <label class="form-message__title" for="message">Доп</label>
+                  <textarea class="field  field--area" cols="25" rows="6" name="message" id="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                </div>
+              </div>
+              <div class="form-submit  form__group">
+                <div class="form-submit__wrapper">
+                  <span class="form-submit__note">*Поля обязательны для заполнения</span>
+                  <button class="btn  form-submit__btn" type="submit">Отправить заказ</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <footer class="footer  page__footer">
