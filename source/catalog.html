@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page">
-    <div class="modal-background"></div>
     <div class="page__wrapper">
       <header class="header  page__header">
         <div class="header__wrapper  header__wrapper--no-js">
@@ -197,15 +196,16 @@
       </div>
     </footer>
     <div class="modal" id="popup">
+      <div class="modal__background"></div>
       <div class="modal__wrapper">
-        <h1 class="modal__title">Добавить в корзину</h1>
+        <h2 class="modal__title">Добавить в корзину</h2>
         <span class="modal__label">Выберите размер:</span>
-        <ul class="modal__sizes">
-          <li class="modal__sizes-item  modal__sizes-item--current">S</li>
-          <li class="modal__sizes-item">M</li>
-          <li class="modal__sizes-item">L</li>
+        <ul class="modal__sizes  sizes">
+          <li class="sizes__item  sizes__item--current">S</li>
+          <li class="sizes__item">M</li>
+          <li class="sizes__item">L</li>
         </ul>
-        <button class="btn  modal__btn" type="button">Добавить</button>
+        <button class="modal__btn  btn" type="button">Добавить</button>
       </div>
     </div>
   </body>
