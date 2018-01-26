@@ -1,0 +1,86 @@
+// Цвета
+
+$gray-0:                          #000000;
+$gray-68:                         #444444;
+$gray-102:                        #666666;
+$gray-141:                        #8d8d8d;
+$gray-178:                        #b2b2b2;
+$gray-191:                        #b2b2b2;
+$gray-199:                        #c7c7c7;
+$gray-202:                        #cacaca;
+$gray-210:                        #d3d2d2;
+$gray-229:                        #e5e5e5;
+$gray-236:                        #ececec;
+$gray-241:                        #f1f1f1;
+$gray-255:                        #ffffff;
+
+$color-main--lightest:            #d0f1ea;
+$color-main--lighten:             #c7ece7;
+$color-main--light:               #bde3dd;
+$color-main:                      #63d1bb;
+$color-main--dark:                #56c3b3;
+$color-main--darker:              #46c1af;
+$color-main--darken:              #3bb09d;
+$color-main--darkest:             #35a99a;
+$color-secondary:                 #231f20;
+$color-secondary--dark:           #221f1f;
+
+$text-color:                      $gray-68;
+$body-bg:                         #ffffff;
+
+$icon-color:                      $gray-210;
+$icon-color--hover:               $color-main;
+$icon-color--active:              $color-main--lighten;
+
+$catalog-link-color:              $color-main;
+$catalog-link-color--hover:       #59d5bc;
+$catalog-link-color--active:      #59d5bc;
+
+$catalog-link-color-dark:         $color-main--darker;
+$catalog-link-color-dark--hover:  #3bbaa7;
+$catalog-link-color-dark--active: #3bbaa7;
+$catalog-icon-color:              #14907f;
+
+$link-color:                      $gray-0;
+$link-color--hover:               $gray-141;
+$link-color--active:              $gray-202;
+
+$mail-link-color:                 $gray-68;
+$mail-link-color--hover:          $color-main--darker;
+$mail-link-color--active:         $color-main--lighten;
+$mail-underlining-color:          $color-main;
+$mail-underlining-color--hover:   $color-main--darker;
+$mail-underlining-color--active:  $color-main--lighten;
+
+$btn-color:                       $gray-68;
+$btn-bg:                          $gray-255;
+$btn-border:                      $gray-68;
+
+$btn-color--hover:                $gray-255;
+$btn-bg--hover:                   $gray-68;
+$btn-border--hover:               $gray-68;
+
+$btn-color--active:               $gray-141;
+$btn-bg--active:                  $gray-68;
+$btn-border--active:              $gray-68;
+
+$header-logo-color:               $gray-0;
+$header-logo-color--hover:        $gray-102;
+$header-logo-color--active:       $gray-178;
+
+$footer-logo-color:               $color-secondary;
+$footer-logo-color--hover:        $color-main--darker;
+$footer-logo-color--active:       $color-main--light;
+
+
+
+// Шрифты
+$font-stack:                      "Open Sans", "Arial", sans-serif;
+
+
+
+// Анимация
+$no-hover:                        0.1s;
+$hover-animation:                 0.12s;
+$active-animation:                0.05s;
+$animation-function:              cubic-bezier(0.4, 0.0, 0.2, 1);
