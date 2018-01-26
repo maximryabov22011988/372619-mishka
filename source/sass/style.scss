@@ -1,0 +1,77 @@
+// Глобальные переменные, миксины, помощники
+
+@import "variables.scss";
+@import "mixins.scss";
+@import "helpers.scss";
+
+
+
+// Библиотеки
+
+@import "global/normalize.scss";
+
+
+
+// Базовые параметры страниц
+
+@import "global/fonts.scss";
+@import "global/base.scss";
+
+
+
+// Типовые блоки
+
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/toggle.scss";
+@import "blocks/menu.scss";
+@import "blocks/user-menu.scss";
+@import "blocks/mini-cart.scss";
+@import "blocks/content.scss";
+@import "blocks/inner-page.scss";
+@import "blocks/footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+@import "blocks/modal.scss";
+
+
+
+// Главная страница
+
+@import "blocks/promo.scss";
+@import "blocks/production.scss";
+@import "blocks/product-of-week.scss";
+@import "blocks/title-product.scss";
+@import "blocks/product.scss";
+@import "blocks/parametrs.scss";
+@import "blocks/price.scss";
+@import "blocks/btn.scss";
+@import "blocks/about.scss";
+@import "blocks/reviews.scss";
+@import "blocks/slider.scss";
+@import "blocks/contacts.scss";
+
+
+
+// Страница каталога
+
+@import "blocks/catalog.scss";
+@import "blocks/product-card.scss";
+@import "blocks/property.scss";
+@import "blocks/promo-video.scss";
+
+
+
+// Страница заказа
+
+@import "blocks/form.scss";
+@import "blocks/form-group.scss";
+@import "blocks/type.scss";
+@import "blocks/radio-button.scss";
+@import "blocks/color.scss";
+@import "blocks/checkbox.scss";
+@import "blocks/username.scss";
+@import "blocks/field.scss";
+@import "blocks/user-contacts.scss";
