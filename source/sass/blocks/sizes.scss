@@ -1,0 +1,32 @@
+.sizes {
+  display: flex;
+  @include no-list-style();
+}
+
+.sizes__item {
+  margin-right: 7px;
+  padding: 15px 33px;
+  box-sizing: border-box;
+  @include font($weight: 700, $size: 17px, $lh: 1, $color: $gray-68);
+  text-align: center;
+  border: 2px solid $gray-236;
+  cursor: pointer;
+
+  &:hover:not(.sizes__item--current) {
+    border-color: $gray-199;
+    transition: border-color $hover-animation $animation-function;
+  }
+
+  &:active:not(.sizes__item--current) {
+    border-color: $color-main;
+    transition: border-color $active-animation $animation-function;
+  }
+
+  &--current {
+    border-color: $color-main;
+  }
+}
+
+.sizes__item:last-child {
+  margin-right: 0;
+}
