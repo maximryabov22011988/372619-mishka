@@ -7,7 +7,7 @@
   height: 50px;
   padding: 15px;
   box-sizing: border-box;
-  @include font-resizer(0, 0);
+  @include font($size: 0, $lh: 0);
   background-color: transparent;
   border: 0;
   overflow: hidden;
