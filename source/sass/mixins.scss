@@ -15,17 +15,11 @@
   display: $display;
 }
 
-@mixin font-open-sans($weight: false, $size: false, $lh: false, $color: false) {
-  font-family: $font-stack;
+@mixin font($weight: false, $size: false, $lh: false, $color: false) {
   @if $weight { font-weight: $weight; }
   @if $size { font-size: $size; }
   @if $lh { line-height: $lh; }
   @if $color { color: $color; }
-}
-
-@mixin font-resizer($size, $lh) {
-  font-size: $size;
-  line-height: $lh;
 }
 
 @mixin title ($size, $lh, $color: $gray-0) {

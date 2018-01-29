@@ -1,0 +1,31 @@
+@media (max-width: 767px) {
+  .user-menu__item {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-left: 75px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $gray-236;
+  }
+
+  .user-menu__link {
+    flex-grow: 1;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+    text-align: left;
+    text-decoration: none;
+    transition: color $no-hover $animation-function;
+    user-select: none;
+
+    &:hover {
+      color: $link-color--hover;
+      transition: color $hover-animation $animation-function;
+    }
+
+    &:active {
+      color: $link-color--active;
+      transition: color $active-animation $animation-function;
+    }
+  }
+}
