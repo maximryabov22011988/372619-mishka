@@ -1,0 +1,35 @@
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  @include font($weight: 700, $size: 17px, $lh: 1.176, $color: $gray-68);
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $gray-255;
+  border: 2px solid $gray-68;
+  transition: color $no-hover $animation-function,
+              background-color $no-hover $animation-function,
+              border-color $no-hover $animation-function;
+  user-select: none;
+
+  &:hover {
+    color: $btn-color--hover;
+    background-color: $btn-bg--hover;
+    border-color: $btn-border--hover;
+    transition: color $hover-animation $animation-function,
+                background-color $hover-animation $animation-function,
+                border-color $hover-animation $animation-function,;
+  }
+
+  &:active {
+    color: $btn-color--active;
+    background-color: $btn-bg--active;
+    border-color: $btn-border--active;
+    transition: color $active-animation $animation-function,
+                background-color $active-animation $animation-function,
+                border-color $active-animation $animation-function,;
+  }
+}
