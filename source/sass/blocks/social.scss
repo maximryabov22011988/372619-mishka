@@ -1,0 +1,21 @@
+.social__list {
+  display: flex;
+  @include no-list-style();
+  @include font($size: 0, $lh: 0);
+}
+
+.social__item {
+  margin-right: 25px;
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
