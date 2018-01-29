@@ -1,0 +1,33 @@
+.header  {
+  flex-shrink: 0;
+}
+
+.header__wrapper {
+  width: auto;
+  max-width: 1050px;
+  padding: 22px 30px;
+
+  &--no-js {
+    padding: 22px 0;
+  }
+}
+
+.header__logo {
+  margin: 0 auto;
+}
+
+.header__logo[href="index.html"] {
+  opacity: 1;
+  transition: opacity $no-hover $animation-function;
+
+  &:hover img {
+    opacity: 0.6;
+    transition: opacity $hover-animation $animation-function;
+  }
+
+  &:active img {
+    opacity: 0.3;
+    transition: opacity $active-animation $animation-function;
+  }
+}
+
