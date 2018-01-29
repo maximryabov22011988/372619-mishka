@@ -1,0 +1,21 @@
+.footer {
+  flex-shrink: 0;
+  background-color: $gray-241;
+}
+
+.footer__wrapper {
+  width: auto;
+  max-width: 1050px;
+  padding: 23px 30px;
+}
+
+.footer__logo {
+  display: none;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 27px;
+  border-bottom: 1px solid $gray-229;
+}
