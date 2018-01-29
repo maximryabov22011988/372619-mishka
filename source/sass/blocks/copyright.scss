@@ -1,0 +1,26 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: flex-start;
+  @include font($weight: 700, $size: 19px, $lh: 1, $color: $gray-0);
+  text-decoration: none;
+
+  &:hover {
+    color: $gray-0;
+    transition: color $hover-animation $animation-function;
+  }
+
+  &:active {
+    color: rgba($gray-0, 0.3);
+    transition: color $active-animation $animation-function;
+  }
+}
+
+.copyright__text {
+  padding-top: 6px;
+}
