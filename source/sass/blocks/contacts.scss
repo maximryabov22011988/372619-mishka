@@ -9,6 +9,7 @@
 }
 
 .contacts__title {
+  margin-top: 0;
   margin-bottom: 26px;
   @include font($weight: 700, $size: 25px, $lh: 1.2, $color: $gray-0);
 }
