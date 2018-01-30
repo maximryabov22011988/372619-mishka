@@ -1,0 +1,30 @@
+.product {
+  @include no-list-style();
+}
+
+.product__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product__description {
+  margin: 0;
+  margin-bottom: 16px;
+  @include font($size: 15px, $lh: 1.6, $color: $gray-68);
+}
+
+.product__parametrs {
+  margin-bottom: 28px;
+}
+
+.product__img {
+  margin-bottom: 14px;
+  text-align: center;
+  background-color: $gray-241;
+}
