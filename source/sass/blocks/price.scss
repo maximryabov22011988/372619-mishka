@@ -1,0 +1,11 @@
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.price__wrapper {
+  margin-bottom: 26px;
+  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-68);
+}
