@@ -1,0 +1,26 @@
+.about__wrapper {
+  width: auto;
+  max-width: 1050px;
+  margin-bottom: 55px;
+  padding: 28px 30px 0;
+}
+
+.about__title {
+  margin-bottom: 13px;
+  @include font($weight: 700, $size: 25px, $lh: 1.2, $color: $gray-0);
+}
+
+.about__list {
+  @include no-list-style();
+}
+
+.about__item {
+  position: relative;
+  display: flex;
+  margin-bottom: 11px;
+  padding-top: 74px;
+}
+
+.about__text {
+  @include font($weight: 700, $size: 17px, $lh: 1.176, $color: $gray-0);
+}
