@@ -1,0 +1,43 @@
+.slider__viewport {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider__list {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: calc(100% * 3);
+  margin: 0 0 30px;
+  padding: 0;
+  transition: 0.5s;
+  transition-timing-function: $animation-function;
+}
+
+.slider__item {
+  width: calc(100% / 3);
+}
+
+.slider__nav {
+  display: flex;
+}
+
+.slider__prev,
+.slider__next {
+  width: 130px;
+  height: 52px;
+  @include font($size: 0, $lh: 0);
+  background-color: $gray-255;
+  border: 1px solid $gray-236;
+}
+
+.slider__prev {
+  margin-left: auto;
+  border-right: none;
+}
+
+.slider__next {
+  margin-right: auto;
+}
