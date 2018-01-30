@@ -3,17 +3,20 @@
 }
 
 .header__wrapper {
+  display: flex;
   width: auto;
   max-width: 1050px;
-  padding: 22px 30px;
-
-  &--no-js {
-    padding: 22px 0;
-  }
+  padding: 22px 0;
+  padding-right: 17px;
 }
 
 .header__logo {
-  margin: 0 auto;
+  display: flex;
+  flex-grow: 1;
+}
+
+.header__logo img {
+  margin-left: 46.5%;
 }
 
 .header__logo[href="index.html"] {
