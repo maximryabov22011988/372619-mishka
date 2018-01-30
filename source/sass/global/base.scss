@@ -9,8 +9,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  margin: 0;
-  background-color: #ffffff;
-  font-family: $font-stack;
+img {
+  max-width: 100%;
+  height: auto;
 }
