@@ -1,0 +1,64 @@
+.production {
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.production__wrapper {
+  width: auto;
+  max-width: 1050px;
+}
+
+.production__list {
+  display: flex;
+  flex-direction: column;
+  @include no-list-style();
+}
+
+.production__item {
+  position: relative;
+}
+
+.production__item-title {
+  margin: 0;
+  @include font($weight: 700, $size: 19px, $lh: 1.263, $color: $gray-255);
+}
+
+.production__link {
+  display: flex;
+  justify-content: space-between;
+  min-height: 103px; // временно - до вставки декоративных элементов
+  padding: 26px 35px 16px 29px;
+  text-decoration: none;
+  background-color: $color-main;
+  transform: translateY(0);
+  transition: transform $no-hover $animation-function;
+  user-select: none;
+
+  &:hover {
+    background-color: $catalog-link-color--hover;
+    transition: transform $hover-animation $animation-function;
+  }
+
+  &:active {
+    color: rgba($gray-255, 0.3);
+    background-color: $catalog-link-color--active;
+    transition: color $active-animation $animation-function,
+                background-color $active-animation $animation-function;
+  }
+
+  &--dark {
+    background-color: $catalog-link-color-dark;
+
+    &:hover {
+      background-color: $catalog-link-color-dark--hover;
+      transition: background-color $hover-animation $animation-function;
+    }
+
+    &:active {
+      color: rgba($gray-255, 0.3);
+      background-color: $catalog-link-color-dark--active;
+      transition: color $active-animation $animation-function,
+                  background-color $active-animation $animation-function;
+    }
+  }
+}
