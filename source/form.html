@@ -67,7 +67,7 @@
             <fieldset class="form__group  form-group">
               <div class="form-group__wrapper">
                 <div class="form-group__title">Тип</div>
-                <ul class="form-group__options  type">
+                <ul class="form-group__type  type">
                   <li class="type__item">
                     <label class="type__value  radio-button">
                       <input class="radio-button__input" type="radio" name="type" value="interior-accessory" checked>
@@ -88,7 +88,7 @@
             <fieldset class="form__group  form__group--bg-gray  form-group">
               <div class="form-group__wrapper">
                 <div class="form-group__title">Цвет</div>
-                <ul class="form-group__options  color">
+                <ul class="form-group__color  color">
                   <li class="color__item">
                     <label class="color__value  checkbox">
                       <input class="checkbox__input" type="checkbox" name="color" value="white" checked>
@@ -163,23 +163,23 @@
               <div class="form-group__wrapper">
                 <ul class="form-group__contacts  user-contacts">
                   <li class="user-contacts__item">
-                    <label class="form-group__title" for="phone">Тел</label>
-                    <input class="field  field--text" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ *" required>
+                    <label class="form-group__title  form-group__title--small-margin" for="phone">Тел</label>
+                    <input class="field  field--text  field--full-width" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ *" required>
                   </li>
                   <li class="user-contacts__item">
-                    <label class="form-group__title" for="email">E-mail</label>
-                    <input class="field  field--text" type="email" name="email" id="email" placeholder="Ваш Email *" required>
+                    <label class="form-group__title  form-group__title--small-margin" for="email">E-mail</label>
+                    <input class="field  field--text  field--full-width" type="email" name="email" id="email" placeholder="Ваш Email *" required>
                   </li>
                 </ul>
               </div>
             </fieldset>
-            <div class="form__group  form-group">
+            <div class="form__group  form-group  form-group--message">
               <div class="form-group__wrapper">
                 <label class="form-group__title" for="message">Доп</label>
-                <textarea class="field  field--area" cols="25" rows="6" name="message" id="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <textarea class="field  field--area" cols="25" rows="5" name="message" id="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </div>
             </div>
-            <div class="form__group  form-group">
+            <div class="form__group  form-group  form-group--submit">
               <div class="form-group__wrapper">
                 <span class="form-group__note">*Поля обязательны для заполнения</span>
                 <button class="form-group__btn  btn" type="submit">Отправить заказ</button>

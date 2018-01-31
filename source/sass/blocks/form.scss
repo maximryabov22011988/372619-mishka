@@ -1,0 +1,20 @@
+.form__title {
+  @include font($size: 0, $lh: 0);
+}
+
+.form__wrapper {
+  width: auto;
+  max-width: 1050px;
+  padding: 23px 30px;
+}
+
+.form__intro {
+  margin: 0;
+  @include font($size: 13px, $lh: 1.86, $color: $gray-68);
+}
+
+.form__group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}

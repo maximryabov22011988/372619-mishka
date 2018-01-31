@@ -1,0 +1,44 @@
+.radio-button {
+  position: relative;
+}
+
+.radio-button__input {
+  display: none;
+}
+
+.radio-button__indicator {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  display: block;
+  width: 34px;
+  height: 34px;
+  background-color: $gray-255;
+  border: 9px solid $gray-255;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px $gray-68;
+  transition: $no-hover;
+}
+
+.radio-button__input:checked ~ .radio-button__indicator {
+  background-color: $color-main;
+  transition: background-color $hover-animation $animation-function;
+}
+
+.radio-button:hover .radio-button__indicator {
+  box-shadow: 0 0 0 2px $color-main;
+  transition: box-shadow $hover-animation $animation-function;
+}
+
+.radio-button:active .radio-button__indicator {
+  box-shadow: 0 0 0 2px rgba($gray-68, 0.3);
+  transition: box-shadow $active-animation $animation-function;
+}
+
+.radio-button__text {
+  display: block;
+  padding-top: 8px;
+  @include font($weight: 700, $size: 17px, $lh: 1.059, $color: $gray-0);
+}
+
+

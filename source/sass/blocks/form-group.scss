@@ -1,0 +1,65 @@
+.form-group__wrapper {
+  width: auto;
+  max-width: 1050px;
+  padding: 0 30px;
+}
+
+.form-group__title {
+  position: relative;
+  display: block;
+  margin-bottom: 27px;
+  @include font($weight: 700, $size: 17px, $lh: 1, $color: $color-main);
+  text-transform: uppercase;
+
+  &:before {
+    @include pseudo-element();
+    top: 50%;
+    left: 62px;
+    right: 0;
+    height: 1px;
+    background-color: $color-main;
+  }
+
+  &--small-margin {
+    margin-bottom: 8px;
+  }
+}
+
+.form-group__type {
+  @include no-list-style()
+  margin-bottom: 44px;
+}
+
+.form-group__color {
+  @include no-list-style()
+  margin-bottom: 29px;
+}
+
+.form-group__username {
+  @include no-list-style();
+  margin-bottom: 31px;
+}
+
+.form-group__contacts {
+  @include no-list-style();
+  margin-bottom: 32px;
+}
+
+.form-group__note {
+  display: block;
+  margin-bottom: 32px;
+  @include font($size: 14px, $lh: 1.143, $color: $gray-68);
+}
+
+.form-group--message {
+  margin-bottom: 15px;
+  font-size: 0;
+}
+
+.form-group--message .form-group__title {
+  margin-bottom: 25px;
+}
+
+.form-group--submit {
+  margin-bottom: 54px;
+}
