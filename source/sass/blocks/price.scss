@@ -9,3 +9,18 @@
   margin-bottom: 26px;
   @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-68);
 }
+
+.price--row {
+  display: flex;
+  flex-direction: row;
+  @include font($weight: 700, $size: 15px, $lh: 1.6, $color: $gray-0);
+}
+
+.price--row .price__field {
+    @include font($size: 0, $lh: 0);
+}
+
+.price--row .price__value {
+  margin-right: 3px;
+}
+

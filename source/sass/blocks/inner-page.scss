@@ -1,0 +1,21 @@
+.inner-page__wrapper {
+  background-color: $gray-241;
+}
+
+.inner-page__title-wrapper {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  max-width: 1150px;
+}
+
+.inner-page__info {
+  display: none;
+}
+
+.inner-page__title {
+  display: block;
+  margin: 70px auto 76px;
+  @include font($weight: 700, $size: 27px, $lh: 1.11, $color: $gray-0);
+  text-align: center;
+}
