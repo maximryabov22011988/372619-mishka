@@ -5,7 +5,9 @@
 }
 
 .copyright__link {
+  position: relative;
   display: flex;
+  padding-right: 56px;
   align-items: flex-start;
   @include font($weight: 700, $size: 19px, $lh: 1, $color: $gray-0);
   text-decoration: none;
@@ -23,4 +25,10 @@
 
 .copyright__text {
   padding-top: 6px;
+}
+
+.copyright svg {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

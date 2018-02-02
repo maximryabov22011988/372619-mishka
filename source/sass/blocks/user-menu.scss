@@ -28,4 +28,20 @@
       transition: color $active-animation $animation-function;
     }
   }
+
+  .user-menu__search-icon {
+    position: absolute;
+    top: 31px;
+    left: 31px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .user-menu__cart-icon {
+    position: absolute;
+    top: 31px;
+    left: 31px;
+    width: 21px;
+    height: 18px;
+  }
 }

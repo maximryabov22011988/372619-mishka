@@ -16,6 +16,9 @@
   }
 
   .menu__item:nth-child(n+3) {
+    border: 0;
+  }
+  .menu__item:nth-child(n+3) .menu__link {
     display: none;
   }
 

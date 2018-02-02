@@ -61,4 +61,21 @@
                   background-color $active-animation $animation-function;
     }
   }
+
+  .production__interior-icon {
+    position: absolute;
+    top: 23px;
+    right: 36px;
+    width: 40px;
+    height: 62px;
+    opacity: 0.5;
+  }
+
+  .production__toy-icon {
+    position: absolute;
+    top: 21px;
+    right: 27px;
+    width: 60px;
+    height: 60px;
+  }
 }
