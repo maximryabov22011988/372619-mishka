@@ -8,3 +8,24 @@
   margin-bottom: 32px;
 }
 
+.user-contacts__item--phone {
+  position: relative;
+}
+
+.user-contacts__item--phone svg {
+  position: absolute;
+  top: 34px;
+  right: 8px;
+  z-index: 100;
+}
+
+.user-contacts__item--email {
+  position: relative;
+}
+
+.user-contacts__item--email svg {
+  position: absolute;
+  top: 34px;
+  right: 4px;
+  z-index: 100;
+}

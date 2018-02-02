@@ -10,13 +10,27 @@
 }
 
 .promo-video__title {
+  position: relative;
   display: flex;
   align-items: center;
-  padding: 21px 32px 24px;
+  padding: 21px 32px 24px 88px;
+}
+
+.promo-video__title::before {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: 33px;
+  display: block;
+  width: 32px;
+  height: 28px;
+  background-image: url("../../img/icon-video.svg");
+  background-repeat: no-repeat;
 }
 
 .promo-video__title h2 {
   margin: 0;
+  padding-top: 2px;
   @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
 }
 
