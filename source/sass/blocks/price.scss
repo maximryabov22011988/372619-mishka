@@ -12,7 +12,9 @@
 
 .price--row {
   display: flex;
+  flex-grow: 1;
   flex-direction: row;
+  justify-content: flex-start;
   @include font($weight: 700, $size: 15px, $lh: 1.6, $color: $gray-0);
 }
 
@@ -23,4 +25,3 @@
 .price--row .price__value {
   margin-right: 3px;
 }
-

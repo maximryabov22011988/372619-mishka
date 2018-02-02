@@ -26,8 +26,8 @@
 .production__link {
   display: flex;
   justify-content: space-between;
-  min-height: 103px; // временно - до вставки декоративных элементов
-  padding: 26px 35px 16px 29px;
+  flex-wrap: wrap;
+  padding: 26px 105px 31px 29px;
   text-decoration: none;
   background-color: $color-main;
   transform: translateY(0);
