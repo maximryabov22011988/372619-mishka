@@ -34,3 +34,16 @@
   }
 }
 
+.header__wrapper--no-js {
+  flex-direction: column;
+  padding: 22px 0 0;
+}
+
+.header__wrapper--no-js .header__logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.header__wrapper--no-js img:first-of-type {
+  margin-left: 0;
+}

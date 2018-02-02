@@ -15,40 +15,36 @@
     background-color: $gray-255;
   }
 
-  .main-nav--closed {
-    .menu__list {
-      display: none;
-    }
+  .main-nav--closed .menu__list {
+    display: none;
   }
 
-  .main-nav--no-js {
-    .toggle {
-      display: none;
-    }
+  .main-nav--no-js .toggle {
+    display: none;
+  }
 
-    .main-nav__wrapper {
-      position: static;
-      padding-top: 22px;
-    }
+  .main-nav--no-js .main-nav__wrapper {
+    position: static;
+    padding-top: 22px;
+  }
 
-    .menu__list {
-      display: flex;
-    }
+  .main-nav--no-js .menu__list {
+    display: flex;
+  }
 
-    .menu__item:first-child {
-      border-top: 1px solid $gray-236;
-    }
+  .main-nav--no-js .menu__item:first-child {
+    border-top: 1px solid $gray-236;
+  }
 
-    .menu__item:nth-child(n+3) {
-      display: flex;
-    }
+  .main-nav--no-js .menu__item:nth-child(n+3) {
+    display: flex;
+  }
 
-    .user-menu__item {
-      display: flex;
-    }
+  .main-nav--no-js .user-menu__item {
+    display: flex;
+  }
 
-    .user-menu__item:last-child {
-      border: 0;
-    }
+  .main-nav--no-js .user-menu__item:last-child {
+    border: 0;
   }
 }
