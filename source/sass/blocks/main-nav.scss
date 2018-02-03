@@ -48,3 +48,9 @@
     border: 0;
   }
 }
+
+@media (min-width: $screen-md) {
+  .main-nav__wrapper {
+    justify-content: flex-end;
+  }
+}

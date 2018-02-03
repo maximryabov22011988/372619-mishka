@@ -47,3 +47,22 @@
 .header__wrapper--no-js img:first-of-type {
   margin-left: 0;
 }
+
+@media (min-width: $screen-md) {
+  .header__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    @include centering();
+    padding: 0 6.51%;
+  }
+
+  .header .header__logo {
+    flex-basis: 16.62%;
+    margin: 0;
+    margin-top: 23px;
+  }
+
+  .header__logo img {
+    margin-left: 0;
+  }
+}

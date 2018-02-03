@@ -1,3 +1,17 @@
 .mini-cart {
   @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+  text-decoration: none;
+}
+
+@media (min-width: $screen-md) {
+  .mini-cart {
+    display: flex;
+    flex-basis: 39.52%;
+    flex-wrap: wrap;
+    padding: 31px 0 33px 30px;
+  }
+
+  .mini-cart__title {
+    margin-right: 5px;
+  }
 }
