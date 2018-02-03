@@ -1,0 +1,25 @@
+.promo {
+  background-color: #f9f9f9;
+  border-top: 1px solid $gray-236;
+}
+
+.promo__wrapper {
+  width: auto;
+  max-width: 1050px;
+  min-height: 142px;
+  padding: 70px 30px;
+  box-sizing: content-box;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center -18px;
+}
+
+.promo__info {
+  display: none;
+}
+
+.promo__title {
+  margin: 0;
+  @include font($size: 27px, $lh: 1.111, $color: $gray-0);
+  text-align: center;
+}

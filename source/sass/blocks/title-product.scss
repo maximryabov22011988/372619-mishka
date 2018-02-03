@@ -1,0 +1,21 @@
+.title-product {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-product__subtitle {
+  margin: 0;
+  margin-bottom: 6px;
+  @include font($weight: 700, $size: 25px, $lh: 1.2);
+}
+
+.title-product__text {
+  order: 2;
+  margin: 0;
+  @include font($weight: 700, $size: 17px, $lh: 1.176, $color: $color-main);
+  text-transform: uppercase;
+}
+
+.title-product__text br {
+  display: none;
+}

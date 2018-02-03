@@ -1,0 +1,25 @@
+.username {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.username__item {
+  margin-bottom: 22px;
+}
+
+.username__item:last-child {
+  margin-bottom: 0;
+}
+
+.username__field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.username__text {
+  margin-bottom: 3px;
+  @include font($weight: 700, $size: 17px, $lh: 1.058, $color: $gray-0);
+}

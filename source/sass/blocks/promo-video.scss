@@ -1,0 +1,73 @@
+.promo-video__wrapper {
+  width: auto;
+  max-width: 1150px;
+  margin-bottom: 57px;
+  padding: 0 30px;
+}
+
+.promo-video__inner {
+  border: 1px solid $gray-236;
+}
+
+.promo-video__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 21px 32px 24px 88px;
+}
+
+.promo-video__title::before {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: 33px;
+  display: block;
+  width: 32px;
+  height: 28px;
+  background-image: url("../../img/icon-video.svg");
+  background-repeat: no-repeat;
+}
+
+.promo-video__title h2 {
+  margin: 0;
+  padding-top: 2px;
+  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+}
+
+.promo-video__play {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  @include font($size: 0, $lh: 0);
+  text-align: center;
+  background-color: $gray-236;
+}
+
+.promo-video__play img {
+  width: 100%;
+}
+
+.promo-video__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  transition: $no-hover;
+  cursor: pointer;
+  outline: none;
+}
+
+.promo-video__description {
+  padding: 29px 32px 33px;
+}
+
+.promo-video__text {
+  margin: 0;
+  margin-bottom: 25px;
+  padding-right: 10px;
+  @include font($size: 13px, $lh: 1.9, $color: $gray-68);
+}

@@ -1,0 +1,12 @@
+.type__item {
+  margin-bottom: 14px;
+  padding-left: 62px;
+}
+
+.type__item:last-child {
+  margin-bottom: 0;
+}
+
+.type__value {
+  cursor: pointer;
+}

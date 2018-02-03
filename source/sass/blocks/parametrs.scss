@@ -1,0 +1,13 @@
+.parametrs__list {
+  width: 100%;
+  @include font($size: 15px, $lh: 2.667, $color: $gray-68);
+  border-collapse: collapse;
+}
+
+.parametrs__item {
+  border-bottom: 1px solid $gray-236;
+}
+
+.parametrs__field {
+  width: 38.46%;
+}

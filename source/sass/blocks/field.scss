@@ -1,0 +1,52 @@
+.field {
+  position: relative;
+  padding: 15px;
+  padding-left: 0;
+  @include font($size: 17px, $lh: 1.059, $color: rgba($gray-68, 0.3));
+  border: 0;
+  outline: none;
+}
+
+.field--text {
+  border-bottom: 2px solid $gray-0;
+
+  @include placeholder {
+    color: rgba($gray-68, 0.3);
+  };
+
+  &:hover {
+    border-bottom-color: $color-main;
+    transition: border-bottom-color $active-animation $animation-function;
+  }
+
+  &:focus {
+    color: $gray-68;
+    border-bottom-color: $color-main;
+    transition: color $active-animation $animation-function,
+                border-bottom-color $active-animation $animation-function;
+  }
+}
+
+.field--area {
+  width: 100%;
+  min-height: 142px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 2px solid $gray-0;
+
+  &:hover {
+    border-color: $color-main;
+    transition: border-color $hover-animation $animation-function;
+  }
+
+  &:focus {
+    color: $gray-68;
+    border-color: $color-main;
+    transition: color $active-animation $animation-function,
+                border-color $active-animation $animation-function;
+  }
+}
+
+.field--full-width {
+  width: 100%;
+}
