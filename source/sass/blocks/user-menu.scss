@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: $screen-md - 1) {
   .user-menu__item {
     position: relative;
     display: flex;

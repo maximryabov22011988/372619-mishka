@@ -3,7 +3,7 @@
   justify-content: space-between;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-md - 1) {
   .main-nav__wrapper {
     position: absolute;
     top: 80px;

@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: $screen-md - 1) {
   .menu__list {
     display: flex;
     flex-direction: column;
