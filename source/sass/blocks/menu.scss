@@ -1,8 +1,7 @@
 @media (max-width: $screen-md - 1) {
-  .menu__list {
+  .menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
     @include no-list-style();
   }
@@ -14,9 +13,14 @@
     border-bottom: 1px solid $gray-236;
   }
 
+  .menu__item:first-child {
+    border-top: 1px solid $gray-236;
+  }
+
   .menu__item:nth-child(n+3) {
     border: 0;
   }
+
   .menu__item:nth-child(n+3) .menu__link {
     display: none;
   }
@@ -44,29 +48,15 @@
 
 @media (min-width: $screen-md) {
   .menu {
-    flex-wrap: wrap;
-  }
-
-  .menu__toggle {
-    display: none;
-  }
-
-  .menu__list {
     display: flex;
+    flex-wrap: wrap;
+    order: 2;
     width: 100%;
     @include no-list-style();
   }
 
-  .menu__list:first-of-type {
-    position: relative;
-    top: 46px;
-    left: -95px;
-    z-index: 100;
-    margin-top: -31px;
-  }
-
   .menu__item {
-    margin-right: 37px;
+    margin-right: 36px;
   }
 
   .menu__item:nth-child(n+3) {
@@ -74,7 +64,7 @@
   }
 
   .menu__link {
-    padding: 16px 0;
+    padding: 20px 0;
     @include font($weight: 700, $size: 15px, $lh: 1.6, $color: $gray-0);
     text-decoration: none;
   }

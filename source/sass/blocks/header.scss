@@ -6,8 +6,6 @@
   display: flex;
   width: auto;
   max-width: 1050px;
-  padding: 22px 0;
-  padding-right: 17px;
 }
 
 .header__logo {
@@ -32,20 +30,6 @@
     opacity: 0.3;
     transition: opacity $active-animation $animation-function;
   }
-}
-
-.header__wrapper--no-js {
-  flex-direction: column;
-  padding: 22px 0 0;
-}
-
-.header__wrapper--no-js .header__logo {
-  display: block;
-  margin: 0 auto;
-}
-
-.header__wrapper--no-js img:first-of-type {
-  margin-left: 0;
 }
 
 @media (min-width: $screen-md) {

@@ -34,19 +34,19 @@
   <body class="page">
     <div class="page__wrapper">
       <header class="header">
-        <div class="header__wrapper  header__wrapper--no-js">
-          <a href="index.html" class="logo  header__logo">
-            <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип компании Мишка"/>
-          </a>
+        <div class="header__wrapper">
           <nav class="main-nav  main-nav--no-js">
-            <button class="toggle menu__toggle" type="button">
-              <span></span>
-              <span></span>
-              <span></span>
-              Открыть меню
-            </button>
-            <div class="main-nav__wrapper  menu">
-              <ul class="menu__list">
+            <div class="main-nav__wrapper">
+              <a class="main-nav__logo  logo" href="index.html">
+                <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип компании Мишка"/>
+              </a>
+              <button class="main-nav__toggle  toggle" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+                Открыть меню
+              </button>
+              <ul class="main-nav__menu  menu">
                 <li class="menu__item">
                   <a class="menu__link">Каталог товаров</a>
                 </li>
@@ -60,16 +60,16 @@
                   <a class="menu__link" href="#">Распродажа</a>
                 </li>
               </ul>
-              <ul class="menu__list  user-menu">
-                <li class="user-menu__item">
-                  <a class="user-menu__link" href="#">
-                    <svg class="user-menu__search-icon" width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="-0.8 -0.8 17.6 17.6"><path fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/></svg>
+              <ul class="main-nav__user-menu  user-menu">
+                <li class="user-menu__item  user-menu__item--search">
+                  <a class="user-menu__link  search" href="#">
+                    <svg class="search__icon" width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="-0.8 -0.8 17.6 17.6"><path fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/></svg>
                     Поиск по сайту
                   </a>
                 </li>
-                <li class="user-menu__item">
+                <li class="user-menu__item  user-menu__item--mini-cart">
                   <a class="user-menu__link  mini-cart" href="#">
-                    <svg class="user-menu__cart-icon" width="21px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="264.205 370.961 20.294 18.849"><path fill="#d3d2d2" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/></svg>
+                    <svg class="mini-cart__icon" width="21px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="264.205 370.961 20.294 18.849"><path fill="#d3d2d2" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/></svg>
                     <span class="mini-cart__title">Корзина:</span>
                     <span class="mini-cart__amount">пока пуста</span>
                   </a>

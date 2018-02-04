@@ -3,15 +3,30 @@
   text-decoration: none;
 }
 
+@media (max-width: $screen-md - 1) {
+  .mini-cart__icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+}
+
 @media (min-width: $screen-md) {
   .mini-cart {
     display: flex;
-    flex-basis: 39.52%;
+    flex-basis: 233px;
     flex-wrap: wrap;
-    padding: 31px 0 33px 30px;
+  }
+
+  .mini-cart__icon {
+    position: relative;
+    top: 3px;
+    width: 21px;
+    height: 18px;
   }
 
   .mini-cart__title {
     margin-right: 5px;
+    padding-left: 30px;
   }
 }

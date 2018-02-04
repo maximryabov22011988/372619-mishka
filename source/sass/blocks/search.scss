@@ -1,0 +1,17 @@
+.search {
+  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+  text-decoration: none;
+}
+
+.search__icon {
+  width: 18px;
+  height: 19px;
+}
+
+@media (max-width: $screen-md - 1) {
+  .search__icon {
+    position: absolute;
+    top: 30px;
+    left: 32px;
+  }
+}
