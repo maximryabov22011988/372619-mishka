@@ -71,3 +71,47 @@
   padding-right: 10px;
   @include font($size: 13px, $lh: 1.9, $color: $gray-68);
 }
+
+@media (min-width: $screen-md) {
+  .promo-video__wrapper {
+    margin-bottom: 63px;
+    padding: 0 6.51%;
+  }
+
+  .promo-video__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .promo-video__play {
+    order: -1;
+  }
+
+  .promo-video__play img {
+    width: 668px;  //временно
+    height: 455px;
+  }
+
+  .promo-video__title {
+    padding-top: 36px;
+    padding-left: 105px;
+  }
+
+  .promo-video__title h2 {
+    @include font($size: 20px, $lh: 1.2);
+  }
+
+  .promo-video__title::before {
+    top: 33px;
+    left: 41px;
+  }
+
+  .promo-video__description {
+    padding: 8px 38px 44px;
+  }
+
+  .promo-video__text {
+    margin-bottom: 36px;
+    @include font($size: 15px, $lh: 2);
+  }
+}
