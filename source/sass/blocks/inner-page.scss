@@ -19,3 +19,9 @@
   @include font($weight: 700, $size: 27px, $lh: 1.11, $color: $gray-0);
   text-align: center;
 }
+
+@media (min-width: $screen-md) {
+  .inner-page {
+    margin-top: -45px;
+  }
+}
