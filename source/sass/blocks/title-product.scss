@@ -19,3 +19,28 @@
 .title-product__text br {
   display: none;
 }
+
+@media (min-width: $screen-md) {
+  .title-product {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title-product__subtitle {
+    flex-grow: 1;
+    margin-bottom: 0;
+    @include font($size: 43px, $lh: 1.163);
+  }
+
+  .title-product__text {
+    margin-top: 5px;
+    margin-right: 27px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .title-product br {
+    display: block;
+  }
+}

@@ -11,3 +11,17 @@
 .product-of-week__title {
   margin-bottom: 23px;
 }
+
+@media (min-width: $screen-md) {
+  .product-of-week__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 47px 6.51% 68px;
+  }
+
+  .product-of-week__title {
+    width: 100%;
+    margin-bottom: 57px;
+  }
+}

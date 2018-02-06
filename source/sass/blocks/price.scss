@@ -25,3 +25,10 @@
 .price--row .price__value {
   margin-right: 3px;
 }
+
+@media (min-width: $screen-md) {
+  .price__wrapper {
+    margin-bottom: 33px;
+    @include font($size: 20px, $lh: 1.2);
+  }
+}
