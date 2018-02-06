@@ -27,6 +27,7 @@
     align-items: center;
     margin: 0 auto;
     padding: 34px 50px 53px;
+    box-sizing: content-box;
   }
 
   .footer__logo {
@@ -66,5 +67,30 @@
     margin-right: 12.21%;
     padding-bottom: 0;
     border: 0;
+  }
+
+  .footer__copyright {
+    padding-top: 22px;
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .footer__wrapper {
+    padding-top: 37px;
+    padding-bottom: 54px;
+  }
+
+  .footer__logo {
+    margin-top: 10px;
+  }
+
+  .footer__social {
+    justify-content: center;
+    margin-left: 32.83%;
+    margin-right: 26.10%;
+  }
+
+  .footer__copyright {
+    padding-top: 18px;
   }
 }
