@@ -53,9 +53,17 @@
 
   .reviews__wrapper {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     margin: 0 auto;
     min-height: 380px;
     padding: 78px 6.51% 129px;
+  }
+
+  .reviews__slider {
+    width: 100%;
   }
 
   .reviews__item  {
@@ -63,8 +71,8 @@
   }
 
   .reviews__title {
+    order: -2;
     margin-bottom: 49px;
-    padding-right: 200px;
     @include font($size: 43px, $lh: 1.163);
   }
 
@@ -82,9 +90,7 @@
   }
 
   .reviews__write {
-    position: absolute;
-    top: 78px;
-    right: 50px;
+    order:-1;
     max-width: 175px;
     margin-bottom: 0;
   }
