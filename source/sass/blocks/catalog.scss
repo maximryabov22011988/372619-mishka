@@ -18,3 +18,18 @@
 .catalog__item:last-child {
   margin-bottom: 0;
 }
+
+@media (min-width: $screen-md) {
+  .catalog__wrapper {
+    margin-bottom: 51px;
+    padding: 81px 6.51% 0;
+  }
+
+  .catalog__item {
+    margin-bottom: 52px;
+  }
+
+  .catalog__item:last-child {
+    margin-bottom: 0;
+  }
+}
