@@ -61,21 +61,58 @@
                   background-color $active-animation $animation-function;
     }
   }
+}
+
+.production__interior-icon {
+  position: absolute;
+  top: 23px;
+  right: 36px;
+  width: 40px;
+  height: 62px;
+  opacity: 0.5;
+}
+
+.production__toy-icon {
+  position: absolute;
+  top: 21px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+}
+
+@media (min-width: $screen-md) {
+  .production__wrapper {
+    margin: 0 auto;
+    padding: 0 6.51%;
+  }
+
+  .production__list {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .production__item {
+    display: flex;
+    flex-basis: 50%;
+  }
+
+  .production__link {
+    flex-grow: 1;
+    padding: 30px 35px 29px;
+  }
+
+  .production__item-title {
+    margin-top: -2px;
+    @include font($size: 20px, $lh: 1.5)
+  }
 
   .production__interior-icon {
-    position: absolute;
-    top: 23px;
-    right: 36px;
-    width: 40px;
-    height: 62px;
-    opacity: 0.5;
+    top: 30px;
   }
 
   .production__toy-icon {
-    position: absolute;
-    top: 21px;
-    right: 27px;
-    width: 60px;
-    height: 60px;
+    top: 32px;
+    right: 34px;
   }
 }
