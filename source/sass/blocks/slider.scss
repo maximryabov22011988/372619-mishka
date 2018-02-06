@@ -41,3 +41,24 @@
 .slider__next {
   margin-right: auto;
 }
+
+@media (min-width: $screen-md) {
+  .slider__nav {
+    position: absolute;
+    right: 50px;
+    bottom: 134px;
+    margin-bottom: 0;
+  }
+
+  .slider__prev {
+    width: 88px;
+    padding: 0;
+    border: 0;
+  }
+
+  .slider__next {
+    width: 88px;
+    padding: 0;
+    border: 0;
+  }
+}

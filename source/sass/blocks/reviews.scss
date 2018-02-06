@@ -44,3 +44,48 @@
 .reviews__write {
   margin-bottom: 51px;
 }
+
+@media (min-width: $screen-md) {
+  .reviews {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .reviews__wrapper {
+    position: relative;
+    margin: 0 auto;
+    min-height: 380px;
+    padding: 78px 6.51% 129px;
+  }
+
+  .reviews__item  {
+    margin-bottom: 0;
+  }
+
+  .reviews__title {
+    margin-bottom: 49px;
+    padding-right: 200px;
+    @include font($size: 43px, $lh: 1.163);
+  }
+
+  .reviews__author-text {
+    margin-bottom: 58px;
+    @include font($size: 17px, $lh: 1.765);
+  }
+
+  .reviews__author-name {
+    padding-right: 200px;
+  }
+
+  .reviews__author-twitter {
+    padding-right: 200px;
+  }
+
+  .reviews__write {
+    position: absolute;
+    top: 78px;
+    right: 50px;
+    max-width: 175px;
+    margin-bottom: 0;
+  }
+}
