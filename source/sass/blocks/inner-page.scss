@@ -22,6 +22,28 @@
 
 @media (min-width: $screen-md) {
   .inner-page {
+    position: relative;
     margin-top: -45px;
+  }
+
+  .inner-page__wrapper {
+    padding: 15px 6.51% 77px;
+  }
+
+  .inner-page__title-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .inner-page__info {
+    display: block;
+    width: 100%;
+    margin-bottom: 52px;
+    text-align: right;
+  }
+
+  .inner-page__title {
+    flex-grow: 1;
+    margin: 0;
+    @include font($size: 43px, $lh: 1.163);
   }
 }
