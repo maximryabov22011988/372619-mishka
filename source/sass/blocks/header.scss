@@ -37,7 +37,8 @@
     flex-direction: row;
     justify-content: space-between;
     @include centering();
-    padding: 0 6.51%;
+    padding: 0 50px;
+    box-sizing: content-box;
   }
 
   .header .header__logo {

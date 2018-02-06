@@ -50,7 +50,6 @@
   .menu {
     display: flex;
     flex-wrap: wrap;
-    order: 2;
     width: 100%;
     @include no-list-style();
   }
@@ -67,5 +66,62 @@
     padding: 20px 0;
     @include font($weight: 700, $size: 15px, $lh: 1.6, $color: $gray-0);
     text-decoration: none;
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .menu {
+    position: relative;
+    top: 28px;
+  }
+
+  .menu__item:nth-child(n+3) {
+    display: block;
+  }
+
+  .menu__item:nth-child(1) {
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+
+  .menu__item:nth-child(2) {
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+
+  .menu__item:nth-child(3) {
+    margin-right: 62px;
+  }
+
+  .menu__link {
+    padding-top: 34px;
+    padding-bottom: 34px;
+    @include font($size: 17px, $lh: 1.412);
+
+    &--small-text {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @include font($size: 15px, $lh: 1.6);
+    }
+  }
+
+  .menu__item:first-child .menu__link {
+    position: relative;
+    padding-right: 36px;
+  }
+
+  .menu__item:nth-child(2) .menu__link {
+    padding-left: 35px;
+  }
+
+  .menu__item:first-child .menu__link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 1px;
+    background-color: $gray-236;
   }
 }

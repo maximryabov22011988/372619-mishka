@@ -7,3 +7,9 @@
     margin-top: -45px;
   }
 }
+
+@media (min-width: $screen-xl) {
+  .content__promo {
+    margin-top: -17px;
+  }
+}

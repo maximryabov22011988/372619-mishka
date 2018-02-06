@@ -38,7 +38,7 @@
     z-index: 500;
     display: flex;
     flex-wrap: wrap;
-    width: auto;
+    width: 100%;
   }
 
   .main-nav__logo {
@@ -60,5 +60,31 @@
 
   .main-nav__user-menu {
     margin-bottom: 15px;
+  }
+
+  .main-nav__menu {
+    order: 2;
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .main-nav {
+    align-items: flex-start;
+  }
+
+  .main-nav__menu {
+    flex-basis: 375px;
+    order: 1;
+  }
+
+  .main-nav__logo {
+    display: flex;
+    justify-content: center;
+    order: 2;
+  }
+
+  .main-nav__user-menu {
+    order: 3;
+    margin-bottom: 0;
   }
 }
