@@ -131,6 +131,12 @@
     @include font($size: 0, $lh: 0);
   }
 
+  .promo-video__play img {
+    display: block;
+    width: 682px;
+    height: 455px;
+  }
+
   .promo-video__title {
     align-self: flex-start;
     max-width: 240px;
@@ -156,11 +162,5 @@
   .promo-video__text {
     margin-bottom: 47px;
     padding-right: 0;
-  }
-
-  .promo-video__play img {
-    display: block;
-    width: 682px;
-    height: 455px;
   }
 }
