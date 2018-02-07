@@ -43,3 +43,13 @@
     @include font($size: 43px, $lh: 1.163);
   }
 }
+
+@media (min-width: $screen-xl) {
+  .promo__wrapper {
+    padding-bottom: 262px;
+  }
+
+  .promo__title {
+    @include font($size: 53px, $lh: 1.075);
+  }
+}
