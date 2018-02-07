@@ -41,3 +41,24 @@
   display: block;
   @include font($weight: 700, $size: 17px, $lh: 1.059, $color: $gray-0);
 }
+
+@media (min-width: $screen-md) {
+  .checkbox__indicator {
+    left: -80px;
+    width: 50px;
+    height: 48px;
+    background-color: transparent;
+  }
+
+  .checkbox__input:checked ~ .checkbox__indicator::before {
+    width: 50px;
+    height: 47px;
+    background-size: 33px 22px;
+    background-position: 9px 14px;
+  }
+
+  .checkbox__text {
+    @include font($size: 19px, $lh: 1);
+  }
+}
+

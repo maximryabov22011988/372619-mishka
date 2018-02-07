@@ -18,3 +18,22 @@
   padding: 0;
   border: 0;
 }
+
+@media (min-width: $screen-md) {
+  .form__wrapper {
+    margin: 0 auto 32px;
+    padding: 74px 50px 28px;
+  }
+
+  .form__intro {
+    @include font($size: 17px, $lh: 1.765);
+  }
+
+  .form__group {
+    background-color: $gray-255;
+
+    &--bg-gray {
+      background-color: $gray-241;
+    }
+  }
+}

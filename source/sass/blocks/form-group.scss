@@ -63,3 +63,77 @@
 .form-group--submit {
   margin-bottom: 54px;
 }
+
+@media (min-width: $screen-md) {
+  .form-group__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 50px 50px;
+
+    &--bottom-indent {
+      padding-top: 0;
+    }
+
+    &--no-indent {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .form-group__title {
+    flex-grow: 1;
+    margin-bottom: 0;
+    padding-top: 15px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .form-group__type {
+    flex-basis: 75%;
+    margin-bottom: 17px;
+  }
+
+  .form-group__color {
+    flex-basis: 75%;
+    margin-bottom: 0;
+  }
+
+  .form-group__username {
+    flex-basis: 75%;
+    margin-bottom: 0;
+  }
+
+  .form-group__contacts {
+    flex-basis: 100%;
+    margin-bottom: 0;
+  }
+
+  .form-group--message {
+    margin-bottom: 0;
+  }
+
+  .form-group--message .form-group__title {
+    margin-bottom: 0;
+  }
+
+  .form-group--message .field {
+    flex-basis: 75%;
+  }
+
+  .form-group--submit .form-group__wrapper {
+    align-items: center;
+  }
+
+  .form-group--submit .form-group__btn {
+    flex-basis: 34.5%;
+    order: -1;
+  }
+
+  .form-group--submit .form-group__note {
+    margin: 0;
+    @include font($size: 17px, $lh: 1.765);
+  }
+}

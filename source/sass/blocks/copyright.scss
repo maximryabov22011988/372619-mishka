@@ -1,7 +1,6 @@
 .copyright {
   display: flex;
   justify-content: center;
-  padding-top: 22px;
 }
 
 .copyright__link {
@@ -31,4 +30,18 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@media (min-width: $screen-md) {
+  .copyright {
+    justify-content: flex-end;
+  }
+  .copyright__text {
+    margin-left: -3px;
+    padding-top: 2px;
+  }
+
+  .copyright svg {
+    top: -4px;
+  }
 }
