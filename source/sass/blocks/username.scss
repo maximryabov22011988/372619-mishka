@@ -44,3 +44,9 @@
     flex-grow: 1;
   }
 }
+
+@media (min-width: $screen-xl) {
+  .username {
+    padding-right: 125px;
+  }
+}

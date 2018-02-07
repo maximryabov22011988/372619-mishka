@@ -37,3 +37,11 @@
     }
   }
 }
+
+@media (min-width: $screen-xl) {
+  .form__wrapper {
+    padding-top: 124px;
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+}

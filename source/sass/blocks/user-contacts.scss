@@ -58,3 +58,17 @@
     right: 22px;
   }
 }
+
+@media (min-width: $screen-xl) {
+  .user-contacts__item .field {
+    flex-basis: 85%;
+  }
+
+  .user-contacts__item--phone svg {
+    right: 8px;
+  }
+
+  .user-contacts__item--email svg {
+    right: 4px;
+  }
+}

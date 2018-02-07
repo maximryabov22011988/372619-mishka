@@ -137,3 +137,47 @@
     @include font($size: 17px, $lh: 1.765);
   }
 }
+
+@media (min-width: $screen-xl) {
+  .form-group__title {
+    padding-left: 14px;
+  }
+
+  .form-group__type {
+    flex-basis: 87%;
+  }
+
+  .form-group__color {
+    flex-basis: 87%;
+  }
+
+  .form-group__username {
+    flex-basis: 87%;
+  }
+
+  .form-group__contacts {
+    flex-basis: 86.8%;
+  }
+
+  .form-group__contacts .form-group__title {
+    padding-top: 3px;
+  }
+
+  .form-group--message .form-group__wrapper {
+    padding-right: 175px;
+  }
+
+  .form-group--message .field {
+    flex-basis: 85%;
+  }
+
+  .form-group--submit .form-group__wrapper {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+  .form-group--submit .form-group__btn {
+    flex-basis: 230px;
+    order: -1;
+  }
+}

@@ -28,3 +28,17 @@
     margin-bottom: 0;
   }
 }
+
+@media (min-width: $screen-xl) {
+  .color {
+    justify-content: flex-start;
+  }
+
+  .color__item {
+    flex-basis: 31.95%;
+  }
+
+  .color__item:nth-child(4) {
+    margin-bottom: 0;
+  }
+}
