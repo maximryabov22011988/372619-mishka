@@ -46,11 +46,6 @@
 }
 
 @media (min-width: $screen-md) {
-  .reviews {
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
-  }
-
   .reviews__wrapper {
     position: relative;
     display: flex;
@@ -60,6 +55,8 @@
     margin: 0 auto;
     min-height: 380px;
     padding: 78px 50px 129px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
   }
 
   .reviews__slider {

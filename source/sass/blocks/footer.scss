@@ -20,6 +20,12 @@
   border-bottom: 1px solid $gray-229;
 }
 
+@media (max-width: $screen-md - 1) {
+  .footer__copyright {
+    margin-top: 21px;
+  }
+}
+
 @media (min-width: $screen-md) {
   .footer__wrapper {
     display: flex;

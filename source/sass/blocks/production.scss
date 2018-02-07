@@ -117,3 +117,9 @@
     right: 34px;
   }
 }
+
+@media (min-width: $screen-xl) {
+  .production__link {
+    padding-right: 130px;
+  }
+}

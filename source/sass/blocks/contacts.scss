@@ -67,20 +67,6 @@
 }
 
 @media (min-width: $screen-md) {
-  .contacts {
-    position: relative;
-
-    &::before {
-      @include pseudo-element();
-      top: 46px;
-      right: 53px;
-      display: block;
-      width: 47px;
-      height: 81px;
-      background-image: url("../img/icon-flag.svg");
-    }
-  }
-
   .contacts__wrapper {
     margin: 0 auto;
     padding-top: 61px;
@@ -92,8 +78,19 @@
   }
 
   .contacts__title {
+    position: relative;
     margin-bottom: 49px;
     @include font($size: 43px, $lh: 1.163);
+  }
+
+  .contacts__title::before {
+    @include pseudo-element();
+    top: -15px;
+    right: 3px;
+    display: block;
+    width: 47px;
+    height: 81px;
+    background-image: url("../img/icon-flag.svg");
   }
 
   .contacts__inner {
@@ -144,8 +141,7 @@
   }
 
   .contacts__wrapper {
-    position: relative;
-    display: flex;
+     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 71px;
@@ -156,6 +152,11 @@
     @include font($size: 53px, $lh: 1.075);
   }
 
+  .contacts__title::before {
+    top: -9px;
+    left: -112px;
+  }
+
   .contacts__inner {
     display: flex;
     flex-direction: column;
@@ -163,6 +164,7 @@
   }
 
   .contacts__info {
+    position: relative;
     width: 50%;
     margin-bottom: 0;
     padding-top: 70px;
