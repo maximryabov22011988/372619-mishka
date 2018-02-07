@@ -185,6 +185,8 @@
   }
 
   .contacts__wrapper-btn {
+    position: relative;
+    z-index: 100;
     align-items: flex-start;
     margin-top: -132px;
     margin-bottom: 0;

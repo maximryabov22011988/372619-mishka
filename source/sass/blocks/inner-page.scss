@@ -26,12 +26,11 @@
     margin-top: -45px;
   }
 
-  .inner-page__wrapper {
-    padding: 15px 50px 77px;
-  }
-
   .inner-page__title-wrapper {
     flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 50px 77px;
   }
 
   .inner-page__info {
@@ -51,5 +50,13 @@
 @media (min-width: $screen-xl) {
   .inner-page {
     margin-top: -17px;
+  }
+
+  .inner-page__title-wrapper {
+    padding-bottom: 99px;
+  }
+
+  .inner-page__title {
+    @include font($size: 53px, $lh: 1.075);
   }
 }
