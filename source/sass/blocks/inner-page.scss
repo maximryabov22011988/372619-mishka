@@ -47,3 +47,9 @@
     @include font($size: 43px, $lh: 1.163);
   }
 }
+
+@media (min-width: $screen-xl) {
+  .inner-page {
+    margin-top: -17px;
+  }
+}
