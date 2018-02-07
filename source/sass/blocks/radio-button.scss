@@ -17,12 +17,16 @@
   border: 9px solid $gray-255;
   border-radius: 50%;
   box-shadow: 0 0 0 2px $gray-68;
-  transition: $no-hover;
+  transition: background-color $no-hover $animation-function;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .radio-button__input:checked ~ .radio-button__indicator {
   background-color: $color-main;
-  transition: background-color $hover-animation $animation-function;
+  transition: background-color 0.3s $animation-function;
 }
 
 .radio-button:hover .radio-button__indicator {
