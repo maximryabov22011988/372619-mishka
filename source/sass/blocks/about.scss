@@ -171,3 +171,21 @@
     @include font($size: 20px, $lh: 1.1);
   }
 }
+
+@media (min-width: $screen-xl) {
+  .about__wrapper {
+    margin-bottom: 69px;
+    padding: 60px 0 0 175px;
+    box-sizing: border-box;
+  }
+
+  .about__item {
+    flex-basis: 35%;
+    margin-right: 44px;
+    padding-right: 0;
+  }
+
+  .about__title {
+    @include font($size: 53px, $lh: 1.075);
+  }
+}
