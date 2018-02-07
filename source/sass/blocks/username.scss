@@ -23,3 +23,24 @@
   margin-bottom: 3px;
   @include font($weight: 700, $size: 17px, $lh: 1.058, $color: $gray-0);
 }
+
+@media (min-width: $screen-md) {
+  .username__item {
+    margin-bottom: 21px;
+  }
+
+  .username__field {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .username__text {
+    margin-right: 24px;
+    margin-bottom: 0;
+    @include font($size: 19px, $lh: 1);
+  }
+
+  .username__field .field {
+    flex-grow: 1;
+  }
+}

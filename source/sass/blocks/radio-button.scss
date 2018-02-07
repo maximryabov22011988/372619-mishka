@@ -40,3 +40,17 @@
   padding-top: 8px;
   @include font($weight: 700, $size: 17px, $lh: 1.059, $color: $gray-0);
 }
+
+@media (min-width: $screen-md) {
+  .radio-button__indicator {
+    left: -78px;
+    width: 47px;
+    height: 47px;
+    border-width: 13px;
+  }
+
+  .radio-button__text {
+    padding-top: 13px;
+    @include font($size: 19px, $lh: 1);
+  }
+}

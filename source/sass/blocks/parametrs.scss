@@ -11,3 +11,9 @@
 .parametrs__field {
   width: 38.46%;
 }
+
+@media (min-width: $screen-md) {
+  .parametrs__field {
+    width: 33.37%;
+  }
+}

@@ -10,3 +10,10 @@
 .type__value {
   cursor: pointer;
 }
+
+@media (min-width: $screen-md) {
+  .type__item {
+    margin-bottom: 44px;
+    padding-left: 81px;
+  }
+}

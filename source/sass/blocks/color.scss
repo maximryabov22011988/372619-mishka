@@ -10,3 +10,21 @@
 .color__value {
   cursor: pointer;
 }
+
+@media (min-width: $screen-md) {
+  .color {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .color__item {
+    flex-basis: 48%;
+    margin-bottom: 26px;
+    padding: 13px 0 18px 82px;
+  }
+
+  .color__item:nth-child(5) {
+    margin-bottom: 0;
+  }
+}

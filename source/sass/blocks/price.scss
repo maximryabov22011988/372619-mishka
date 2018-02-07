@@ -19,9 +19,24 @@
 }
 
 .price--row .price__field {
-    @include font($size: 0, $lh: 0);
+  @include font($size: 0, $lh: 0);
 }
 
 .price--row .price__value {
   margin-right: 3px;
+}
+
+@media (min-width: $screen-md) {
+  .price__wrapper {
+    margin-bottom: 33px;
+    @include font($size: 20px, $lh: 1.2);
+  }
+
+  .price--row .price__value {
+    @include font($size: 17px, $lh: 1.412);
+  }
+
+  .price--row .price__currency {
+    @include font($size: 17px, $lh: 1.412);
+  }
 }

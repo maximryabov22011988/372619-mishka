@@ -29,3 +29,32 @@
   right: 4px;
   z-index: 100;
 }
+
+@media (min-width: $screen-md) {
+  .user-contacts__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .user-contacts__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .user-contacts__item .field {
+    flex-basis: 75%;
+    background-color: transparent;
+  }
+
+  .user-contacts__item--phone svg {
+    top: 13px;
+    right: 26px;
+  }
+
+  .user-contacts__item--email svg {
+    top: 15px;
+    right: 22px;
+  }
+}
