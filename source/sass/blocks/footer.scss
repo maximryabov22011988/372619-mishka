@@ -31,6 +31,7 @@
   }
 
   .footer__logo {
+    flex: 0 0 33.33%;
     display: block;
     width: 102px;
     height: 34px;
@@ -59,17 +60,15 @@
   }
 
   .footer__social {
-    flex-basis: 140px;
-    flex-grow: 1;
+    flex: 0 0 33.33%;
     justify-content: flex-start;
     margin-top: 22px;
-    margin-left: 23.1%;
-    margin-right: 12.21%;
     padding-bottom: 0;
     border: 0;
   }
 
   .footer__copyright {
+    flex: 0 0 33.33%;
     padding-top: 22px;
   }
 }
@@ -86,8 +85,6 @@
 
   .footer__social {
     justify-content: center;
-    margin-left: 32.83%;
-    margin-right: 26.10%;
   }
 
   .footer__copyright {

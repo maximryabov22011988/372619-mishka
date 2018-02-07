@@ -33,6 +33,9 @@
 }
 
 @media (min-width: $screen-md) {
+  .copyright {
+    justify-content: flex-end;
+  }
   .copyright__text {
     margin-left: -3px;
     padding-top: 2px;
