@@ -141,7 +141,11 @@
                   </div>
                 </div>
                 <div class="product__img">
-                    <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Двухцветные вязанные корзинки трёх размеров"/>
+                    <picture>
+                      <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                      <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Двухцветные вязанные корзинки трёх размеров"/>
+                  </picture>
                 </div>
                 <div class="product__price  price">
                   <div class="price__wrapper">
