@@ -62,3 +62,10 @@
     border: 0;
   }
 }
+
+@media (min-width: $screen-xl) {
+  .slider__nav {
+    right: 0;
+    bottom: 188px;
+  }
+}

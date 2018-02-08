@@ -3,6 +3,7 @@
   padding: 15px;
   padding-left: 0;
   @include font($size: 17px, $lh: 1.059, $color: rgba($gray-68, 0.3));
+  border-radius: 0;
   border: 0;
   outline: none;
 }

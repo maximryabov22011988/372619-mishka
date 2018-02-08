@@ -78,6 +78,7 @@
   }
 
   .product-card__img {
+    //flex-basis: 50%;
     width: 334px;  //временно
     height: 334px;
   }
@@ -106,5 +107,31 @@
     top: -3px;
     left: -5px;
     padding-bottom: 0;
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .product-card {
+    flex-direction: column;
+    flex-basis: 316px;
+  }
+
+  .product-card__img {
+    //flex-basis: auto;
+    width: 316px;
+    height: 462px;
+  }
+
+  .product-card__title {
+    padding-right: 25px;
+  }
+
+  .product-card__property {
+    margin-bottom: 14px;
+  }
+
+  .product-card__price-wrapper {
+    padding-top: 23px;
+    margin-left: -6px;
   }
 }

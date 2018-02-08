@@ -72,3 +72,30 @@
     margin-top: -111px;
   }
 }
+
+@media (min-width: $screen-xl) {
+  .product__info {
+    width: 27.81%;
+    margin-right: 5.52%;
+    margin-left: 16.67%;
+    padding-top: 80px;
+  }
+
+  .product__description {
+    margin-bottom: 46px;
+  }
+
+  .product__img {
+    margin-top: -87px;
+  }
+
+  .product__img img {
+    width: 525px;
+    height: 636px;
+  }
+
+  .product__price {
+    width: 27.81%;
+    margin-left: 16.67%;
+  }
+}

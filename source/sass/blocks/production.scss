@@ -84,6 +84,7 @@
   .production__wrapper {
     margin: 0 auto;
     padding: 0 50px;
+    box-sizing: content-box;
   }
 
   .production__list {
@@ -114,5 +115,11 @@
   .production__toy-icon {
     top: 32px;
     right: 34px;
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .production__link {
+    padding-right: 130px;
   }
 }

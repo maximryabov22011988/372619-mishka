@@ -18,10 +18,24 @@
     flex-wrap: wrap;
     margin: 0 auto;
     padding: 47px 50px 68px;
+    box-sizing: content-box;
   }
 
   .product-of-week__title {
     width: 100%;
     margin-bottom: 57px;
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .product-of-week__wrapper {
+    padding-bottom: 97px;
+  }
+
+  .product-of-week__title {
+    position: relative;
+    top: 80px;
+    left: 47px;
+    z-index: 50;
   }
 }

@@ -67,20 +67,6 @@
 }
 
 @media (min-width: $screen-md) {
-  .contacts {
-    position: relative;
-
-    &::before {
-      @include pseudo-element();
-      top: 46px;
-      right: 53px;
-      display: block;
-      width: 47px;
-      height: 81px;
-      background-image: url("../img/icon-flag.svg");
-    }
-  }
-
   .contacts__wrapper {
     margin: 0 auto;
     padding-top: 61px;
@@ -92,8 +78,19 @@
   }
 
   .contacts__title {
+    position: relative;
     margin-bottom: 49px;
     @include font($size: 43px, $lh: 1.163);
+  }
+
+  .contacts__title::before {
+    @include pseudo-element();
+    top: -15px;
+    right: 3px;
+    display: block;
+    width: 47px;
+    height: 81px;
+    background-image: url("../img/icon-flag.svg");
   }
 
   .contacts__inner {
@@ -133,5 +130,77 @@
 
   .contacts__btn {
     max-width: 230px;
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .contacts::before {
+    right: 0;
+    left: 213px;
+    top: 133px;
+  }
+
+  .contacts__wrapper {
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 71px;
+    margin-bottom: 25px;
+  }
+
+  .contacts__title {
+    @include font($size: 53px, $lh: 1.075);
+  }
+
+  .contacts__title::before {
+    top: -9px;
+    left: -112px;
+  }
+
+  .contacts__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .contacts__info {
+    position: relative;
+    width: 50%;
+    margin-bottom: 0;
+    padding-top: 70px;
+    padding-left: 16.67%;
+    padding-right: 4.9%;
+    box-sizing: border-box;
+  }
+
+  .contacts__email {
+    display: flex;
+    align-items: flex-start;
+    flex-basis: auto;
+    margin-right: 0;
+  }
+
+  .contacts__subtitle-email {
+    min-width: 52px;
+  }
+
+  .contacts__wrapper-btn {
+    position: relative;
+    z-index: 100;
+    align-items: flex-start;
+    margin-top: -132px;
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 16.67%;
+  }
+
+  .contacts__btn {
+    width: 230px;
+  }
+
+  .contacts__map {
+    width: 50%;
+    margin-bottom: 0;
+    background-color: #f5f5f5;
   }
 }
