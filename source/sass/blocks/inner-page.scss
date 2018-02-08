@@ -8,18 +8,4 @@
   .inner-page {
     margin-top: -17px;
   }
-
-  .inner-page__title-wrapper {
-    padding-bottom: 99px;
-
-    &::after {
-      bottom: -10px;
-      background-size: 1150px 34px;
-      background-position: -8px 0;
-    }
-  }
-
-  .inner-page__title {
-    @include font($size: 53px, $lh: 1.075);
-  }
 }
