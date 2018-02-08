@@ -81,6 +81,16 @@
 }
 
 @media (min-width: $screen-md) {
+  .production::after {
+    @include pseudo-element();
+    bottom: -13px;
+    width: 100%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat-x: repeat;
+    background-size: 768px 24px;
+  }
+
   .production__wrapper {
     margin: 0 auto;
     padding: 0 50px;
@@ -119,6 +129,13 @@
 }
 
 @media (min-width: $screen-xl) {
+  .production::after {
+    bottom: -17px;
+    height: 34px;
+    background-size: 1150px 34px;
+    background-position: -15px 0;
+  }
+
   .production__link {
     padding-right: 130px;
   }
