@@ -1,5 +1,6 @@
 @media (max-width: $screen-md - 1) {
   .main-nav {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -29,6 +30,18 @@
 
   .main-nav--no-js .toggle {
     display: none;
+  }
+
+  .main-nav--no-js .menu {
+    position: static;
+    bottom: 0;
+    display: block;
+  }
+
+  .main-nav--no-js .user-menu {
+    position: static;
+    bottom: 0;
+    display: block;
   }
 }
 
