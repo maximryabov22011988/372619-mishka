@@ -324,15 +324,16 @@
         <h2 class="modal__title">Добавить в корзину</h2>
         <span class="modal__label">Выберите размер:</span>
         <ul class="modal__sizes  sizes">
-          <li class="sizes__item  sizes__item--current">S</li>
-          <li class="sizes__item">M</li>
-          <li class="sizes__item">L</li>
+          <li class="sizes__item  sizes__item--current" tabindex="1">S</li>
+          <li class="sizes__item" tabindex="2">M</li>
+          <li class="sizes__item" tabindex="3">L</li>
         </ul>
-        <button class="modal__btn  btn" type="button">Добавить</button>
+        <button class="modal__btn  btn" type="button" tabindex="4">Добавить</button>
       </div>
     </div>
     <script src="js/dropdown-menu.js"></script>
     <script src="js/map.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuFNHGkyX3fP-_phd2i8550CT_whBne6U&callback=initMap"></script>
+    <script src="js/popup.js"></script>
   </body>
 </html>
