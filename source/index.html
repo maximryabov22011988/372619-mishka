@@ -46,7 +46,11 @@
         <div class="header__wrapper">
           <nav class="main-nav  main-nav--no-js">
             <a class="main-nav__logo  logo">
-              <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип компании Мишка"/>
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип компании Мишка"/>
+              </picture>
             </a>
             <button class="main-nav__toggle  toggle" type="button">
               <span></span>
