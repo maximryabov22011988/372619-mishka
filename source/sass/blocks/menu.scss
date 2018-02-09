@@ -74,23 +74,13 @@
 }
 
 @media (min-width: $screen-xl) {
-  .menu {
-    position: relative;
-    top: 28px;
-  }
-
   .menu__item:nth-child(n+3) {
     display: block;
   }
 
-  .menu__item:nth-child(1) {
+  .menu__item:nth-child(-n+2) {
+    display: flex;
     margin-right: 0;
-    margin-bottom: 45px;
-  }
-
-  .menu__item:nth-child(2) {
-    margin-right: 0;
-    margin-bottom: 45px;
   }
 
   .menu__item:nth-child(3) {
@@ -98,7 +88,7 @@
   }
 
   .menu__link {
-    padding-top: 34px;
+    padding-top: 32px;
     padding-bottom: 34px;
     @include font($size: 17px, $lh: 1.412);
 
@@ -111,11 +101,18 @@
 
   .menu__item:first-child .menu__link {
     position: relative;
+    margin-bottom: 13px;
     padding-right: 36px;
   }
 
   .menu__item:nth-child(2) .menu__link {
+    margin-bottom: 13px;
     padding-left: 35px;
+  }
+
+  .menu__item:nth-child(n+3) .menu__link {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .menu__item:first-child .menu__link::before {
