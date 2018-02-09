@@ -1,4 +1,4 @@
-.product-of-week {
+.featured-product {
   position: relative;
 
   &::after {
@@ -13,25 +13,25 @@
   }
 }
 
-.product-of-week__wrapper {
+.featured-product__wrapper {
   width: auto;
   max-width: 1050px;
   padding: 27px 30px 41px;
 }
 
-.product-of-week__title {
+.featured-product__title {
   margin-bottom: 23px;
 }
 
 @media (min-width: $screen-md) {
-  .product-of-week::after {
+  .featured-product::after {
     bottom: 0;
     height: 17px;
     background-size: 768px 17px;
     background-position: 20px 0;
   }
 
-  .product-of-week__wrapper {
+  .featured-product__wrapper {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -39,14 +39,14 @@
     box-sizing: content-box;
   }
 
-  .product-of-week__title {
+  .featured-product__title {
     width: 100%;
     margin-bottom: 57px;
   }
 }
 
 @media (min-width: $screen-xl) {
-  .product-of-week::after {
+  .featured-product::after {
     left: 0;
     right: 0;
     width: auto;
@@ -58,11 +58,11 @@
     background-position: 15px 0;
   }
 
-  .product-of-week__wrapper {
+  .featured-product__wrapper {
     padding-bottom: 97px;
   }
 
-  .product-of-week__title {
+  .featured-product__title {
     position: relative;
     top: 80px;
     left: 47px;
