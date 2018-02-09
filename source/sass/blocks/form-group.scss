@@ -89,6 +89,10 @@
     &::before {
       display: none;
     }
+
+    &--small-margin {
+      margin-top: -16px;
+    }
   }
 
   .form-group__type {
@@ -141,6 +145,10 @@
 @media (min-width: $screen-xl) {
   .form-group__title {
     padding-left: 14px;
+
+    &--small-margin {
+      margin-top: -4px;
+    }
   }
 
   .form-group__type {

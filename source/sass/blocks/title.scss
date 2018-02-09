@@ -1,0 +1,74 @@
+.title {
+  background-color: $gray-241;
+}
+
+.title__wrapper {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  max-width: 1150px;
+}
+
+.title__label {
+  display: none;
+}
+
+.title__text {
+  display: block;
+  margin: 70px auto 76px;
+  @include font($weight: 700, $size: 27px, $lh: 1.11, $color: $gray-0);
+  text-align: center;
+}
+
+@media (min-width: $screen-md) {
+  .title {
+    position: relative;
+
+    &::after {
+      @include pseudo-element();
+      bottom: -14px;
+      width: 100%;
+      height: 24px;
+      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-repeat-x: repeat;
+      background-size: 768px 24px;
+    }
+  }
+
+  .title__wrapper {
+    position: relative;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 50px 77px;
+  }
+
+  .title__label {
+    display: block;
+    width: 100%;
+    margin-bottom: 52px;
+    text-align: right;
+  }
+
+  .title__text {
+    flex-grow: 1;
+    margin: 0;
+    @include font($size: 43px, $lh: 1.163);
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .title::after {
+      bottom: -10px;
+      background-size: 1150px 34px;
+      background-position: 10px 0;
+  }
+
+  .title__wrapper {
+    padding-bottom: 99px;
+  }
+
+  .title__text {
+    @include font($size: 53px, $lh: 1.075);
+  }
+}

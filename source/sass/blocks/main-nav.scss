@@ -1,5 +1,6 @@
 @media (max-width: $screen-md - 1) {
   .main-nav {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -30,6 +31,18 @@
   .main-nav--no-js .toggle {
     display: none;
   }
+
+  .main-nav--no-js .menu {
+    position: static;
+    bottom: 0;
+    display: block;
+  }
+
+  .main-nav--no-js .user-menu {
+    position: static;
+    bottom: 0;
+    display: block;
+  }
 }
 
 @media (min-width: $screen-md) {
@@ -46,7 +59,7 @@
     width: 113px;
     height: 46px;
     margin-right: auto;
-    margin-top: 18px;
+    margin-top: 22px;
   }
 
   .main-nav__logo .logo__image {
@@ -81,6 +94,8 @@
     display: flex;
     justify-content: center;
     order: 2;
+    margin-top: 10px;
+    margin-left: -27px;
   }
 
   .main-nav__user-menu {

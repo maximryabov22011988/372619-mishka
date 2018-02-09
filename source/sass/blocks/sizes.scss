@@ -24,6 +24,10 @@
     transition: border-color $active-animation $animation-function;
   }
 
+  &:focus {
+    outline: -webkit-focus-ring-color auto 5px  ;
+  }
+
   &--current {
     border-color: $color-main;
   }
@@ -31,4 +35,17 @@
 
 .sizes__item:last-child {
   margin-right: 0;
+}
+
+@media (min-width: $screen-md) {
+  .sizes {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sizes__item {
+    flex-basis: 32%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
