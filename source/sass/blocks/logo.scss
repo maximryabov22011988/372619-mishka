@@ -3,6 +3,16 @@
   height: 35px;
 }
 
+.logo[href]:hover {
+  opacity: 0.6;
+  transition: opacity $no-hover $animation-function;
+}
+
+.logo[href]:active {
+  opacity: 0.3;
+  transition: opacity $active-animation $animation-function;
+}
+
 @media (min-width: $screen-md) {
   .logo img {
     width: 113px;
