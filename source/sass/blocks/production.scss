@@ -68,7 +68,7 @@
   }
 }
 
-.production__link--interior::before {
+.production__link--icon-interior::before {
   content: "";
   position: absolute;
   top: 23px;
@@ -79,7 +79,7 @@
   opacity: 0.5;
 }
 
-.production__link--toy::before {
+.production__link--icon-toy::before {
   content: "";
   position: absolute;
   top: 21px;
@@ -138,11 +138,11 @@
     @include font($size: 20px, $lh: 1.5)
   }
 
-  .production__link--interior::before {
+  .production__link--icon-interior::before {
     top: 30px;
   }
 
-  .production__link--toy::before {
+  .production__link--icon-toy::before {
     top: 32px;
     right: 34px;
   }

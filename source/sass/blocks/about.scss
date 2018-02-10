@@ -22,68 +22,80 @@
   padding-top: 74px;
 }
 
-.about__icon-flower {
+.about__text {
+  @include font($weight: 700, $size: 17px, $lh: 1.176, $color: $gray-0);
+}
+
+.about__item--icon-flower::before {
+  content: "";
   position: absolute;
   top: 18px;
   left: 8px;
   display: block;
   width: 32px;
   height: 37px;
-  fill: $color-main;
+  background-image: url("../img/icon-about-flower.svg");
+  background-repeat: no-repeat;
 }
 
-.about__icon-money {
+.about__item--icon-money::before {
+  content: "";
   position: absolute;
   top: 19px;
   left: 0;
   display: block;
   width: 47px;
   height: 27px;
-  fill: $color-main;
+  background-image: url("../img/icon-about-money.svg");
+  background-repeat: no-repeat;
 }
 
-.about__icon-heart {
+.about__item--icon-heart::before {
+  content: "";
   position: absolute;
   top: 24px;
   left: 8px;
   display: block;
   width: 34px;
   height: 31px;
-  fill: $color-main;
+  background-image: url("../img/icon-about-heart.svg");
+  background-repeat: no-repeat;
 }
 
-.about__icon-ball {
+.about__item--icon-ball::before {
+  content: "";
   position: absolute;
   top: 21px;
   left: 4px;
   display: block;
   width: 35px;
   height: 34px;
-  fill: $color-main;
+  background-image: url("../img/icon-about-ball.svg");
+  background-repeat: no-repeat;
 }
 
-.about__icon-rocket {
+.about__item--icon-rocket::before {
+  content: "";
   position: absolute;
   top: 22px;
   left: -3px;
   display: block;
   width: 55px;
   height: 23px;
-  fill: $color-main;
+  background-image: url("../img/icon-about-rocket.svg");
+  background-repeat: no-repeat;
 }
 
-.about__icon-gift {
+.about__item--icon-gift::before {
+  content: "";
   position: absolute;
   top: 20px;
   left: 3px;
   display: block;
   width: 33px;
   height: 32px;
-  fill: $color-main;
-}
-
-.about__text {
-  @include font($weight: 700, $size: 17px, $lh: 1.176, $color: $gray-0);
+  background-image: url("../img/icon-about-gift.svg");
+  background-repeat: no-repeat;
 }
 
 @media (min-width: $screen-md) {
@@ -116,7 +128,7 @@
     order: 1;
   }
 
-  .about__icon-flower {
+  .about__item--icon-flower::before {
     top: 34px;
     left: 8px;
   }
@@ -126,7 +138,7 @@
     margin-right: 0;
   }
 
-  .about__icon-ball {
+  .about__item--icon-ball::before {
     top: 37px;
     left: 3px;
   }
@@ -135,7 +147,7 @@
     order: 3;
   }
 
-  .about__icon-money {
+  .about__item--icon-money::before {
     top: 35px;
   }
 
@@ -144,7 +156,7 @@
     margin-right: 0;
   }
 
-  .about__icon-rocket {
+  .about__item--icon-rocket::before {
     top: 38px;
   }
 
@@ -152,7 +164,7 @@
     order: 5;
   }
 
-  .about__icon-heart {
+  .about__item--icon-heart::before {
     top: 40px;
     left: 8px;
   }
@@ -162,7 +174,7 @@
     margin-right: 0;
   }
 
-  .about__icon-gift {
+  .about__item--icon-gift::before {
     top: 36px;
   }
 
