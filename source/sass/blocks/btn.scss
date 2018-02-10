@@ -8,6 +8,7 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  word-wrap: break-word;
   background-color: $gray-255;
   border: 2px solid $gray-68;
   transition: color $no-hover $animation-function,

@@ -2,7 +2,7 @@
                                      Popup
 -------------------------------------------------------------------------------------*/
 var modal = document.getElementById('popup');
-var modalBtnShow = document.querySelector('.product__btn');
+var modalBtnShow = document.querySelector('.featured-product__btn');
 var modalBtnHide = document.querySelector('.modal__btn');
 var background = document.querySelector('.modal__background');
 var basket = document.querySelectorAll('.product-card__to-cart');

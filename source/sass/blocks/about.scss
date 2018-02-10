@@ -2,7 +2,7 @@
   width: auto;
   max-width: 1050px;
   margin-bottom: 55px;
-  padding: 28px 30px 0;
+  padding: 34px 30px 0;
 }
 
 .about__title {
@@ -92,7 +92,7 @@
     flex-direction: column;
     justify-content: flex-start;
     margin: 0 auto 61px;
-    padding: 50px 50px 0;
+    padding: 66px 50px 0;
   }
 
   .about__title {
@@ -175,7 +175,7 @@
 @media (min-width: $screen-xl) {
   .about__wrapper {
     margin-bottom: 69px;
-    padding: 60px 0 0 175px;
+    padding: 83px 0 0 175px;
     box-sizing: border-box;
   }
 

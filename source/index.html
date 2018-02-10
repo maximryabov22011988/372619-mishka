@@ -100,7 +100,7 @@
               <li class="production__item">
                 <a class="production__link" href="#">
                   <h3 class="production__item-title">Предметы <br> интерьера</h3>
-                  <svg width="41" height="62">
+                  <svg class="production__interior-icon" width="41" height="62">
                     <use xlink:href="#icon-interior"></use>
                   </svg>
                 </a>
@@ -108,7 +108,7 @@
               <li class="production__item">
                 <a class="production__link  production__link--dark" href="#">
                   <h3 class="production__item-title">Детские <br> игрушки</h3>
-                  <svg width="60" height="61">
+                  <svg class="production__toy-icon" width="60" height="61">
                     <use xlink:href="#icon-toy"></use>
                   </svg>
                 </a>
@@ -118,48 +118,44 @@
         </section>
         <section class="featured-product">
           <div class="featured-product__wrapper">
-            <div class="featured-product__title  title-product">
-              <h2 class="title-product__text">Товар <br> недели</h2>
-              <h3 class="title-product__subtitle">Вязаные корзинки</h3>
+            <div class="featured-product__title-wrapper">
+              <h2 class="featured-product__title">Товар <br> недели</h2>
+              <h3 class="featured-product__name">Вязаные корзинки</h3>
             </div>
-            <ul class="featured-product__list  product">
-              <li class="product__item">
-                <div class="product__info">
-                  <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-                  <div class="product__parametrs  parametrs">
-                    <table class="parametrs__list">
-                      <tr class="parametrs__item">
-                        <td class="parametrs__field">Цвет:</td>
-                        <td class="parametrs__value">«Тиффани»/серый</td>
-                      </tr>
-                      <tr class="parametrs__item">
-                        <td class="parametrs__field">Диаметр:</td>
-                        <td class="parametrs__value">25 см</td>
-                      </tr>
-                      <tr class="parametrs__item">
-                        <td class="parametrs__field">Высота:</td>
-                        <td class="parametrs__value">15 см</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-                <div class="product__img">
-                    <picture>
-                      <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-                      <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Двухцветные вязанные корзинки трёх размеров"/>
-                  </picture>
-                </div>
-                <div class="product__price  price">
+            <div class="featured-product__inner">
+              <div class="featured-product__info">
+                <p class="featured-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+                <table class="featured-product__parametrs  parametrs">
+                  <tr class="parametrs__item">
+                    <td class="parametrs__field">Цвет:</td>
+                    <td class="parametrs__value">«Тиффани»/серый</td>
+                  </tr>
+                  <tr class="parametrs__item">
+                    <td class="parametrs__field">Диаметр:</td>
+                    <td class="parametrs__value">25 см</td>
+                  </tr>
+                  <tr class="parametrs__item">
+                    <td class="parametrs__field">Высота:</td>
+                    <td class="parametrs__value">15 см</td>
+                  </tr>
+                </table>
+                <div class="featured-product__price  price">
                   <div class="price__wrapper">
                     <span class="price__field">Цена:</span>
                     <span class="price__value">990</span>
                     <span class="price__currency">руб.</span>
                   </div>
-                  <button class="product__btn  btn" type="button">Заказать</button>
+                  <button class="featured-product__btn  btn" type="button">Заказать</button>
                 </div>
-              </li>
-            </ul>
+              </div>
+              <div class="featured-product__img">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                  <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Двухцветные вязанные корзинки трёх размеров"/>
+                </picture>
+              </div>
+            </div>
           </div>
         </section>
         <section class="about">
