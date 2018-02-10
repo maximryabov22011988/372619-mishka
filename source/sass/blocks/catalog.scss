@@ -38,6 +38,7 @@
   .catalog__wrapper {
     margin-bottom: 0;
     padding-top: 146px;
+    padding-bottom: 54px;
   }
 
   .catalog__list {
@@ -49,15 +50,15 @@
   }
 
   .catalog__item {
+    margin-bottom: 0;
     margin-right: 4.57%;
-    margin-bottom: 48px;
-  }
-
-  .catalog__item:last-child {
-    margin-bottom: 48px;
   }
 
   .catalog__item:nth-child(3n) {
     margin-right: 0;
+  }
+
+  .catalog__item:nth-child(n+4) {
+    margin-top: 50px;
   }
 }

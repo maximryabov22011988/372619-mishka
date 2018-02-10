@@ -17,6 +17,7 @@
 
 .contacts__email {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
@@ -100,6 +101,7 @@ span[itemprop="email"] {
   .contacts__title {
     position: relative;
     margin-bottom: 49px;
+    padding-right: 80px;
     @include font($size: 43px, $lh: 1.163);
   }
 
@@ -175,6 +177,7 @@ span[itemprop="email"] {
   }
 
   .contacts__title {
+    padding-right: 0;
     @include font($size: 53px, $lh: 1.075);
   }
 

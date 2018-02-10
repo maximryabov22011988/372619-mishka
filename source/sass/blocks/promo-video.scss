@@ -32,6 +32,7 @@
   margin: 0;
   padding-top: 2px;
   @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+  word-wrap: break-word;
 }
 
 .promo-video__play {
@@ -87,10 +88,6 @@
     order: -1;
   }
 
-  .promo-video__play img {
-    width: 100%;
-  }
-
   .promo-video__title {
     padding-top: 36px;
     padding-left: 105px;
@@ -116,45 +113,43 @@
 }
 
 @media (min-width: $screen-xl) {
-  .promo-video__wrapper {
-    padding-top: 7px;
-  }
-
   .promo-video__inner {
-    flex-direction: row;
-    align-items: stretch;
+    display: block;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 
   .promo-video__play {
+    float: left;
     width: 64.95%;
     @include font($size: 0, $lh: 0);
   }
 
-  .promo-video__play img {
-    display: block;
-    width: 682px;
-    height: 455px;
+  .promo-video__title {
+    float: right;
+    width: 35.05%;
+    margin-bottom: 32px;
+    padding: 96px 54px 0 80px;
+    box-sizing: border-box;
   }
 
-  .promo-video__title {
-    align-self: flex-start;
-    max-width: 240px;
-    margin-left: 78px;
-    margin-right: -316px;
-    padding: 0;
-    padding-top: 93px;
+  .promo-video__title h2 {
+    padding-top: 0;
   }
 
   .promo-video__title::before {
-    top: 41px;
-    left: 3px;
+    top: 42px;
+    left: 79px;
   }
 
   .promo-video__description {
+    float: right;
     width: 35.05%;
-    padding-left: 80px;
-    padding-right: 54px;
-    padding-top: 175px;
+    padding: 0 54px 59px 80px;
     box-sizing: border-box;
   }
 

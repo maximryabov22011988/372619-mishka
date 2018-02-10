@@ -179,6 +179,7 @@
 
   .featured-product__name {
     @include font($size: 53px, $lh: 1.075);
+    @include text-limiter();
   }
 
   .featured-product__title {
