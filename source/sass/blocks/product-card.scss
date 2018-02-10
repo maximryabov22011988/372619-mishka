@@ -43,6 +43,28 @@
   @include font($weight: 700, $size: 17px, $lh: 1.412);
 }
 
+.product-card__info:hover .product-card__title {
+  color: rgba($gray-0, 0.6);
+  transition: color $hover-animation $animation-function;
+}
+
+.product-card__info:active .product-card__title {
+  color: rgba($gray-0, 0.3);
+  transition: color $active-animation $animation-function;
+}
+
+.product-card__info:hover .to-cart__icon {
+  fill: $icon-color--hover;
+  transition: fill $hover-animation $animation-function;
+}
+
+.product-card__info:active .to-cart__icon {
+  fill: $icon-color--hover;
+  opacity: 0.3;
+  transition: fill $active-animation $animation-function,
+              opacity $active-animation $animation-function;
+}
+
 .product-card__img {
   @include font($size: 0, $lh: 0);
   background-color: $gray-236;
