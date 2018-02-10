@@ -169,11 +169,15 @@ span[itemprop="email"] {
   }
 
   .contacts__wrapper {
-     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: block;
     padding-top: 95px;
-    margin-bottom: 25px;
+    margin-bottom: 104px;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 
   .contacts__title {
@@ -187,15 +191,13 @@ span[itemprop="email"] {
   }
 
   .contacts__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: block;
   }
 
   .contacts__info {
-    position: relative;
+    float: left;
     width: 50%;
-    margin-bottom: 0;
+    margin-bottom: 78px;
     padding-top: 70px;
     padding-left: 16.67%;
     padding-right: 4.9%;
@@ -213,25 +215,21 @@ span[itemprop="email"] {
     min-width: 52px;
   }
 
-  .contacts__address {
-    padding-bottom: 150px;
-  }
-
   .contacts__wrapper-btn {
-    position: relative;
-    z-index: 100;
-    align-items: flex-start;
-    margin-top: -132px;
+    float: left;
+    clear: left;
+    width: 50%;
     margin-bottom: 0;
     padding: 0;
-    padding-left: 16.67%;
   }
 
   .contacts__btn {
-    width: 230px;
+    margin-left: 16.67%;
+    margin-right: 4.9%;
   }
 
   .contacts__map {
+    float: right;
     width: 50%;
     margin-bottom: 0;
     background-color: #f5f5f5;
