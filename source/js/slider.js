@@ -16,32 +16,32 @@
     document.addEventListener('DOMContentLoaded', function() {
 
       function nextSlide() {
-          if (slideNow === slideCount || slideNow <= 0 || slideNow > slideCount) {
-              sliderList.style.transform = 'translate(0, 0)';
-              slideNow = 1;
-          } else {
-              translateWidth = -document.querySelector('.slider__viewport').offsetWidth * slideNow;
-              sliderList.style.transform = 'translate('+ translateWidth + 'px, 0)';
-              slideNow++;
-          }
+        if (slideNow === slideCount || slideNow <= 0 || slideNow > slideCount) {
+          sliderList.style.transform = 'translate(0, 0)';
+          slideNow = 1;
+        } else {
+          translateWidth = -document.querySelector('.slider__viewport').offsetWidth * slideNow;
+          sliderList.style.transform = 'translate(' + translateWidth + 'px, 0)';
+          slideNow++;
+        }
       }
 
       function prevSlide() {
-          if (slideNow === 1 || slideNow <= 0 || slideNow > slideCount) {
-              translateWidth = -document.querySelector('.slider__viewport').offsetWidth * (slideCount - 1);
-              sliderList.style.transform = 'translate('+ translateWidth + 'px, 0)';
-              slideNow = slideCount;
-          } else {
-              translateWidth = -document.querySelector('.slider__viewport').offsetWidth * (slideNow - 2);
-              sliderList.style.transform = 'translate('+ translateWidth + 'px, 0)';
-              slideNow--;
-          }
+        if (slideNow === 1 || slideNow <= 0 || slideNow > slideCount) {
+          translateWidth = -document.querySelector('.slider__viewport').offsetWidth * (slideCount - 1);
+          sliderList.style.transform = 'translate(' + translateWidth + 'px, 0)';
+          slideNow = slideCount;
+        } else {
+          translateWidth = -document.querySelector('.slider__viewport').offsetWidth * (slideNow - 2);
+          sliderList.style.transform = 'translate(' + translateWidth + 'px, 0)';
+          slideNow--;
+        }
       }
 
       next.addEventListener('click', nextSlide, false);
       prev.addEventListener('click', prevSlide, false);
 
-      });
+    });
   }
 
 })();

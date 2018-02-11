@@ -32,7 +32,7 @@ if (modalBtnShow && background) {
 
 if (basket && background) {
   for (var i = 0; i < basket.length; i++) {
-      basket[i].addEventListener('click', showModal, false);
+    basket[i].addEventListener('click', showModal, false);
   }
   background.addEventListener('click', hideModal, false);
 }
