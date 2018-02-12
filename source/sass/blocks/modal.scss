@@ -28,6 +28,7 @@
   margin-top: 0;
   margin-bottom: 10px;
   padding: 0 50px;
+
   @include font($size: 25px, $lh: 1.2);
   text-transform: uppercase;
   text-align: center;
@@ -35,6 +36,7 @@
 
 .modal__label {
   margin-bottom: 25px;
+
   @include font($size: 15px, $lh: 2, $color: $gray-68);
 }
 
@@ -42,30 +44,25 @@
   margin-bottom: 32px;
 }
 
-.modal__btn  {
+.modal__btn {
   width: 100%;
   color: $gray-255;
   background-color: $color-main;
   border-color: $color-main;
-  transition: color $hover-animation $animation-function,
-              background-color $hover-animation $animation-function,
-              border-color $hover-animation $animation-function;
+  transition: color $hover-animation $animation-function, background-color $hover-animation $animation-function, border-color $hover-animation $animation-function;
 
   &:hover {
     color: $color-main;
     background-color: $gray-255;
     border-color: $color-main;
-    transition: background-color $hover-animation $animation-function,
-                border-color $hover-animation $animation-function;
+    transition: background-color $hover-animation $animation-function, border-color $hover-animation $animation-function;
   }
 
   &:active {
     color: rgba($color-main, 0.5);
     background-color: $gray-255;
     border-color: $color-main--lighten;
-    transition: color $active-animation $animation-function,
-                background-color $active-animation $animation-function,
-                border-color $active-animation $animation-function;
+    transition: color $active-animation $animation-function, background-color $active-animation $animation-function, border-color $active-animation $animation-function;
   }
 }
 
@@ -102,11 +99,13 @@
     margin-top: 0;
     margin-bottom: 27px;
     padding: 0;
+
     @include font($size: 30px, $lh: 1);
   }
 
   .modal__label {
     margin-bottom: 21px;
+
     @include font($size: 17px, $lh: 1.765);
   }
 

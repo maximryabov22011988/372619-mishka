@@ -5,14 +5,12 @@
 
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-    transition: border $hover-animation $animation-function,
-                box-shadow $hover-animation $animation-function;
+    transition: border $hover-animation $animation-function, box-shadow $hover-animation $animation-function;
   }
 
   &:active {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-    transition: border $active-animation $animation-function,
-                box-shadow $active-animation $animation-function;
+    transition: border $active-animation $animation-function, box-shadow $active-animation $animation-function;
   }
 }
 
@@ -40,6 +38,7 @@
 .product-card__title {
   margin: 0;
   margin-bottom: 4px;
+
   @include font($weight: 700, $size: 17px, $lh: 1.412);
 }
 
@@ -61,8 +60,7 @@
 .product-card__info:active .to-cart__icon {
   fill: $icon-color--hover;
   opacity: 0.3;
-  transition: fill $active-animation $animation-function,
-              opacity $active-animation $animation-function;
+  transition: fill $active-animation $animation-function, opacity $active-animation $animation-function;
 }
 
 .product-card__img {
@@ -110,6 +108,7 @@
 
   .product-card__title {
     padding-right: 35px;
+
     @include font($size: 20px, $lh: 1.2);
   }
 

@@ -22,6 +22,7 @@
 .reviews__title {
   margin-top: 0;
   margin-bottom: 25px;
+
   @include font($weight: 700, $size: 25px, $lh: 1.2, $color: $gray-0);
 }
 
@@ -40,6 +41,7 @@
 .reviews__author-name {
   margin-bottom: 5px;
   font-style: normal;
+
   @include font($weight: 700, $size: 18px, $lh: 1.333, $color: $gray-0);
 }
 
@@ -79,7 +81,7 @@
     width: 100%;
   }
 
-  .reviews__item  {
+  .reviews__item {
     margin-bottom: 0;
   }
 
@@ -87,12 +89,14 @@
     order: -2;
     max-width: 73.35%;
     margin-bottom: 49px;
+
     @include font($size: 43px, $lh: 1.163);
     @include text-limiter();
   }
 
   .reviews__author-text {
     margin-bottom: 58px;
+
     @include font($size: 17px, $lh: 1.765);
   }
 
@@ -105,7 +109,7 @@
   }
 
   .reviews__write {
-    order:-1;
+    order: -1;
     max-width: 175px;
     margin-bottom: 0;
   }
@@ -131,6 +135,7 @@
   .reviews__title {
     flex-grow: 1;
     margin-bottom: 46px;
+
     @include font($size: 53px, $lh: 1.075);
   }
 
@@ -141,6 +146,7 @@
 
   .reviews__author-name {
     margin-bottom: 2px;
+
     @include font($size: 17px, $lh: 1.412);
   }
 

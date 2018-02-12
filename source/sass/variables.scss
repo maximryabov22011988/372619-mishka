@@ -73,10 +73,8 @@ $footer-logo-color--hover:        $color-main--darker;
 $footer-logo-color--active:       $color-main--light;
 
 
-
 // Шрифты
 $font-stack:                      "Open Sans", "Arial", sans-serif;
-
 
 
 // Брейкпойнты
@@ -84,15 +82,13 @@ $screen-md:                       768px;
 $screen-xl:                       1150px;
 
 
-
 // Плотность пикселей
 $retina-dpi:                      144dpi;
 $retina-dppx:                     1.5dppx;
-
 
 
 // Анимация
 $no-hover:                        0.1s;
 $hover-animation:                 0.12s;
 $active-animation:                0.05s;
-$animation-function:              cubic-bezier(0.4, 0.0, 0.2, 1);
+$animation-function:              cubic-bezier(0.4, 0, 0.2, 1);

@@ -10,6 +10,7 @@
 
 .form__intro {
   margin: 0;
+
   @include font($size: 13px, $lh: 1.86, $color: $gray-68);
 }
 

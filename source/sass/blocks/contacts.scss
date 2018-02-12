@@ -11,6 +11,7 @@
 .contacts__title {
   margin-top: 0;
   margin-bottom: 26px;
+
   @include font($weight: 700, $size: 25px, $lh: 1.2, $color: $gray-0);
   word-wrap: break-word;
 }
@@ -37,15 +38,13 @@ span[itemprop="email"] {
   &:hover {
     color: $mail-link-color--hover;
     border-bottom-color: $mail-underlining-color--hover;
-    transition: color $hover-animation $animation-function,
-                border-bottom-color $hover-animation $animation-function;
+    transition: color $hover-animation $animation-function, border-bottom-color $hover-animation $animation-function;
   }
 
   &:active {
     color: $mail-link-color--active;
     border-bottom-color: $mail-underlining-color--active;
-    transition: color $active-animation $animation-function,
-                border-bottom-color $active-animation $animation-function;
+    transition: color $active-animation $animation-function, border-bottom-color $active-animation $animation-function;
   }
 }
 
@@ -102,6 +101,7 @@ span[itemprop="email"] {
     position: relative;
     margin-bottom: 49px;
     padding-right: 80px;
+
     @include font($size: 43px, $lh: 1.163);
   }
 
@@ -118,6 +118,7 @@ span[itemprop="email"] {
   .contacts__inner {
     display: flex;
     align-items: flex-start;
+
     @include font($size: 17px, $lh: 1.765);
   }
 
@@ -140,10 +141,6 @@ span[itemprop="email"] {
     margin-right: 22px;
   }
 
-  .contacts__map {
-    margin-bottom: 54px;
-  }
-
   .contacts__wrapper-btn {
     display: flex;
     justify-content: center;
@@ -151,6 +148,7 @@ span[itemprop="email"] {
   }
 
   .contacts__map {
+    margin-bottom: 54px;
     background-image: url("../img/map-tablet@1x.jpg");
     background-position-y: 0;
     background-size: 768px auto;
@@ -182,6 +180,7 @@ span[itemprop="email"] {
 
   .contacts__title {
     padding-right: 0;
+
     @include font($size: 53px, $lh: 1.075);
   }
 

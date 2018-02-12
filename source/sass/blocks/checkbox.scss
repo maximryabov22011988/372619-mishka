@@ -32,6 +32,7 @@
   box-shadow: 0 0 0 2px $color-main;
   transition: box-shadow $hover-animation $animation-function;
 }
+
 .checkbox:active .checkbox__indicator {
   box-shadow: 0 0 0 2px rgba($gray-68, 0.3);
   transition: box-shadow $active-animation $animation-function;
@@ -39,6 +40,7 @@
 
 .checkbox__text {
   display: block;
+
   @include font($weight: 700, $size: 17px, $lh: 1.059, $color: $gray-0);
 }
 
