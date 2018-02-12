@@ -27,12 +27,12 @@
 }
 
 .form-group__type {
-  @include no-list-style()
+  @include no-list-style();
   margin-bottom: 44px;
 }
 
 .form-group__color {
-  @include no-list-style()
+  @include no-list-style();
   margin-bottom: 29px;
 }
 
