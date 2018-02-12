@@ -15,7 +15,7 @@
     <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/min.style.css">
   </head>
   <body class="page">
     <div class="page__wrapper">
@@ -130,9 +130,9 @@
               </div>
               <div class="featured-product__img">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
@@ -289,13 +289,10 @@
         <button class="modal__btn  btn" type="button" tabindex="4">Добавить</button>
       </div>
     </div>
-    <script src="js/dropdown-menu.js"></script>
-    <script src="js/map.js"></script>
+    <script src="js/min.scripts.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuFNHGkyX3fP-_phd2i8550CT_whBne6U&callback=initMap"></script>
-    <script src="js/popup.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/picturefill.js"></script>
-    <script src="js/svg4everybody.js"></script>
+    <script src="js/lib/min.picturefill.js"></script>
+    <script src="js/lib/min.svg4everybody.js"></script>
     <script>svg4everybody();</script>
   </body>
 </html>

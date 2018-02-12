@@ -13,6 +13,7 @@
     "gulp-htmlmin": "4.0.x",
     "gulp-postcss": "7.0.x",
     "gulp-sass": "3.1.x",
+    "gulp-sourcemaps": "2.6.x",
     "autoprefixer": "7.2.x",
     "css-mqpacker": "6.0.x",
     "gulp-csso": "3.0.x",

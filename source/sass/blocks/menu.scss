@@ -9,7 +9,7 @@
     transition: color $hover-animation $animation-function;
   }
 
-  &:active {
+  &:not(.menu__link--current):active {
     color: $link-color--active;
     transition: color $active-animation $animation-function;
   }
