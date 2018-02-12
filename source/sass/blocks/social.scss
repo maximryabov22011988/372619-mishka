@@ -20,6 +20,22 @@
   height: 30px;
 }
 
+.social__icon {
+  fill: $color-secondary--dark;
+}
+
+.social__link:hover .social__icon {
+  fill: $color-main--darker;
+  transition: fill $hover-animation $animation-function;
+}
+
+.social__link:active .social__icon {
+  fill: $color-main--darker;
+  opacity: 0.3;
+  transition: fill $active-animation $animation-function,
+              opacity $active-animation $animation-function;
+}
+
 @media (min-width: $screen-md) {
   .social__item {
     margin-right: 30px;

@@ -24,9 +24,8 @@
 }
 
 .production__link {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   padding: 26px 105px 31px 29px;
   text-decoration: none;
   background-color: $color-main;
@@ -40,50 +39,66 @@
   }
 
   &:active {
-    color: rgba($gray-255, 0.3);
     background-color: $catalog-link-color--active;
-    transition: color $active-animation $animation-function,
-                background-color $active-animation $animation-function;
+    transition: background-color $active-animation $animation-function;
   }
 
-  &--dark {
-    background-color: $catalog-link-color-dark;
+  &:hover::before {
+    opacity: 0.7;
+    transition: opacity $hover-animation $animation-function;
+  }
 
-    &:hover {
-      background-color: $catalog-link-color-dark--hover;
-      transition: background-color $hover-animation $animation-function;
-    }
-
-    &:active {
-      color: rgba($gray-255, 0.3);
-      background-color: $catalog-link-color-dark--active;
-      transition: color $active-animation $animation-function,
-                  background-color $active-animation $animation-function;
-    }
+  &:active::before {
+    opacity: 0.3;
+    transition: opacity $active-animation $animation-function;
   }
 }
 
-.production__interior-icon {
+.production__link--dark {
+  background-color: $catalog-link-color-dark;
+
+  &:hover {
+    background-color: $catalog-link-color-dark--hover;
+    transition: background-color $hover-animation $animation-function;
+  }
+
+  &:active {
+    background-color: $catalog-link-color-dark--active;
+    transition: background-color $active-animation $animation-function;
+  }
+}
+
+.production__link--icon-interior::before {
+  content: "";
   position: absolute;
   top: 23px;
   right: 36px;
   width: 40px;
   height: 62px;
+  background-image: url("../img/icon-interior.svg");
   opacity: 0.5;
 }
 
-.production__toy-icon {
+.production__link--icon-toy::before {
+  content: "";
   position: absolute;
   top: 21px;
   right: 27px;
   width: 60px;
   height: 60px;
+  background-image: url("../img/icon-toy.svg");
+  opacity: 0.5;
+}
+
+.production__link:active .production__item-title {
+  color: rgba($gray-255, 0.3);
+  transition: color $active-animation $animation-function;
 }
 
 @media (min-width: $screen-md) {
   .production::after {
     @include pseudo-element();
-    bottom: -13px;
+    bottom: -9px;
     width: 100%;
     height: 24px;
     background-image: url("../img/bg-zigzag-fill.svg");
@@ -110,7 +125,12 @@
 
   .production__link {
     flex-grow: 1;
-    padding: 30px 35px 29px;
+    padding: 30px 110px 33px 35px;
+
+    &:hover {
+      transform: translateY(-5px);
+      transition: transform $hover-animation $animation-function;
+    }
   }
 
   .production__item-title {
@@ -118,11 +138,11 @@
     @include font($size: 20px, $lh: 1.5)
   }
 
-  .production__interior-icon {
+  .production__link--icon-interior::before {
     top: 30px;
   }
 
-  .production__toy-icon {
+  .production__link--icon-toy::before {
     top: 32px;
     right: 34px;
   }
@@ -130,7 +150,7 @@
 
 @media (min-width: $screen-xl) {
   .production::after {
-    bottom: -17px;
+    bottom: -15px;
     height: 34px;
     background-size: 1150px 34px;
     background-position: -15px 0;

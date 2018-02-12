@@ -1,11 +1,24 @@
 @media (min-width: $screen-md) {
   .inner-page {
     margin-top: -45px;
+    border-top: 1px solid $gray-236;
+  }
+
+  .inner-page__catalog {
+    margin-bottom: 54px;
+  }
+
+  .inner-page__promo-video {
+    margin-bottom: 65px;
   }
 }
 
 @media (min-width: $screen-xl) {
-  .inner-page {
-    margin-top: -17px;
+  .inner-page__catalog {
+    margin-bottom: 0;
+  }
+
+  .inner-page__promo-video {
+    margin-bottom: 105px;
   }
 }

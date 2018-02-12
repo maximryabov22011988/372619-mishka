@@ -3,6 +3,10 @@
   text-decoration: none;
 }
 
+.mini-cart__icon {
+  fill: $icon-color;
+}
+
 @media (max-width: $screen-md - 1) {
   .mini-cart__icon {
     position: absolute;

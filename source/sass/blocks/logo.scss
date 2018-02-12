@@ -1,6 +1,15 @@
-.logo {
+.logo img {
   width: 86px;
   height: 35px;
+}
+
+.logo[href]:hover {
+  opacity: 0.6;
+  transition: opacity $no-hover $animation-function;
+}
+
+.logo[href]:active {
+  opacity: 0.3;
 }
 
 @media (min-width: $screen-md) {

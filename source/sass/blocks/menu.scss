@@ -1,3 +1,20 @@
+.menu__link {
+  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+  transition: color $no-hover $animation-function;
+  text-decoration: none;
+  user-select: none;
+
+  &:not(.menu__link--current):hover {
+    color: $link-color--hover;
+    transition: color $hover-animation $animation-function;
+  }
+
+  &:active {
+    color: $link-color--active;
+    transition: color $active-animation $animation-function;
+  }
+}
+
 @media (max-width: $screen-md - 1) {
   .menu {
     position: absolute;
@@ -32,21 +49,7 @@
   .menu__link {
     flex-grow: 1;
     padding: 27px 27px 27px 75px;
-    @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
     text-align: left;
-    text-decoration: none;
-    transition: color $no-hover $animation-function;
-    user-select: none;
-
-    &:hover {
-      color: $link-color--hover;
-      transition: color $hover-animation $animation-function;
-    }
-
-    &:active {
-      color: $link-color--active;
-      transition: color $active-animation $animation-function;
-    }
   }
 }
 
@@ -74,23 +77,13 @@
 }
 
 @media (min-width: $screen-xl) {
-  .menu {
-    position: relative;
-    top: 28px;
-  }
-
   .menu__item:nth-child(n+3) {
     display: block;
   }
 
-  .menu__item:nth-child(1) {
+  .menu__item:nth-child(-n+2) {
+    display: flex;
     margin-right: 0;
-    margin-bottom: 45px;
-  }
-
-  .menu__item:nth-child(2) {
-    margin-right: 0;
-    margin-bottom: 45px;
   }
 
   .menu__item:nth-child(3) {
@@ -98,7 +91,7 @@
   }
 
   .menu__link {
-    padding-top: 34px;
+    padding-top: 32px;
     padding-bottom: 34px;
     @include font($size: 17px, $lh: 1.412);
 
@@ -111,11 +104,18 @@
 
   .menu__item:first-child .menu__link {
     position: relative;
+    margin-bottom: 13px;
     padding-right: 36px;
   }
 
   .menu__item:nth-child(2) .menu__link {
+    margin-bottom: 13px;
     padding-left: 35px;
+  }
+
+  .menu__item:nth-child(n+3) .menu__link {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .menu__item:first-child .menu__link::before {

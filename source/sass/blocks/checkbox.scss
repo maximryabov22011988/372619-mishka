@@ -22,7 +22,7 @@
   @include pseudo-element();
   width: 36px;
   height: 35px;
-  background-image: url("../../img/icon-tick.svg");
+  background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-size: 22px 16px;
   background-position: 6px 10px;
@@ -61,4 +61,3 @@
     @include font($size: 19px, $lh: 1);
   }
 }
-

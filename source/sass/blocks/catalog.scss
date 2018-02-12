@@ -21,8 +21,8 @@
 
 @media (min-width: $screen-md) {
   .catalog__wrapper {
-    margin: 0 auto 51px;
-    padding: 81px 50px 0;
+    margin: 0 auto;
+    padding: 92px 50px 0;
   }
 
   .catalog__item {
@@ -37,7 +37,8 @@
 @media (min-width: $screen-xl) {
   .catalog__wrapper {
     margin-bottom: 0;
-    padding-top: 131px;
+    padding-top: 146px;
+    padding-bottom: 54px;
   }
 
   .catalog__list {
@@ -49,15 +50,15 @@
   }
 
   .catalog__item {
+    margin-bottom: 0;
     margin-right: 4.57%;
-    margin-bottom: 48px;
-  }
-
-  .catalog__item:last-child {
-    margin-bottom: 48px;
   }
 
   .catalog__item:nth-child(3n) {
     margin-right: 0;
+  }
+
+  .catalog__item:nth-child(n+4) {
+    margin-top: 50px;
   }
 }

@@ -6,6 +6,14 @@
   border-radius: 0;
   border: 0;
   outline: none;
+
+  &[disabled] {
+    border-bottom-color: $gray-236;
+  }
+
+  &[disabled]:hover {
+    border-bottom-color: transparent;
+  }
 }
 
 .field--text {

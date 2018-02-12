@@ -1,3 +1,30 @@
+.user-menu__link {
+  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+  text-decoration: none;
+  transition: color $no-hover $animation-function;
+  user-select: none;
+
+  &:hover {
+    color: $link-color--hover;
+    transition: color $hover-animation $animation-function;
+  }
+
+  &:active {
+    color: $link-color--active;
+    transition: color $active-animation $animation-function;
+  }
+}
+
+.user-menu__link:hover svg {
+  fill: $icon-color--hover;
+  transition: fill $hover-animation $animation-function;
+}
+
+.user-menu__link:active svg {
+  fill: $icon-color--active;
+  transition: fill $active-animation $animation-function;
+}
+
 @media (max-width: $screen-md - 1) {
   .user-menu {
     position: absolute;
@@ -25,28 +52,14 @@
   .user-menu__link {
     flex-grow: 1;
     padding: 27px 27px 27px 75px;
-    @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
     text-align: left;
-    text-decoration: none;
-    transition: color $no-hover $animation-function;
-    user-select: none;
-
-    &:hover {
-      color: $link-color--hover;
-      transition: color $hover-animation $animation-function;
-    }
-
-    &:active {
-      color: $link-color--active;
-      transition: color $active-animation $animation-function;
-    }
   }
 }
 
 @media (min-width: $screen-md) {
   .user-menu {
     display: flex;
-    width: 348px;
+    flex-basis: 350px;
     margin-top: 0;
     padding: 0;
     list-style: none;
@@ -63,7 +76,7 @@
 
   .user-menu__item--search .user-menu__link {
     display: flex;
-    padding: 36px 30px 33px 35px;
+    padding: 36px 32px 33px 32px;
     @include font($size: 0, $lh: 0);
   }
 

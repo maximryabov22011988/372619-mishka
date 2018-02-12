@@ -18,8 +18,8 @@
 
 .user-contacts__item--phone .user-contacts__icon {
   position: absolute;
-  top: 12px;
-  right: 26px;
+  top: 35px;
+  right: 8px;
   z-index: 100;
 }
 
@@ -29,9 +29,15 @@
 
 .user-contacts__item--email .user-contacts__icon {
   position: absolute;
-  top: 14px;
-  right: 22px;
+  top: 35px;
+  right: 4px;
   z-index: 100;
+}
+
+.user-contacts__field:hover ~ .user-contacts__icon,
+.user-contacts__field:focus ~ .user-contacts__icon {
+  fill: $color-main;
+  transition: fill $hover-animation $animation-function;
 }
 
 @media (min-width: $screen-md) {
@@ -52,14 +58,14 @@
     background-color: transparent;
   }
 
-  .user-contacts__item--phone svg {
-    top: 13px;
-    right: 26px;
-  }
-
-  .user-contacts__item--email svg {
+  .user-contacts__item--email .user-contacts__icon {
     top: 15px;
     right: 22px;
+  }
+
+  .user-contacts__item--phone .user-contacts__icon {
+    top: 13px;
+    right: 26px;
   }
 }
 
@@ -68,11 +74,11 @@
     flex-basis: 85%;
   }
 
-  .user-contacts__item--phone .user-contacts__icon {
-    right: 8px;
-  }
-
   .user-contacts__item--email .user-contacts__icon {
     right: 4px;
+  }
+
+  .user-contacts__item--phone .user-contacts__icon {
+    right: 8px;
   }
 }
