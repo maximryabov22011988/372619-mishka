@@ -21,6 +21,8 @@
 @media (max-width: $screen-md - 1) {
   .menu {
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: -159px;
     z-index: 500;
     display: flex;
