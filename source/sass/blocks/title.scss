@@ -16,6 +16,7 @@
 .title__text {
   display: block;
   margin: 70px auto 76px;
+
   @include font($weight: 700, $size: 27px, $lh: 1.11, $color: $gray-0);
   text-align: center;
 }
@@ -33,7 +34,6 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat-x: repeat;
       background-size: 768px 24px;
-      background-position-y: 1px;
     }
   }
 
@@ -55,14 +55,15 @@
   .title__text {
     flex-grow: 1;
     margin: 0;
+
     @include font($size: 43px, $lh: 1.163);
   }
 }
 
 @media (min-width: $screen-xl) {
   .title::after {
-      background-size: 1150px 34px;
-      background-position: -7px 0;
+    background-size: 1150px 34px;
+    background-position: -7px 0;
   }
 
   .title__wrapper {

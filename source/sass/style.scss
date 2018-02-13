@@ -5,18 +5,15 @@
 @import "helpers.scss";
 
 
-
 // Библиотеки
 
 @import "global/normalize.scss";
-
 
 
 // Базовые параметры страниц
 
 @import "global/fonts.scss";
 @import "global/base.scss";
-
 
 
 // Типовые блоки
@@ -43,7 +40,6 @@
 @import "blocks/sizes.scss";
 
 
-
 // Главная страница
 
 @import "blocks/promo.scss";
@@ -57,14 +53,12 @@
 @import "blocks/contacts.scss";
 
 
-
 // Страница каталога
 
 @import "blocks/catalog.scss";
 @import "blocks/product-card.scss";
 @import "blocks/property.scss";
 @import "blocks/promo-video.scss";
-
 
 
 // Страница заказа

@@ -4,17 +4,29 @@
   list-style: none;
 }
 
-@mixin pseudo-element($content: "", $pos: absolute, $display: block){
+@mixin pseudo-element($content: "", $pos: absolute, $display: block) {
   content: $content;
   position: $pos;
   display: $display;
 }
 
 @mixin font($weight: false, $size: false, $lh: false, $color: false) {
-  @if $weight { font-weight: $weight; }
-  @if $size { font-size: $size; }
-  @if $lh { line-height: $lh; }
-  @if $color { color: $color; }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
+
+  @if $color {
+    color: $color;
+  }
 }
 
 @mixin text-limiter() {

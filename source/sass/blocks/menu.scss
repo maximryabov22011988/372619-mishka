@@ -9,7 +9,7 @@
     transition: color $hover-animation $animation-function;
   }
 
-  &:active {
+  &:not(.menu__link--current):active {
     color: $link-color--active;
     transition: color $active-animation $animation-function;
   }
@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
     @include no-list-style();
   }
 
@@ -58,6 +59,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
     @include no-list-style();
   }
 
@@ -71,6 +73,7 @@
 
   .menu__link {
     padding: 20px 0;
+
     @include font($weight: 700, $size: 15px, $lh: 1.6, $color: $gray-0);
     text-decoration: none;
   }
@@ -93,11 +96,13 @@
   .menu__link {
     padding-top: 32px;
     padding-bottom: 34px;
+
     @include font($size: 17px, $lh: 1.412);
 
     &--small-text {
       padding-top: 20px;
       padding-bottom: 20px;
+
       @include font($size: 15px, $lh: 1.6);
     }
   }

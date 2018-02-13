@@ -1,5 +1,6 @@
 .social__list {
   display: flex;
+
   @include no-list-style();
   @include font($size: 0, $lh: 0);
 }
@@ -32,8 +33,7 @@
 .social__link:active .social__icon {
   fill: $color-main--darker;
   opacity: 0.3;
-  transition: fill $active-animation $animation-function,
-              opacity $active-animation $animation-function;
+  transition: fill $active-animation $animation-function, opacity $active-animation $animation-function;
 }
 
 @media (min-width: $screen-md) {

@@ -33,6 +33,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
     @include no-list-style();
   }
 
@@ -77,6 +78,7 @@
   .user-menu__item--search .user-menu__link {
     display: flex;
     padding: 36px 32px 33px 32px;
+
     @include font($size: 0, $lh: 0);
   }
 

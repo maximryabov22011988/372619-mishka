@@ -8,10 +8,11 @@
   position: relative;
   display: block;
   margin-bottom: 27px;
+
   @include font($weight: 700, $size: 17px, $lh: 1, $color: $color-main);
   text-transform: uppercase;
 
-  &:before {
+  &::before {
     @include pseudo-element();
     top: 50%;
     left: 62px;
@@ -26,12 +27,12 @@
 }
 
 .form-group__type {
-  @include no-list-style()
+  @include no-list-style();
   margin-bottom: 44px;
 }
 
 .form-group__color {
-  @include no-list-style()
+  @include no-list-style();
   margin-bottom: 29px;
 }
 
@@ -48,6 +49,7 @@
 .form-group__note {
   display: block;
   margin-bottom: 32px;
+
   @include font($size: 14px, $lh: 1.143, $color: $gray-68);
 }
 
@@ -138,6 +140,7 @@
 
   .form-group--submit .form-group__note {
     margin: 0;
+
     @include font($size: 17px, $lh: 1.765);
   }
 }

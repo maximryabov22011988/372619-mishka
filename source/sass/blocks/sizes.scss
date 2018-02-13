@@ -9,6 +9,7 @@
   margin-right: 7px;
   padding: 15px 33px;
   box-sizing: border-box;
+
   @include font($weight: 700, $size: 17px, $lh: 1, $color: $gray-68);
   text-align: center;
   border: 2px solid $gray-236;
@@ -25,7 +26,7 @@
   }
 
   &:focus {
-    outline: -webkit-focus-ring-color auto 5px  ;
+    outline: -webkit-focus-ring-color auto 5px;
   }
 
   &--current {

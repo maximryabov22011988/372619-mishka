@@ -2,6 +2,7 @@
   position: relative;
   padding: 15px;
   padding-left: 0;
+
   @include font($size: 17px, $lh: 1.059, $color: rgba($gray-68, 0.3));
   border-radius: 0;
   border: 0;
@@ -21,7 +22,7 @@
 
   @include placeholder {
     color: rgba($gray-68, 0.3);
-  };
+  }
 
   &:hover {
     border-bottom-color: $color-main;
@@ -31,8 +32,7 @@
   &:focus {
     color: $gray-68;
     border-bottom-color: $color-main;
-    transition: color $active-animation $animation-function,
-                border-bottom-color $active-animation $animation-function;
+    transition: color $active-animation $animation-function, border-bottom-color $active-animation $animation-function;
   }
 }
 
@@ -51,8 +51,7 @@
   &:focus {
     color: $gray-68;
     border-color: $color-main;
-    transition: color $active-animation $animation-function,
-                border-color $active-animation $animation-function;
+    transition: color $active-animation $animation-function, border-color $active-animation $animation-function;
   }
 }
 
@@ -63,6 +62,7 @@
 @media (min-width: $screen-md) {
   .field {
     padding: 12px 70px 14px 17px;
+
     @include font($size: 19px, $lh: 1);
   }
 }

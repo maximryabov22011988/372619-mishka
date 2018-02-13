@@ -8,6 +8,7 @@
   display: flex;
   padding-right: 56px;
   align-items: flex-start;
+
   @include font($weight: 700, $size: 19px, $lh: 1, $color: $gray-0);
   text-decoration: none;
 
@@ -41,8 +42,7 @@
 .copyright__link:active .copyright__icon-developer {
   fill: $color-main--darker;
   opacity: 0.3;
-  transition: fill $hover-animation $animation-function,
-              opacity $hover-animation $animation-function;
+  transition: fill $hover-animation $animation-function, opacity $hover-animation $animation-function;
 }
 
 @media (min-width: $screen-md) {
