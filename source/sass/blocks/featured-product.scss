@@ -187,6 +187,7 @@
   .featured-product__name {
     font-size: 53px;
     line-height: 1.075;
+
     @include text-limiter();
   }
 
