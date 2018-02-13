@@ -38,8 +38,9 @@
 .product-card__title {
   margin: 0;
   margin-bottom: 4px;
-
-  @include font($weight: 700, $size: 17px, $lh: 1.412);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.412;
 }
 
 .product-card__info:hover .product-card__title {
@@ -64,7 +65,8 @@
 }
 
 .product-card__img {
-  @include font($size: 0, $lh: 0);
+  font-size: 0;
+  line-height: 0;
   background-color: $gray-236;
 }
 
@@ -108,8 +110,8 @@
 
   .product-card__title {
     padding-right: 35px;
-
-    @include font($size: 20px, $lh: 1.2);
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   .product-card__price-wrapper {

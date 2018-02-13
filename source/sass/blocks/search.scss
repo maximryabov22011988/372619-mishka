@@ -1,6 +1,9 @@
 .search {
-  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.412;
   text-decoration: none;
+  color: $gray-0;
 }
 
 .search__icon {

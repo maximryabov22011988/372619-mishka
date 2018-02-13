@@ -21,8 +21,10 @@
 
 .username__text {
   margin-bottom: 3px;
-
-  @include font($weight: 700, $size: 17px, $lh: 1.058, $color: $gray-0);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.058;
+  color: $gray-0;
 }
 
 @media (min-width: $screen-md) {
@@ -38,8 +40,8 @@
   .username__text {
     margin-right: 24px;
     margin-bottom: 0;
-
-    @include font($size: 19px, $lh: 1);
+    font-size: 19px;
+    line-height: 1;
   }
 
   .username__field .field {

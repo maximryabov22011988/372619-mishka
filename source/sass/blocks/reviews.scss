@@ -22,8 +22,10 @@
 .reviews__title {
   margin-top: 0;
   margin-bottom: 25px;
-
-  @include font($weight: 700, $size: 25px, $lh: 1.2, $color: $gray-0);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.2;
+  color: $gray-0;
 }
 
 .reviews__item {
@@ -41,12 +43,16 @@
 .reviews__author-name {
   margin-bottom: 5px;
   font-style: normal;
-
-  @include font($weight: 700, $size: 18px, $lh: 1.333, $color: $gray-0);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.333;
+  color: $gray-0;
 }
 
 .reviews__author-twitter {
-  @include font($size: 17px, $lh: 1.765, $color: $gray-68);
+  font-size: 17px;
+  line-height: 1.765;
+  color: $gray-68;
 }
 
 .reviews__nav {
@@ -89,15 +95,15 @@
     order: -2;
     max-width: 73.35%;
     margin-bottom: 49px;
-
-    @include font($size: 43px, $lh: 1.163);
+    font-size: 43px;
+    line-height: 1.163;
     @include text-limiter();
   }
 
   .reviews__author-text {
     margin-bottom: 58px;
-
-    @include font($size: 17px, $lh: 1.765);
+    font-size: 17px;
+    line-height: 1.765;
   }
 
   .reviews__author-name {
@@ -135,8 +141,8 @@
   .reviews__title {
     flex-grow: 1;
     margin-bottom: 46px;
-
-    @include font($size: 53px, $lh: 1.075);
+    font-size: 53px;
+    line-height: 1.075;
   }
 
   .reviews__author-text {
@@ -146,8 +152,8 @@
 
   .reviews__author-name {
     margin-bottom: 2px;
-
-    @include font($size: 17px, $lh: 1.412);
+    font-size: 17px;
+    line-height: 1.412;
   }
 
   .reviews__write {

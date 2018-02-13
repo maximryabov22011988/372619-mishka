@@ -3,8 +3,8 @@
   height: 23px;
   padding: 0;
   box-sizing: border-box;
-
-  @include font($size: 0, $lh: 0);
+  font-size: 0;
+  line-height: 0;
   background-color: transparent;
   border: 0;
   overflow: hidden;

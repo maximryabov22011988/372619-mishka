@@ -11,8 +11,10 @@
 .contacts__title {
   margin-top: 0;
   margin-bottom: 26px;
-
-  @include font($weight: 700, $size: 25px, $lh: 1.2, $color: $gray-0);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.2;
+  color: $gray-0;
   word-wrap: break-word;
 }
 
@@ -101,8 +103,8 @@ span[itemprop="email"] {
     position: relative;
     margin-bottom: 49px;
     padding-right: 80px;
-
-    @include font($size: 43px, $lh: 1.163);
+    font-size: 43px;
+    line-height: 1.163;
   }
 
   .contacts__title::before {
@@ -118,8 +120,8 @@ span[itemprop="email"] {
   .contacts__inner {
     display: flex;
     align-items: flex-start;
-
-    @include font($size: 17px, $lh: 1.765);
+    font-size: 17px;
+    line-height: 1.765;
   }
 
   .contacts__email {
@@ -180,8 +182,8 @@ span[itemprop="email"] {
 
   .contacts__title {
     padding-right: 0;
-
-    @include font($size: 53px, $lh: 1.075);
+    font-size: 53px;
+    line-height: 1.075;
   }
 
   .contacts__title::before {

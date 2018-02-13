@@ -1,5 +1,8 @@
 .menu__link {
-  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.412;
+  color: $gray-0;
   transition: color $no-hover $animation-function;
   text-decoration: none;
   user-select: none;
@@ -73,8 +76,10 @@
 
   .menu__link {
     padding: 20px 0;
-
-    @include font($weight: 700, $size: 15px, $lh: 1.6, $color: $gray-0);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.6;
+    color: $gray-0;
     text-decoration: none;
   }
 }
@@ -96,14 +101,14 @@
   .menu__link {
     padding-top: 32px;
     padding-bottom: 34px;
-
-    @include font($size: 17px, $lh: 1.412);
+    font-size: 17px;
+    line-height: 1.412;
 
     &--small-text {
       padding-top: 20px;
       padding-bottom: 20px;
-
-      @include font($size: 15px, $lh: 1.6);
+      font-size: 15px;
+      line-height: 1.6;
     }
   }
 

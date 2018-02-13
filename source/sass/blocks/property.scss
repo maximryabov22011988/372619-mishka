@@ -1,9 +1,12 @@
 .property {
-  @include font($size: 13px, $lh: 2.308, $color: $gray-68);
+  font-size: 13px;
+  line-height: 2.308;
+  color: $gray-68;
 }
 
 @media (min-width: $screen-md) {
   .property {
-    @include font($size: 15px, $lh: 2);
+    font-size: 15px;
+    line-height: 2;
   }
 }

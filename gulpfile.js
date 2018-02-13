@@ -6,7 +6,6 @@ var sourcemaps = require("gulp-sourcemaps");       // содержит инфо�
 var sass = require("gulp-sass");                   // компилирует SASS в CSS
 var postcss = require("gulp-postcss");             // подключает плагины
 var autoprefixer = require("autoprefixer");        // подставляет вендорные префиксы в CSS
-var mqpacker = require("css-mqpacker");            // объединяет медиа-запросы
 var htmlmin = require("gulp-htmlmin");             // минифицирует HTML
 var minify = require("gulp-csso");                 // минифицирует CSS
 var jshint = require("gulp-jshint");               // проверяет JS
@@ -40,10 +39,7 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer({browsers: [
         "last 2 versions"
-      ]}),
-      mqpacker({
-        sort: true
-      })
+      ]})
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())

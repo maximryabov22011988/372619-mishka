@@ -8,8 +8,10 @@
   position: relative;
   display: block;
   margin-bottom: 27px;
-
-  @include font($weight: 700, $size: 17px, $lh: 1, $color: $color-main);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1;
+  color: $color-main;
   text-transform: uppercase;
 
   &::before {
@@ -49,8 +51,9 @@
 .form-group__note {
   display: block;
   margin-bottom: 32px;
-
-  @include font($size: 14px, $lh: 1.143, $color: $gray-68);
+  font-size: 14px;
+  line-height: 1.143;
+  color: $gray-68;
 }
 
 .form-group--message {
@@ -140,8 +143,8 @@
 
   .form-group--submit .form-group__note {
     margin: 0;
-
-    @include font($size: 17px, $lh: 1.765);
+    font-size: 17px;
+    line-height: 1.765;
   }
 }
 

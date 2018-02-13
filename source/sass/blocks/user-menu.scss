@@ -1,6 +1,9 @@
 .user-menu__link {
-  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.412;
   text-decoration: none;
+  color: $gray-0;
   transition: color $no-hover $animation-function;
   user-select: none;
 
@@ -78,8 +81,8 @@
   .user-menu__item--search .user-menu__link {
     display: flex;
     padding: 36px 32px 33px 32px;
-
-    @include font($size: 0, $lh: 0);
+    font-size: 0;
+    line-height: 0;
   }
 
   .user-menu__item--mini-cart .user-menu__link {
