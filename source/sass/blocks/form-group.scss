@@ -87,7 +87,9 @@
   }
 
   .form-group__title {
+    flex-basis: 25%;
     flex-grow: 1;
+    flex-shrink: 0;
     margin-bottom: 0;
     padding-top: 15px;
 
@@ -150,6 +152,9 @@
 
 @media (min-width: $screen-xl) {
   .form-group__title {
+    flex-basis: 111px;
+    flex-grow: 0;
+    box-sizing: content-box;
     padding-left: 14px;
 
     &--small-margin {

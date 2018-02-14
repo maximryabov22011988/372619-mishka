@@ -51,6 +51,9 @@
 
 @media (min-width: $screen-xl) {
   .username {
+    flex-basis: 73.68%;
+    flex-grow: 1;
+    flex-shrink: 1;
     padding-right: 125px;
   }
 }
