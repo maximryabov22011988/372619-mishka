@@ -40,8 +40,10 @@
 
 .checkbox__text {
   display: block;
-
-  @include font($weight: 700, $size: 17px, $lh: 1.059, $color: $gray-0);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.059;
+  color: $gray-0;
 }
 
 @media (min-width: $screen-md) {
@@ -60,6 +62,7 @@
   }
 
   .checkbox__text {
-    @include font($size: 19px, $lh: 1);
+    font-size: 19px;
+    line-height: 1;
   }
 }

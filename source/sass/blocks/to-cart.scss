@@ -2,8 +2,8 @@
   width: 20px;
   height: 19px;
   padding: 0;
-
-  @include font($size: 0, $lh: 0);
+  font-size: 0;
+  line-height: 0;
   background-color: transparent;
   border: 0;
   outline: none;

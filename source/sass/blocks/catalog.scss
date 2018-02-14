@@ -6,8 +6,7 @@
 }
 
 .catalog__list {
-  display: flex;
-  flex-direction: column;
+  display: block;
 
   @include no-list-style();
 }
@@ -43,6 +42,7 @@
   }
 
   .catalog__list {
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;

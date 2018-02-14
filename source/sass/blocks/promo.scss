@@ -20,8 +20,9 @@
 
 .promo__title {
   margin: 0;
-
-  @include font($size: 27px, $lh: 1.111, $color: $gray-0);
+  font-size: 27px;
+  line-height: 1.111;
+  color: $gray-0;
   text-align: center;
 }
 
@@ -43,8 +44,8 @@
 
   .promo__title {
     margin-bottom: 100px;
-
-    @include font($size: 43px, $lh: 1.163);
+    font-size: 43px;
+    line-height: 1.163;
   }
 }
 
@@ -57,7 +58,8 @@
   }
 
   .promo__title {
-    @include font($size: 53px, $lh: 1.075);
+    font-size: 53px;
+    line-height: 1.075;
   }
 }
 

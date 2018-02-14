@@ -1,5 +1,6 @@
 .form__title {
-  @include font($size: 0, $lh: 0);
+  font-size: 0;
+  line-height: 0;
 }
 
 .form__wrapper {
@@ -10,8 +11,9 @@
 
 .form__intro {
   margin: 0;
-
-  @include font($size: 13px, $lh: 1.86, $color: $gray-68);
+  font-size: 13px;
+  line-height: 1.86;
+  color: $gray-68;
 }
 
 .form__group {
@@ -27,7 +29,8 @@
   }
 
   .form__intro {
-    @include font($size: 17px, $lh: 1.765);
+    font-size: 17px;
+    line-height: 1.765;
   }
 
   .form__group {

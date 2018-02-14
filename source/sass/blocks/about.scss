@@ -8,8 +8,10 @@
 .about__title {
   margin-top: 0;
   margin-bottom: 13px;
-
-  @include font($weight: 700, $size: 25px, $lh: 1.2, $color: $gray-0);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.2;
+  color: $gray-0;
 }
 
 .about__list {
@@ -24,7 +26,10 @@
 }
 
 .about__text {
-  @include font($weight: 700, $size: 17px, $lh: 1.176, $color: $gray-0);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.176;
+  color: $gray-0;
 }
 
 .about__item--icon-flower::before {
@@ -109,7 +114,8 @@
   }
 
   .about__title {
-    @include font($size: 43px, $lh: 1.163);
+    font-size: 43px;
+    line-height: 1.163;
   }
 
   .about__list {
@@ -118,7 +124,9 @@
   }
 
   .about__item {
-    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: calc(50% - 30px);
     box-sizing: border-box;
     margin-bottom: 22px;
     padding-top: 89px;
@@ -181,8 +189,8 @@
 
   .about__text {
     flex-grow: 1;
-
-    @include font($size: 20px, $lh: 1.1);
+    font-size: 20px;
+    line-height: 1.1;
   }
 }
 
@@ -199,11 +207,12 @@
   }
 
   .about__item {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 20px);
     padding-right: 20px;
   }
 
   .about__title {
-    @include font($size: 53px, $lh: 1.075);
+    font-size: 53px;
+    line-height: 1.075;
   }
 }

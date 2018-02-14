@@ -9,9 +9,11 @@
   margin-right: 7px;
   padding: 15px 33px;
   box-sizing: border-box;
-
-  @include font($weight: 700, $size: 17px, $lh: 1, $color: $gray-68);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1;
   text-align: center;
+  color: $gray-68;
   border: 2px solid $gray-236;
   cursor: pointer;
 

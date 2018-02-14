@@ -59,19 +59,21 @@
   }
 
   .user-contacts__item--email .user-contacts__icon {
-    top: 15px;
+    top: 50%;
     right: 22px;
+    transform: translateY(-50%);
   }
 
   .user-contacts__item--phone .user-contacts__icon {
-    top: 13px;
+    top: 50%;
     right: 26px;
+    transform: translateY(-50%);
   }
 }
 
 @media (min-width: $screen-xl) {
   .user-contacts__item .field {
-    flex-basis: 85%;
+    flex-basis: 700px;
   }
 
   .user-contacts__item--email .user-contacts__icon {

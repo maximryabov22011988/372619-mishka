@@ -28,16 +28,17 @@
   margin-top: 0;
   margin-bottom: 10px;
   padding: 0 50px;
-
-  @include font($size: 25px, $lh: 1.2);
+  font-size: 25px;
+  line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
 }
 
 .modal__label {
   margin-bottom: 25px;
-
-  @include font($size: 15px, $lh: 2, $color: $gray-68);
+  font-size: 15px;
+  line-height: 2;
+  color: $gray-68;
 }
 
 .modal__sizes {
@@ -99,14 +100,14 @@
     margin-top: 0;
     margin-bottom: 27px;
     padding: 0;
-
-    @include font($size: 30px, $lh: 1);
+    font-size: 30px;
+    line-height: 1;
   }
 
   .modal__label {
     margin-bottom: 21px;
-
-    @include font($size: 17px, $lh: 1.765);
+    font-size: 17px;
+    line-height: 1.765;
   }
 
   .modal__btn {

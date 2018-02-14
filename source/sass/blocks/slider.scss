@@ -29,8 +29,8 @@
   position: relative;
   width: 130px;
   height: 52px;
-
-  @include font($size: 0, $lh: 0);
+  font-size: 0;
+  line-height: 0;
   background-color: $gray-255;
   border: 1px solid $gray-236;
 }

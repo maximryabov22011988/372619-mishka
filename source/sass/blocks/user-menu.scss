@@ -1,6 +1,9 @@
 .user-menu__link {
-  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-0);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.412;
   text-decoration: none;
+  color: $gray-0;
   transition: color $no-hover $animation-function;
   user-select: none;
 
@@ -28,6 +31,8 @@
 @media (max-width: $screen-md - 1) {
   .user-menu {
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: -316px;
     z-index: 500;
     display: flex;
@@ -60,7 +65,6 @@
 @media (min-width: $screen-md) {
   .user-menu {
     display: flex;
-    flex-basis: 350px;
     margin-top: 0;
     padding: 0;
     list-style: none;
@@ -78,8 +82,8 @@
   .user-menu__item--search .user-menu__link {
     display: flex;
     padding: 36px 32px 33px 32px;
-
-    @include font($size: 0, $lh: 0);
+    font-size: 0;
+    line-height: 0;
   }
 
   .user-menu__item--mini-cart .user-menu__link {

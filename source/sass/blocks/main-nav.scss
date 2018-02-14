@@ -2,8 +2,8 @@
   .main-nav {
     position: relative;
     display: flex;
+    flex: 1 0 100%;
     flex-wrap: wrap;
-    width: 100%;
     padding: 22px 0 0;
   }
 
@@ -51,7 +51,7 @@
     z-index: 500;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    flex: 1 0 100%;
   }
 
   .main-nav__logo {
@@ -61,32 +61,36 @@
     margin-top: 22px;
   }
 
-  .main-nav__logo .logo__image {
-    width: 113px; // временно
-    height: 46px;
-  }
-
   .main-nav__toggle {
     display: none;
   }
 
   .main-nav__user-menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: calc(100% - 113px);
+    justify-content: flex-end;
     margin-bottom: 15px;
   }
 
   .main-nav__menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
     order: 2;
   }
 }
 
 @media (min-width: $screen-xl) {
   .main-nav {
-    justify-content: space-between;
     align-items: flex-start;
   }
 
   .main-nav__menu {
-    flex-basis: 375px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    justify-content: flex-start;
     order: 1;
   }
 
@@ -102,6 +106,10 @@
   }
 
   .main-nav__user-menu {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    justify-content: flex-end;
     order: 2;
     margin-bottom: 0;
   }

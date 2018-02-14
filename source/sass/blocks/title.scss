@@ -14,10 +14,14 @@
 }
 
 .title__text {
-  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
   margin: 70px auto 76px;
-
-  @include font($weight: 700, $size: 27px, $lh: 1.11, $color: $gray-0);
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.11;
+  color: $gray-0;
   text-align: center;
 }
 
@@ -55,8 +59,8 @@
   .title__text {
     flex-grow: 1;
     margin: 0;
-
-    @include font($size: 43px, $lh: 1.163);
+    font-size: 43px;
+    line-height: 1.163;
   }
 }
 
@@ -71,6 +75,7 @@
   }
 
   .title__text {
-    @include font($size: 53px, $lh: 1.075);
+    font-size: 53px;
+    line-height: 1.075;
   }
 }

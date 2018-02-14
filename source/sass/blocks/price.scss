@@ -7,8 +7,10 @@
 
 .price__wrapper {
   margin-bottom: 26px;
-
-  @include font($weight: 700, $size: 17px, $lh: 1.412, $color: $gray-68);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.412;
+  color: $gray-68;
 }
 
 .price--row {
@@ -16,12 +18,15 @@
   flex-grow: 1;
   flex-direction: row;
   justify-content: flex-start;
-
-  @include font($weight: 700, $size: 15px, $lh: 1.6, $color: $gray-0);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $gray-0;
 }
 
 .price--row .price__field {
-  @include font($size: 0, $lh: 0);
+  font-size: 0;
+  line-height: 0;
 }
 
 .price--row .price__value {
@@ -31,15 +36,17 @@
 @media (min-width: $screen-md) {
   .price__wrapper {
     margin-bottom: 33px;
-
-    @include font($size: 20px, $lh: 1.2);
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   .price--row .price__value {
-    @include font($size: 17px, $lh: 1.412);
+    font-size: 17px;
+    line-height: 1.412;
   }
 
   .price--row .price__currency {
-    @include font($size: 17px, $lh: 1.412);
+    font-size: 17px;
+    line-height: 1.412;
   }
 }
