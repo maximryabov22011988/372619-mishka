@@ -1,5 +1,6 @@
 .checkbox {
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .checkbox__input {
@@ -7,12 +8,12 @@
 }
 
 .checkbox__indicator {
-  position: absolute;
-  top: -11px;
-  left: -60px;
+  flex-shrink: 1;
   display: block;
   width: 36px;
   height: 35px;
+  margin-left: 2px;
+  margin-right: 27px;
   background-color: $gray-255;
   box-shadow: 0 0 0 2px $gray-68;
   transition: $no-hover;
