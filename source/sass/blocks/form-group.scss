@@ -11,8 +11,8 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 1;
-  color: $color-main;
   text-transform: uppercase;
+  color: $color-main;
 
   &::before {
     @include pseudo-element();
@@ -200,7 +200,7 @@
   }
 
   .form-group--submit .form-group__btn {
-    flex-basis: 230px;
     order: -1;
+    flex-basis: 230px;
   }
 }

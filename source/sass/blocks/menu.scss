@@ -2,9 +2,9 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 1.412;
+  text-decoration: none;
   color: $gray-0;
   transition: color $no-hover $animation-function;
-  text-decoration: none;
   user-select: none;
 
   &:not(.menu__link--current):hover {
@@ -34,8 +34,8 @@
 
   .menu__item {
     display: flex;
-    width: 100%;
     box-sizing: border-box;
+    width: 100%;
     background-color: $gray-255;
     border-bottom: 1px solid $gray-236;
   }
@@ -81,8 +81,8 @@
     font-weight: 700;
     font-size: 15px;
     line-height: 1.6;
-    color: $gray-0;
     text-decoration: none;
+    color: $gray-0;
   }
 }
 

@@ -16,14 +16,14 @@
 @media (min-width: $screen-md) {
   .color {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .color__item {
     flex-basis: 48%;
-    margin-bottom: 29px;
     box-sizing: content-box;
+    margin-bottom: 29px;
   }
 
   .color__item:nth-child(5) {

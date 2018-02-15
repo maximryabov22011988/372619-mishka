@@ -34,8 +34,8 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 1.412;
-  color: $gray-0;
   word-wrap: break-word;
+  color: $gray-0;
 }
 
 .promo-video__play {
@@ -151,10 +151,10 @@
 
   .promo-video__title {
     float: right;
+    box-sizing: border-box;
     width: 35.05%;
     margin-bottom: 32px;
     padding: 96px 54px 0 80px;
-    box-sizing: border-box;
   }
 
   .promo-video__title h2 {
@@ -168,9 +168,9 @@
 
   .promo-video__description {
     float: right;
+    box-sizing: border-box;
     width: 35.05%;
     padding: 0 54px 59px 80px;
-    box-sizing: border-box;
   }
 
   .promo-video__text {

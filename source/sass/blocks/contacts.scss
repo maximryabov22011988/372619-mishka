@@ -14,8 +14,8 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 1.2;
-  color: $gray-0;
   word-wrap: break-word;
+  color: $gray-0;
 }
 
 .contacts__email {
@@ -163,15 +163,15 @@ span[itemprop="email"] {
 
 @media (min-width: $screen-xl) {
   .contacts::before {
-    right: 0;
-    left: 213px;
     top: 133px;
+    left: 213px;
+    right: 0;
   }
 
   .contacts__wrapper {
     display: block;
-    padding-top: 95px;
     margin-bottom: 104px;
+    padding-top: 95px;
 
     &::after {
       content: "";
@@ -197,18 +197,18 @@ span[itemprop="email"] {
 
   .contacts__info {
     float: left;
+    box-sizing: border-box;
     width: 50%;
     margin-bottom: 78px;
     padding-top: 70px;
     padding-left: 16.67%;
     padding-right: 4.9%;
-    box-sizing: border-box;
   }
 
   .contacts__email {
     display: flex;
-    align-items: flex-start;
     flex-basis: auto;
+    align-items: flex-start;
     margin-right: 0;
   }
 

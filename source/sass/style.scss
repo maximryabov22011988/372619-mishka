@@ -1,23 +1,19 @@
-// Глобальные переменные, миксины, помощники
-
+// Глобальные переменные, миксины и вспомогательные классы
 @import "variables.scss";
 @import "mixins.scss";
 @import "helpers.scss";
 
 
 // Библиотеки
-
 @import "global/normalize.scss";
 
 
 // Базовые параметры страниц
-
 @import "global/fonts.scss";
 @import "global/base.scss";
 
 
 // Типовые блоки
-
 @import "blocks/page.scss";
 @import "blocks/header.scss";
 @import "blocks/logo.scss";
@@ -41,7 +37,6 @@
 
 
 // Главная страница
-
 @import "blocks/promo.scss";
 @import "blocks/production.scss";
 @import "blocks/featured-product.scss";
@@ -54,7 +49,6 @@
 
 
 // Страница каталога
-
 @import "blocks/catalog.scss";
 @import "blocks/product-card.scss";
 @import "blocks/property.scss";
@@ -62,7 +56,6 @@
 
 
 // Страница заказа
-
 @import "blocks/form.scss";
 @import "blocks/form-group.scss";
 @import "blocks/type.scss";

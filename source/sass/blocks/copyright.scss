@@ -6,13 +6,13 @@
 .copyright__link {
   position: relative;
   display: flex;
-  padding-right: 56px;
   align-items: flex-start;
+  padding-right: 56px;
   font-weight: 700;
   font-size: 19px;
   line-height: 1;
-  color: $gray-0;
   text-decoration: none;
+  color: $gray-0;
 
   &:hover {
     color: $gray-0;

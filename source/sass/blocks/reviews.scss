@@ -76,9 +76,9 @@
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 100%;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     margin: 0 auto;
     min-height: 380px;
     padding: 78px 50px 113px;
@@ -95,10 +95,10 @@
   }
 
   .reviews__title {
+    order: -2;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: calc(100% - 175px);
-    order: -2;
     margin-bottom: 49px;
     font-size: 43px;
     line-height: 1.163;
