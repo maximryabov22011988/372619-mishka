@@ -12,3 +12,14 @@
 .to-cart__icon {
   fill: $icon-color;
 }
+
+.to-cart:hover .to-cart__icon {
+  fill: $icon-color--hover;
+  transition: fill $hover-animation $animation-function;
+}
+
+.to-cart:active .to-cart__icon {
+  fill: $icon-color--hover;
+  opacity: 0.3;
+  transition: fill $active-animation $animation-function, opacity $active-animation $animation-function;
+}
