@@ -71,6 +71,11 @@ gulp.task("images", function() {
 gulp.task("webp", function() {
   return gulp.src("source/img/content-image/*.{png,jpg}")
     .pipe(gulp.dest("build/img/"))
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true})
+    ]))
+    .pipe(gulp.dest("build/img/"))
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img/"));
 });
