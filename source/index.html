@@ -15,6 +15,12 @@
     <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" as="style" href="css/min.style.css">
+    <link rel="preload" as="font" href="fonts/opensans.woff2">
+    <link rel="preload" as="font" href="fonts/opensansbold.woff2">
+    <link rel="preload" as="image" href="img/logo-mobile.svg" media="(max-width: 767px)">
+    <link rel="preload" as="image" href="img/logo-tablet.svg" media="(min-width: 768px)">
+    <link rel="preload" as="image" href="img/logo-desktop.svg" media="(min-width: 1150px)">
     <link rel="stylesheet" href="css/min.style.css">
   </head>
   <body class="page">
@@ -22,7 +28,7 @@
       <header class="header">
         <div class="header__wrapper">
           <nav class="main-nav  main-nav--closed  main-nav--no-js">
-            <a class="main-nav__logo  logo">
+            <a class="main-nav__logo  logo" tabindex="0">
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -37,21 +43,21 @@
             </button>
             <ul class="main-nav__menu  menu">
               <li class="menu__item">
-                <a class="menu__link" href="catalog.html">Каталог товаров</a>
+                <a class="menu__link" href="catalog.html" tabindex="1">Каталог товаров</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="form.html">Вязание на заказ</a>
+                <a class="menu__link" href="form.html" tabindex="2">Вязание на заказ</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link  menu__link--small-text" href="#">Новые поступления</a>
+                <a class="menu__link  menu__link--small-text" href="#" tabindex="3">Новые поступления</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link  menu__link--small-text" href="#">Распродажа</a>
+                <a class="menu__link  menu__link--small-text" href="#" tabindex="4">Распродажа</a>
               </li>
             </ul>
             <ul class="main-nav__user-menu  user-menu">
               <li class="user-menu__item  user-menu__item--search">
-                <a class="user-menu__link  search" href="#" aria-label="Поиск по сайту">
+                <a class="user-menu__link  search" href="#" aria-label="Поиск по сайту" tabindex="5">
                   <svg class="search__icon" width="18" height="18" role="img">
                     <use xlink:href="img/sprite.svg#icon-search"></use>
                   </svg>
@@ -59,7 +65,7 @@
                 </a>
               </li>
               <li class="user-menu__item  user-menu__item--mini-cart">
-                <a class="user-menu__link  mini-cart" href="#" aria-label="Переход в корзину">
+                <a class="user-menu__link  mini-cart" href="#" aria-label="Переход в корзину" tabindex="6">
                   <svg class="mini-cart__icon" width="21" height="18" role="img">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
@@ -233,7 +239,7 @@
     </div>
     <footer class="footer">
       <div class="footer__wrapper">
-        <a class="footer__logo  logo">
+        <a class="footer__logo">
           <svg width="102" height="34" role="img">
             <title>Логотип компании Мишка</title>
             <use xlink:href="img/sprite.svg#logo-footer"></use>

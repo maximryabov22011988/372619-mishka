@@ -13,7 +13,7 @@
   margin-bottom: 0;
 }
 
-.username__field {
+.username__field-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
     margin-bottom: 21px;
   }
 
-  .username__field {
+  .username__field-wrapper {
     flex-direction: row;
     align-items: center;
   }
@@ -44,7 +44,7 @@
     line-height: 1;
   }
 
-  .username__field .field {
+  .username__field {
     flex-grow: 1;
   }
 }

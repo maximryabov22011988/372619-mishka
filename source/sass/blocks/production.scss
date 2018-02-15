@@ -111,9 +111,9 @@
   }
 
   .production__wrapper {
+    box-sizing: content-box;
     margin: 0 auto;
     padding: 0 50px;
-    box-sizing: content-box;
   }
 
   .production__list {

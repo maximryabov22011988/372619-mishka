@@ -1,8 +1,8 @@
 .toggle {
+  box-sizing: border-box;
   width: 23px;
   height: 23px;
   padding: 0;
-  box-sizing: border-box;
   font-size: 0;
   line-height: 0;
   background-color: transparent;
@@ -14,10 +14,10 @@
 
 .toggle > span {
   display: block;
+  box-sizing: border-box;
   width: 20px;
   height: 2px;
   margin: 4px auto;
-  box-sizing: border-box;
   background-color: #221f1f;
 }
 

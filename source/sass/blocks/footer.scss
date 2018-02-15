@@ -31,16 +31,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: content-box;
     margin: 0 auto;
     padding: 34px 50px 53px;
-    box-sizing: content-box;
   }
 
   .footer__logo {
-    flex: 0 0 33.33%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.33%;
     display: block;
-    width: 102px;
-    height: 34px;
     margin-top: 17px;
   }
 
@@ -65,7 +65,9 @@
   }
 
   .footer__social {
-    flex: 0 0 33.33%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.33%;
     justify-content: center;
     margin-top: 22px;
     padding-bottom: 0;
@@ -73,7 +75,9 @@
   }
 
   .footer__copyright {
-    flex: 0 0 33.33%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.33%;
     padding-top: 22px;
   }
 }

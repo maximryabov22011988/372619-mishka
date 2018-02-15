@@ -36,16 +36,10 @@
   .header__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    box-sizing: content-box;
     margin-left: auto;
     margin-right: auto;
     padding: 0 50px;
-    box-sizing: content-box;
-  }
-
-  .header .header__logo {
-    flex-basis: 16.62%;
-    margin: 0;
-    margin-top: 23px;
   }
 
   .header__logo img {

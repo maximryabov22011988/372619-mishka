@@ -20,14 +20,15 @@ var del = require("del");                          // удаляет папки,
 var run = require("run-sequence");                 // выполняет последовательность задач Gulp в указанном порядке
 var server = require("browser-sync").create();     // запускает локальный сервер
 
-/* Минифицирует HTML файлы в папке build*/
+
+// Минифицирует HTML файлы в папке build
 gulp.task("html", function() {
   return gulp.src("build/*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 });
 
-/* Готовит CSS для build версии */
+// Готовит CSS для build версии
 gulp.task("style", function() {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -43,7 +44,7 @@ gulp.task("style", function() {
     .pipe(gulp.dest("build/css"));
 });
 
-/* Проверяет, объединяет, минифицирует JS для build версии */
+// Проверяет, объединяет, минифицирует JS для build версии
 gulp.task("scripts", function() {
   return gulp.src("source/js/*.js")
     .pipe(plumber())
@@ -56,7 +57,7 @@ gulp.task("scripts", function() {
     .pipe(gulp.dest("build/js"));
 });
 
-/* Оптимизирует изображения */
+// Оптимизирует изображения
 gulp.task("images", function() {
   return gulp.src("build/img/*.{png,jpg,svg}")
     .pipe(imagemin([
@@ -67,15 +68,20 @@ gulp.task("images", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-/* Копирует контентные изображения и конвертирует в формат webP в build версии */
+// Копирует контентные изображения и конвертирует в формат webP в build версии
 gulp.task("webp", function() {
   return gulp.src("source/img/content-image/*.{png,jpg}")
+    .pipe(gulp.dest("build/img/"))
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true})
+    ]))
     .pipe(gulp.dest("build/img/"))
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img/"));
 });
 
-/* Собирает SVG спрайт */
+// Собирает SVG спрайт
 gulp.task("sprite", function() {
   return gulp.src("source/img/icons-for-sprite/**")
     .pipe(svgmin())
@@ -86,7 +92,7 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-/* Запускает локальный сервер для build версии */
+// Запускает локальный сервер для build версии
 gulp.task("serve", function() {
   server.init({
     server: "build/"
@@ -95,7 +101,7 @@ gulp.task("serve", function() {
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
 });
 
-/* Копирует файлы */
+// Копирует файлы
 gulp.task("copy", function() {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
@@ -109,12 +115,12 @@ gulp.task("copy", function() {
     .pipe(gulp.dest("build"));
 });
 
-/* Удаляет папку build и все ее содержимое */
+// Удаляет папку build и все ее содержимое
 gulp.task("clean", function() {
   return del("build");
 });
 
-/* Запускает сборку build версии */
+// Запускает сборку build версии
 gulp.task("build", function(done) {
   run(
     "clean",
@@ -130,7 +136,7 @@ gulp.task("build", function(done) {
 });
 
 
-/* Готовит CSS для develop версии */
+// Готовит CSS для develop версии
 gulp.task("style:develop", function() {
   gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -144,7 +150,7 @@ gulp.task("style:develop", function() {
     .pipe(server.stream());
 });
 
-/* Копирует контентные изображения и конвертирует в формат webP в develop версии */
+// Копирует контентные изображения и конвертирует в формат webP в develop версии
 gulp.task("webp:develop", function() {
   return gulp.src("source/img/content-image/*.{png,jpg}")
     .pipe(gulp.dest("source/img/"))
@@ -152,7 +158,7 @@ gulp.task("webp:develop", function() {
     .pipe(gulp.dest("source/img/"));
 });
 
-/* Запускает локальный сервер для develop версии*/
+// Запускает локальный сервер для develop версии
 gulp.task("serve:develop", function() {
   server.init({
     server: "source/",
@@ -166,7 +172,7 @@ gulp.task("serve:develop", function() {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-/* Запускает develop версию для разработки */
+// Запускает develop версию для разработки
 gulp.task("develop", function(done) {
   run(
     "style:develop",
