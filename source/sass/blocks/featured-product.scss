@@ -37,10 +37,6 @@
   color: $color-main;
 }
 
-.featured-product__title br {
-  display: none;
-}
-
 .featured-product__name {
   order: -1;
   margin: 0;
@@ -110,10 +106,6 @@
     margin-bottom: 0;
     line-height: 1;
     text-align: center;
-  }
-
-  .featured-product__title br {
-    display: block;
   }
 
   .featured-product__inner {
