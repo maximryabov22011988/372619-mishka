@@ -7,7 +7,7 @@
 .form-group__title {
   position: relative;
   display: block;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
   font-weight: 700;
   font-size: 17px;
   line-height: 1;
@@ -126,12 +126,20 @@
     margin-bottom: 0;
   }
 
+  .form-group--message .form-group__wrapper {
+    padding-bottom: 54px;
+  }
+
   .form-group--message .form-group__title {
     margin-bottom: 0;
   }
 
   .form-group--message .field {
     flex-basis: 75%;
+  }
+
+  .form-group--submit {
+    margin-bottom: 49px;
   }
 
   .form-group--submit .form-group__wrapper {
@@ -156,10 +164,6 @@
     flex-grow: 0;
     box-sizing: content-box;
     padding-left: 14px;
-
-    &--small-margin {
-      margin-top: -4px;
-    }
   }
 
   .form-group__type {
@@ -179,11 +183,13 @@
   }
 
   .form-group__contacts .form-group__title {
-    padding-top: 3px;
+    margin-top: -7px;
+    padding-top: 2px;
   }
 
   .form-group--message .form-group__wrapper {
     padding-right: 175px;
+    padding-bottom: 50px;
   }
 
   .form-group--message .field {
