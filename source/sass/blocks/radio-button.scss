@@ -45,8 +45,7 @@
 .radio-button__indicator:active {
   background-color: $gray-255;
   box-shadow: 0 0 0 2px rgba($gray-68, 0.3);
-  transition: background-color $active-animation $animation-function,
-              box-shadow $active-animation $animation-function;
+  transition: background-color $active-animation $animation-function, box-shadow $active-animation $animation-function;
 }
 
 .radio-button__input:checked:active ~ .radio-button__indicator {
