@@ -21,10 +21,6 @@
 .field--text {
   border-bottom: 2px solid $gray-0;
 
-  @include placeholder {
-    color: rgba($gray-68, 0.3);
-  }
-
   &:hover {
     border-bottom-color: $color-main;
     transition: border-bottom-color $active-animation $animation-function;
@@ -35,6 +31,22 @@
     border-bottom-color: $color-main;
     transition: color $active-animation $animation-function, border-bottom-color $active-animation $animation-function;
   }
+}
+
+.field--text::-webkit-input-placeholder {
+  color: rgba($gray-68, 0.3);
+}
+
+.field--text:-moz-placeholder {
+  color: rgba($gray-68, 0.3);
+}
+
+.field--text::-moz-placeholder {
+  color: rgba($gray-68, 0.3);
+}
+
+.field--text:-ms-input-placeholder {
+  color: rgba($gray-68, 0.3);
 }
 
 .field--area {
