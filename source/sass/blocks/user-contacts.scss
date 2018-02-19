@@ -40,6 +40,12 @@
   transition: fill $hover-animation $animation-function;
 }
 
+@media (max-width: $screen-md - 1) {
+  .user-contacts__title {
+    margin-bottom: 7px;
+  }
+}
+
 @media (min-width: $screen-md) {
   .user-contacts__item {
     display: flex;
@@ -55,6 +61,7 @@
 
   .user-contacts__field {
     flex-basis: 75%;
+    line-height: 26px;
     background-color: transparent;
   }
 

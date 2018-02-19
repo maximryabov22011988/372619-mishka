@@ -24,16 +24,19 @@
 
 .social__icon {
   fill: $color-secondary--dark;
+  pointer-events: none;
 }
 
 .social__link:hover .social__icon {
   fill: $color-main--darker;
+  pointer-events: none;
   transition: fill $hover-animation $animation-function;
 }
 
 .social__link:active .social__icon {
   fill: $color-main--darker;
   opacity: 0.3;
+  pointer-events: none;
   transition: fill $active-animation $animation-function, opacity $active-animation $animation-function;
 }
 

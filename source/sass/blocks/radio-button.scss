@@ -7,7 +7,15 @@
 }
 
 .radio-button__input {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
 }
 
 .radio-button__indicator {
@@ -29,14 +37,20 @@
   transition: background-color 0.3s $animation-function;
 }
 
-.radio-button:hover .radio-button__indicator {
+.radio-button__indicator:hover {
   box-shadow: 0 0 0 2px $color-main;
   transition: box-shadow $hover-animation $animation-function;
 }
 
-.radio-button:active .radio-button__indicator {
+.radio-button__indicator:active {
+  background-color: $gray-255;
   box-shadow: 0 0 0 2px rgba($gray-68, 0.3);
-  transition: box-shadow $active-animation $animation-function;
+  transition: background-color $active-animation $animation-function, box-shadow $active-animation $animation-function;
+}
+
+.radio-button__input:checked:active ~ .radio-button__indicator {
+  background-color: $gray-255;
+  transition: background-color 0.3s $animation-function;
 }
 
 .radio-button__text {
@@ -45,6 +59,7 @@
   font-size: 17px;
   line-height: 1.059;
   color: $gray-0;
+  user-select: none;
 }
 
 @media (min-width: $screen-md) {

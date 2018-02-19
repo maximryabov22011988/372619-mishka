@@ -30,7 +30,7 @@
 .production__link {
   position: relative;
   display: flex;
-  padding: 26px 105px 31px 29px;
+  padding: 26px 150px 31px 29px;
   text-decoration: none;
   background-color: $color-main;
   transform: translateY(0);
@@ -129,7 +129,7 @@
 
   .production__link {
     flex-grow: 1;
-    padding: 30px 110px 33px 35px;
+    padding: 30px 150px 33px 35px;
 
     &:hover {
       transform: translateY(-5px);
@@ -162,6 +162,6 @@
   }
 
   .production__link {
-    padding-right: 130px;
+    padding-right: 350px;
   }
 }
