@@ -4,7 +4,15 @@
 }
 
 .checkbox__input {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
 }
 
 .checkbox__indicator {
@@ -29,14 +37,19 @@
   background-position: 6px 10px;
 }
 
-.checkbox:hover .checkbox__indicator {
+.checkbox__indicator:hover {
   box-shadow: 0 0 0 2px $color-main;
   transition: box-shadow $hover-animation $animation-function;
 }
 
-.checkbox:active .checkbox__indicator {
+.checkbox__indicator:active {
   box-shadow: 0 0 0 2px rgba($gray-68, 0.3);
   transition: box-shadow $active-animation $animation-function;
+}
+
+.checkbox__input:checked:active ~ .checkbox__indicator::before {
+  opacity: 0;
+  transition: opacity 0.3s $animation-function;
 }
 
 .checkbox__text {
@@ -45,6 +58,7 @@
   font-size: 17px;
   line-height: 1.059;
   color: $gray-0;
+  user-select: none;
 }
 
 @media (min-width: $screen-md) {
