@@ -44,15 +44,6 @@
     transition: border-color 0.35s $animation-function, opacity 0.35s $animation-function;
   }
 
-  &:hover::before {
-    border-color: $color-main;
-  }
-
-  &:active::before {
-    border-color: $gray-68;
-    opacity: 0.3;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -68,22 +59,29 @@
   }
 }
 
-.radio-button__input:checked + .radio-button__label::after {
-  opacity: 1;
-}
-
-.radio-button__input:active:checked + .radio-button__label::after {
-  opacity: 0;
+.radio-button__input:hover + .radio-button__label::before {
+  border-color: $color-main;
 }
 
 .radio-button__input:focus + .radio-button__label::before {
   border-color: $color-main;
-  transition: border-color $hover-animation $animation-function;
 }
 
-.radio-button__input:focus:not(:checked) + .radio-button__label::before {
-  border-color: $color-main;
-  transition: border-color $hover-animation $animation-function;
+.radio-button__input:active + .radio-button__label::before {
+  border-color: $gray-68;
+  opacity: 0.3;
+}
+
+.radio-button__input:checked + .radio-button__label::after {
+  opacity: 1;
+}
+
+.radio-button__input:active + .radio-button__label::after {
+  opacity: 0;
+}
+
+.radio-button__input:not(:checked):active + .radio-button__label::after {
+  opacity: 1;
 }
 
 @media (min-width: $screen-md) {

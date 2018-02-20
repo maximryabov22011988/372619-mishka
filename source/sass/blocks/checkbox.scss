@@ -40,15 +40,6 @@
     transition: border-color 0.35s $animation-function, opacity 0.35s $animation-function;
   }
 
-  // &:hover::before {
-  //   border-color: $color-main;
-  // }
-
-  // &:active::before {
-  //   border-color: $gray-68;
-  //   opacity: 0.3;
-  // }
-
   &::after {
     content: "";
     position: absolute;
@@ -66,14 +57,6 @@
   }
 }
 
-.checkbox__input:checked + .checkbox__label::after {
-  opacity: 1;
-}
-
-.checkbox__input:active + .checkbox__label::after {
-  opacity: 0;
-}
-
 .checkbox__input:hover + .checkbox__label::before {
   border-color: $color-main;
 }
@@ -85,6 +68,18 @@
 .checkbox__input:active + .checkbox__label::before {
   border-color: $gray-68;
   opacity: 0.3;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  opacity: 1;
+}
+
+.checkbox__input:active + .checkbox__label::after {
+  opacity: 0;
+}
+
+.checkbox__input:not(:checked):active + .checkbox__label::after {
+  opacity: 1;
 }
 
 @media (min-width: $screen-md) {
