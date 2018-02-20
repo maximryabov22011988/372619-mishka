@@ -26,11 +26,15 @@
   &--small-margin {
     margin-bottom: 8px;
   }
+
+  &--medium-margin {
+    margin-bottom: 23px;
+  }
 }
 
 .form-group__type {
   @include no-list-style();
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .form-group__color {
@@ -104,7 +108,7 @@
 
   .form-group__type {
     flex-basis: 75%;
-    margin-bottom: 3px;
+    margin-bottom: 0;
   }
 
   .form-group__color {
