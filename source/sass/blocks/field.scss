@@ -4,7 +4,7 @@
   padding-left: 0;
   font-size: 17px;
   line-height: 1.059;
-  color: rgba($gray-68, 0.3);
+  color: $gray-68;
   border-radius: 0;
   border: 0;
   outline: none;
@@ -20,6 +20,10 @@
 
 .field--text {
   border-bottom: 2px solid $gray-0;
+
+  &::placeholder {
+    color: rgba($gray-68, 0.3);
+  }
 
   &:hover {
     border-bottom-color: $color-main;
