@@ -81,6 +81,11 @@
   transition: border-color $hover-animation $animation-function;
 }
 
+.radio-button__input:focus:not(:checked) + .radio-button__label::before {
+  border-color: $color-main;
+  transition: border-color $hover-animation $animation-function;
+}
+
 @media (min-width: $screen-md) {
   .radio-button__label {
     padding: 16px 0 18px 80px;

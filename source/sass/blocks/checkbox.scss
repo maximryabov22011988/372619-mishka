@@ -40,14 +40,14 @@
     transition: border-color 0.35s $animation-function, opacity 0.35s $animation-function;
   }
 
-  &:hover::before {
-    border-color: $color-main;
-  }
+  // &:hover::before {
+  //   border-color: $color-main;
+  // }
 
-  &:active::before {
-    border-color: $gray-68;
-    opacity: 0.3;
-  }
+  // &:active::before {
+  //   border-color: $gray-68;
+  //   opacity: 0.3;
+  // }
 
   &::after {
     content: "";
@@ -70,13 +70,21 @@
   opacity: 1;
 }
 
-.checkbox__input:active:checked + .checkbox__label::after {
+.checkbox__input:active + .checkbox__label::after {
   opacity: 0;
+}
+
+.checkbox__input:hover + .checkbox__label::before {
+  border-color: $color-main;
 }
 
 .checkbox__input:focus + .checkbox__label::before {
   border-color: $color-main;
-  transition: border-color $hover-animation $animation-function;
+}
+
+.checkbox__input:active + .checkbox__label::before {
+  border-color: $gray-68;
+  opacity: 0.3;
 }
 
 @media (min-width: $screen-md) {
