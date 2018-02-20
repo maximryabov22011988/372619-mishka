@@ -9,10 +9,6 @@
   margin-bottom: 0;
 }
 
-.color__value {
-  cursor: pointer;
-}
-
 @media (min-width: $screen-md) {
   .color {
     display: flex;
@@ -26,8 +22,8 @@
     margin-bottom: 22px;
   }
 
-  .color__item:nth-child(5) {
-    margin-bottom: 0;
+  .color__item:last-child {
+    margin-bottom: 22px;
   }
 }
 
@@ -38,9 +34,5 @@
 
   .color__item {
     flex-basis: 31.95%;
-  }
-
-  .color__item:nth-child(4) {
-    margin-bottom: 0;
   }
 }
