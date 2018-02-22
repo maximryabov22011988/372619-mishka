@@ -25,7 +25,7 @@ var del = require("del");                          // удаляет папки,
 var size = require('gulp-size');                   // показывает размеры файлов
 var run = require("run-sequence");                 // выполняет последовательность задач Gulp в указанном порядке
 var server = require("browser-sync").create();     // запускает локальный сервер
-var ghPages = require('gulp-gh-pages');            // публикация содержимого build на GH Pages
+var deploy = require('gulp-gh-pages');             // публикация содержимого build на GH Pages
 
 // Копирует файлы
 gulp.task("copy", function() {
@@ -248,7 +248,7 @@ gulp.task("build", function(done) {
 gulp.task('deploy', function() {
   console.log('---------- Публикация содержимого ./build/ на GH pages');
   return gulp.src("./build/**/*")
-    .pipe(ghPages());
+    .pipe(deploy());
 });
 
 
