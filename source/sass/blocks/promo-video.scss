@@ -64,15 +64,24 @@
   transition: $no-hover;
   cursor: pointer;
 
+  &::before {
+    content: "";
+    display: block;
+    width: 101px;
+    height: 77px;
+    background-image: url("../img/icon-play.svg");
+    background-repeat: no-repeat;
+  }
+
   &:hover {
     transform: translateX(-50%) translateY(-50%) scale(1.2);
     transition: transform $hover-animation $animation-function;
   }
 
   &:active {
-    fill-opacity: 0.3;
+    opacity: 0.3;
     transform: translateX(-50%) translateY(-50%) scale(0.8);
-    transition: fill-opacity $active-animation $animation-function, transform $active-animation $animation-function;
+    transition: opacity $active-animation $animation-function, transform $active-animation $animation-function;
   }
 }
 
