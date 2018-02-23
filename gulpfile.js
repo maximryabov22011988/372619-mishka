@@ -22,10 +22,10 @@ var debug = require("gulp-debug");                 // показывает по�
 var newer = require("gulp-newer");                 // сравнивает файлы, являются ли они новыми (обновленными)
 var wait = require("gulp-wait");                   // вставляет задержку перед вызовом следующего таска
 var del = require("del");                          // удаляет папки, файлы
-var size = require('gulp-size');                   // показывает размеры файлов
+var size = require("gulp-size");                   // показывает размеры файлов
 var run = require("run-sequence");                 // выполняет последовательность задач Gulp в указанном порядке
 var server = require("browser-sync").create();     // запускает локальный сервер
-var deploy = require('gulp-gh-pages');             // публикация содержимого build на GH Pages
+var ghPages = require("gulp-gh-pages");             // публикация содержимого build на GH Pages
 
 // Копирует файлы
 gulp.task("copy", function() {
@@ -38,7 +38,7 @@ gulp.task("copy", function() {
   })
     .pipe(newer("build"))
     .pipe(size({
-      title: 'Размер',
+      title: "Размер",
       showFiles: true,
       showTotal: false,
     }))
@@ -67,7 +67,7 @@ gulp.task("style", function() {
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(size({
-      title: 'Размер',
+      title: "Размер",
       showFiles: true,
       showTotal: false,
     }))
@@ -90,7 +90,7 @@ gulp.task("scripts", function() {
     .pipe(uglify())
     .pipe(rename("scripts.min.js"))
     .pipe(size({
-      title: 'Размер',
+      title: "Размер",
       showFiles: true,
       showTotal: false,
     }))
@@ -120,7 +120,7 @@ gulp.task("images", function() {
       imagemin.svgo()
     ]))
     .pipe(size({
-      title: 'Размер',
+      title: "Размер",
       showFiles: true,
       showTotal: false,
     }))
@@ -131,20 +131,20 @@ gulp.task("images", function() {
 gulp.task("webp", function() {
   console.log("---------- Копирую, оптимизирую контентные изображения, конвертирую в формат webP");
   return gulp.src("source/img/content-image/*.{png,jpg}")
-    .pipe(newer('build/img'))
+    .pipe(newer("build/img"))
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true})
     ]))
     .pipe(gulp.dest("build/img/"))
     .pipe(size({
-      title: 'Размер',
+      title: "Размер",
       showFiles: true,
       showTotal: false,
     }))
     .pipe(webp({quality: 90}))
     .pipe(size({
-      title: 'Размер',
+      title: "Размер",
       showFiles: true,
       showTotal: false,
     }))
@@ -168,7 +168,7 @@ gulp.task("sprite", function() {
     }))
     .pipe(rename("sprite.svg"))
     .pipe(size({
-      title: 'Размер',
+      title: "Размер",
       showFiles: true,
       showTotal: false,
     }))
@@ -244,11 +244,13 @@ gulp.task("build", function(done) {
 });
 
 
-// Отправка в GH pages (ветку gh-pages репозитория)
-gulp.task('deploy', function() {
-  console.log('---------- Публикация содержимого ./build/ на GH pages');
+// Отправка в GH-Pages (ветку gh-pages репозитория)
+gulp.task("deploy", function() {
+  console.log("---------- Публикация содержимого папки build на GH-Pages");
   return gulp.src("./build/**/*")
-    .pipe(deploy());
+    .pipe(ghPages({
+      "remoteUrl" : "git@github.com:maximryabov22011988/372619-mishka.git"
+    }));
 });
 
 
