@@ -13,8 +13,8 @@
     "test": "npm run test:editorconfig && npm run test:style",
     "develop": "gulp develop && gulp serve:develop",
     "build": "gulp build",
-    "deploy": "gulp deploy",
-    "start": "npm run build && gulp serve"
+    "start": "npm run build && gulp serve",
+    "deploy": "gulp deploy"
   },
   "browserslist": [
     "> 1%",
