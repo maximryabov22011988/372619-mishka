@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
+var extend      = require("extend");
 var plumber = require("gulp-plumber");             // отслеживает ошибки в Gulp
 var sourcemaps = require("gulp-sourcemaps");       // содержит информации об исходных файлах
 var sass = require("gulp-sass");                   // компилирует SASS в CSS
@@ -18,6 +19,7 @@ var webp = require("gulp-webp");                   // конвертирует j
 var svgstore = require("gulp-svgstore");           // создаёт SVG спрайт
 var svgmin = require("gulp-svgmin");               // минифицирует SVG файлы
 var rename = require("gulp-rename");               // переименовывает файлы
+var gulpIf = require("gulp-if");                   // задает условия при выполнении потока
 var debug = require("gulp-debug");                 // показывает поток сборки в консоли
 var newer = require("gulp-newer");                 // сравнивает файлы, являются ли они новыми (обновленными)
 var wait = require("gulp-wait");                   // вставляет задержку перед вызовом следующего таска
@@ -27,6 +29,10 @@ var run = require("run-sequence");                 // выполняет пос�
 var server = require("browser-sync").create();     // запускает локальный сервер
 var ghPages = require("gulp-gh-pages");             // публикация содержимого build на GH Pages
 
+
+// Определение: разработка это или финальная сборка
+// Запуск `NODE_ENV=production npm start [задача]` приведет к сборке без sourcemaps
+var isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
 
 // Копирует файлы
 gulp.task("copy", function() {
@@ -53,20 +59,31 @@ gulp.task("clean", function() {
   return del("build");
 });
 
-// Готовит CSS для build версии
+// Копирует normalize в папку source
+gulp.task("normalize", function () {
+  console.log("---------- Компилирую normalize.scss");
+  return gulp.src([
+    "node_modules/normalize.css/normalize.css"
+  ])
+    .pipe(rename("normalize.scss"))
+    .pipe(newer("source/sass/global"))
+    .pipe(gulp.dest("source/sass/global/"));
+});
+
+// Компилирует SASS в CSS
 gulp.task("style", function() {
   console.log("---------- Компилирую SASS в CSS");
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
-    .pipe(wait(50))
+    .pipe(wait(100))
+    .pipe(gulpIf(isDev, sourcemaps.init()))
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(minify())
+    .pipe(gulpIf(!isDev, minify()))
     .pipe(rename("style.min.css"))
+    .pipe(gulpIf(isDev, sourcemaps.write('/')))
     .pipe(size({
       title: "Размер",
       showFiles: true,
@@ -76,30 +93,30 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-// Проверяет, объединяет, минифицирует JS для build версии
+// Проверяет, объединяет, минифицирует JS
 gulp.task("scripts", function() {
   console.log("---------- Проверяю, объединяю и минифицирую JS");
   return gulp.src("source/js/*.js")
     .pipe(plumber())
+    .pipe(gulpIf(isDev, sourcemaps.init()))
     .pipe(newer("build/js"))
     .pipe(debug({title: "check js: "}))
     .pipe(jshint())
     .pipe(jshint.reporter("default"))
     .pipe(jshint.reporter("fail"))
-    .pipe(concat("scripts.js"))
-    .pipe(debug({title: "concat js: "}))
-    .pipe(uglify())
-    .pipe(rename("scripts.min.js"))
+    .pipe(concat("scripts.min.js"))
+    .pipe(gulpIf(!isDev, uglify()))
+    .pipe(gulpIf(isDev, sourcemaps.write('/')))
     .pipe(size({
       title: "Размер",
       showFiles: true,
       showTotal: false,
     }))
     .pipe(gulp.dest("build/js"))
-    .pipe(debug({title: "minify js: "}));
+    .pipe(debug({title: "copy js: "}));
 });
 
-// Копирует полифилы в build версию
+// Копирует полифилы в папку build
 gulp.task("polyfill", function () {
   console.log("---------- Копирую полифилы");
   return gulp.src([
@@ -128,7 +145,7 @@ gulp.task("images", function() {
     .pipe(gulp.dest("build/img"))
 });
 
-// Копирует контентные изображения и конвертирует в формат webP в build версии
+// Копирует контентные изображения и конвертирует в формат webP в папку build
 gulp.task("webp", function() {
   console.log("---------- Копирую, оптимизирую контентные изображения, конвертирую в формат webP");
   return gulp.src("source/img/content-image/*.{png,jpg}")
@@ -152,7 +169,7 @@ gulp.task("webp", function() {
     .pipe(gulp.dest("build/img/"))
 });
 
-// Собирает SVG спрайт в build версии
+// Собирает SVG спрайт
 gulp.task("sprite", function() {
   console.log("---------- Собираю SVG-спрайт");
   return gulp.src("source/img/icons-for-sprite/**")
@@ -186,7 +203,7 @@ gulp.task("html", function() {
     ]))
     .pipe(debug({title: "include svg-sprite: "}))
     .pipe(gulp.dest("build"))
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulpIf(!isDev, htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest("build"))
     .pipe(debug({title: "minify HTML: "}))
     .pipe(server.stream());
@@ -233,6 +250,7 @@ gulp.task("build", function(done) {
   run(
     "clean",
     "copy",
+    "normalize",
     "style",
     "scripts",
     "polyfill",

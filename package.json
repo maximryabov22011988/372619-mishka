@@ -11,10 +11,9 @@
     "test:style": "stylelint \"source/**/*.scss\" --syntax=scss",
     "test:editorconfig": "editorconfig-cli source/**/*.{html,scss}",
     "test": "npm run test:editorconfig && npm run test:style",
-    "develop": "gulp develop && gulp serve:develop",
-    "build": "gulp build",
-    "start": "npm run build && gulp serve",
-    "deploy": "gulp deploy"
+    "start": "gulp",
+    "build": "cross-env NODE_ENV=production npm start build && gulp serve",
+    "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build && cross-env ./node_modules/.bin/gulp deploy"
   },
   "browserslist": [
     "> 1%",
@@ -24,6 +23,7 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "7.2.x",
     "browser-sync": "2.23.x",
+    "cross-env": "^5.1.3",
     "del": "3.0.x",
     "gulp": "3.9.x",
     "gulp-concat": "2.6.x",
@@ -31,6 +31,7 @@
     "gulp-debug": "^3.2.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "4.0.x",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "4.1.x",
     "gulp-jshint": "2.1.x",
     "gulp-newer": "^1.4.0",
@@ -48,14 +49,17 @@
     "gulp-webp": "3.0.x",
     "jshint": "2.9.x",
     "npm": "5.6.x",
-    "picturefill": "^3.0.2",
     "posthtml-include": "^1.1.0",
     "run-sequence": "2.2.x",
     "stylelint": "8.4.x",
-    "stylelint-config-htmlacademy": "0.1.x",
-    "svg4everybody": "^2.1.9"
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "engines": {
     "node": "8.9"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "picturefill": "^3.0.2",
+    "svg4everybody": "^2.1.9"
   }
 }
