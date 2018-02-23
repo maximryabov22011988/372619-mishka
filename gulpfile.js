@@ -27,31 +27,12 @@ var del = require("del");                          // удаляет папки,
 var size = require("gulp-size");                   // показывает размеры файлов
 var run = require("run-sequence");                 // выполняет последовательность задач Gulp в указанном порядке
 var server = require("browser-sync").create();     // запускает локальный сервер
-var ghPages = require("gulp-gh-pages");             // публикация содержимого build на GH Pages
+var ghPages = require("gulp-gh-pages");            // публикация содержимого build на GH Pages
 
 
 // Определение: разработка это или финальная сборка
 // Запуск `NODE_ENV=production npm start [задача]` приведет к сборке без sourcemaps
-var isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
-
-// Копирует файлы
-gulp.task("copy", function() {
-  console.log("---------- Копирую файлы");
-  return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/img/favicons/*.*"
-    ], {
-      base: "source"
-  })
-    .pipe(newer("build"))
-    .pipe(size({
-      title: "Размер",
-      showFiles: true,
-      showTotal: false,
-    }))
-    // .pipe(debug({title: "copy: "}))
-    .pipe(gulp.dest("build"));
-});
+var isDev = !process.env.NODE_ENV || process.env.NODE_ENV == "dev";
 
 // Удаляет папку build и все ее содержимое
 gulp.task("clean", function() {
@@ -59,20 +40,56 @@ gulp.task("clean", function() {
   return del("build");
 });
 
+// Копирует шрифты
+gulp.task("copy:fonts", function () {
+  console.log("---------- Копирую шрифты");
+  return gulp.src("source/fonts/*.{ttf,woff,woff2,eot,svg}")
+    .pipe(newer("build/fonts/"))  // оставить в потоке только изменившиеся файлы
+    .pipe(size({
+      title: "Размер",
+      showFiles: true,
+      showTotal: false,
+    }))
+    .pipe(gulp.dest("build/fonts/"));
+});
+
+// Копирует фавиконки
+gulp.task("copy:favicon", function () {
+  console.log("---------- Копирую фавиконки");
+  return gulp.src("source/img/favicons/*.{png,ico,svg}")
+    .pipe(gulp.dest("build/img/favicons"));
+});
+gulp.task("copy:favicon:data", function () {
+  return gulp.src("source/img/favicons/*.{xml,json}")
+    .pipe(gulp.dest("build/img/favicons"));
+});
+
 // Копирует normalize в папку source
-gulp.task("normalize", function () {
+gulp.task("copy:normalize", function () {
   console.log("---------- Компилирую normalize.scss");
   return gulp.src([
     "node_modules/normalize.css/normalize.css"
   ])
     .pipe(rename("normalize.scss"))
-    .pipe(newer("source/sass/global"))
+    .pipe(newer("source/sass/global"))  // оставить в потоке только изменившиеся файлы
     .pipe(gulp.dest("source/sass/global/"));
 });
 
-// Компилирует SASS в CSS
+// Копирует полифилы в папку build
+gulp.task("copy:polyfill", function () {
+  console.log("---------- Копирую полифилы");
+  return gulp.src([
+    "node_modules/svg4everybody/dist/svg4everybody.min.js",
+    "node_modules/picturefill/dist/picturefill.min.js"
+  ])
+    .pipe(newer("build/js/lib"))  // оставить в потоке только изменившиеся файлы
+    .pipe(gulp.dest("build/js/lib"));
+});
+
+// Компилирует стили
+// Запуск `NODE_ENV=production npm start style` приведет к сборке без sourcemaps
 gulp.task("style", function() {
-  console.log("---------- Компилирую SASS в CSS");
+  console.log("---------- Компилирую стили");
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(wait(100))
@@ -83,7 +100,7 @@ gulp.task("style", function() {
     ]))
     .pipe(gulpIf(!isDev, minify()))
     .pipe(rename("style.min.css"))
-    .pipe(gulpIf(isDev, sourcemaps.write('/')))
+    .pipe(gulpIf(isDev, sourcemaps.write("/")))
     .pipe(size({
       title: "Размер",
       showFiles: true,
@@ -94,19 +111,20 @@ gulp.task("style", function() {
 });
 
 // Проверяет, объединяет, минифицирует JS
+// Запуск `NODE_ENV=production npm start scripts` приведет к сборке без sourcemaps
 gulp.task("scripts", function() {
   console.log("---------- Проверяю, объединяю и минифицирую JS");
   return gulp.src("source/js/*.js")
     .pipe(plumber())
     .pipe(gulpIf(isDev, sourcemaps.init()))
-    .pipe(newer("build/js"))
+    .pipe(newer("build/js"))  // оставить в потоке только изменившиеся файлы
     .pipe(debug({title: "check js: "}))
     .pipe(jshint())
     .pipe(jshint.reporter("default"))
     .pipe(jshint.reporter("fail"))
     .pipe(concat("scripts.min.js"))
     .pipe(gulpIf(!isDev, uglify()))
-    .pipe(gulpIf(isDev, sourcemaps.write('/')))
+    .pipe(gulpIf(isDev, sourcemaps.write("/")))
     .pipe(size({
       title: "Размер",
       showFiles: true,
@@ -116,27 +134,17 @@ gulp.task("scripts", function() {
     .pipe(debug({title: "copy js: "}));
 });
 
-// Копирует полифилы в папку build
-gulp.task("polyfill", function () {
-  console.log("---------- Копирую полифилы");
-  return gulp.src([
-    "node_modules/svg4everybody/dist/svg4everybody.min.js",
-    "node_modules/picturefill/dist/picturefill.min.js"
-  ])
-    .pipe(debug({title: "copy polyfill: "}))
-    .pipe(gulp.dest("build/js/lib"));
-});
-
 // Оптимизирует изображения
+// Запуск `NODE_ENV=production npm start images` приведет к оптимизации изображений
 gulp.task("images", function() {
-  console.log("---------- Оптимизирую изображения");
+  console.log("---------- Копирую и оптимизирую изображения");
   return gulp.src("source/img/*.{png,jpg,svg}")
-    .pipe(newer("build/img"))
-    .pipe(imagemin([
+    .pipe(newer("build/img"))  // оставить в потоке только изменившиеся файлы
+    .pipe(gulpIf(!isDev, imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
-    ]))
+    ])))
     .pipe(size({
       title: "Размер",
       showFiles: true,
@@ -145,15 +153,16 @@ gulp.task("images", function() {
     .pipe(gulp.dest("build/img"))
 });
 
-// Копирует контентные изображения и конвертирует в формат webP в папку build
+// Копирует, оптимизирует и конвертирует в формат webP контентные изображения в папке build
+// Запуск `NODE_ENV=production npm start webp` приведет к оптимизации контентных изображений и созданию копий в формате webP
 gulp.task("webp", function() {
-  console.log("---------- Копирую, оптимизирую контентные изображения, конвертирую в формат webP");
+  console.log("---------- Копирую, оптимизирую, конвертирую в формат webP контентные изображения");
   return gulp.src("source/img/content-image/*.{png,jpg}")
-    .pipe(newer("build/img"))
-    .pipe(imagemin([
+    .pipe(newer("build/img"))  // оставить в потоке только изменившиеся файлы
+    .pipe(gulpIf(!isDev, imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true})
-    ]))
+    ])))
     .pipe(gulp.dest("build/img/"))
     .pipe(size({
       title: "Размер",
@@ -195,6 +204,7 @@ gulp.task("sprite", function() {
 });
 
 // Вставляет спрайт и минифицирует HTML файлы в папке build
+// Запуск `NODE_ENV=production npm start html` приведет к вставке SVG спрайта и минификации HTML
 gulp.task("html", function() {
   console.log("---------- Вставляю SVG спрайт и минифицирую HTML");
   return gulp.src("source/*.html")
@@ -209,7 +219,7 @@ gulp.task("html", function() {
     .pipe(server.stream());
 });
 
-// Запускает локальный сервер для build версии
+// Запускает локальный сервер
 gulp.task("serve", function() {
   console.log("---------- Запускаю локальный сервер");
   server.init({
@@ -249,11 +259,13 @@ gulp.task("watch:sprite", ["sprite"], function (done) {
 gulp.task("build", function(done) {
   run(
     "clean",
-    "copy",
-    "normalize",
+    "copy:fonts",
+    "copy:favicon",
+    "copy:favicon:data",
+    "copy:normalize",
+    "copy:polyfill",
     "style",
     "scripts",
-    "polyfill",
     "images",
     "webp",
     "sprite",
