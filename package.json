@@ -5,7 +5,7 @@
   "author": "Maxim Ryabov",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maximryabov22011988/372619-mishka.git"
+    "url": "git+git@github.com:maximryabov22011988/372619-mishka.git"
   },
   "scripts": {
     "test:style": "stylelint \"source/**/*.scss\" --syntax=scss",
