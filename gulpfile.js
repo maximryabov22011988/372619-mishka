@@ -27,6 +27,7 @@ var run = require("run-sequence");                 // выполняет пос�
 var server = require("browser-sync").create();     // запускает локальный сервер
 var ghPages = require("gulp-gh-pages");             // публикация содержимого build на GH Pages
 
+
 // Копирует файлы
 gulp.task("copy", function() {
   console.log("---------- Копирую файлы");
@@ -251,51 +252,4 @@ gulp.task("deploy", function() {
     .pipe(ghPages({
       "remoteUrl" : "git@github.com:maximryabov22011988/372619-mishka.git"
     }));
-});
-
-
-// Готовит CSS для develop версии
-gulp.task("style:develop", function() {
-  gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
-});
-
-// Копирует контентные изображения и конвертирует в формат webP в develop версии
-gulp.task("webp:develop", function() {
-  return gulp.src("source/img/content-image/*.{png,jpg}")
-    .pipe(gulp.dest("source/img/"))
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img/"));
-});
-
-// Запускает локальный сервер для develop версии
-gulp.task("serve:develop", function() {
-  server.init({
-    server: "source/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style:develop"]);
-  gulp.watch("source/*.html").on("change", server.reload);
-});
-
-// Запускает develop версию для разработки
-gulp.task("develop", function(done) {
-  run(
-    "style:develop",
-    //"webp:develop",
-    "serve:develop",
-    done
-  );
 });
