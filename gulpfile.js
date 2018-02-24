@@ -30,6 +30,7 @@ var server = require("browser-sync").create();     // запускает лок�
 var ghPages = require("gulp-gh-pages");            // публикация содержимого build на GH Pages
 
 
+
 // Определение: разработка это или финальная сборка
 // Запуск `NODE_ENV=production npm start [задача]` приведет к сборке без sourcemaps
 var isDev = !process.env.NODE_ENV || process.env.NODE_ENV == "dev";
@@ -220,7 +221,7 @@ gulp.task("html", function() {
 });
 
 // Запускает локальный сервер
-gulp.task("serve", function() {
+gulp.task("serve", ["watch"],function() {
   console.log("---------- Запускаю локальный сервер");
   server.init({
     server: "build/",
@@ -229,28 +230,16 @@ gulp.task("serve", function() {
     cors: true,
     ui: false
   });
+});
 
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+// Следит за файлами
+gulp.task("watch", function (done) {
   gulp.watch("source/*.html", ["html"]);
-  gulp.watch("source/img/*.{png,jpg,svg}", ["watch:images"]);
-  gulp.watch("source/img/content-image/*.{png,jpg}", ["watch:webp"]);
-  gulp.watch("source/img/icons-for-sprite/*.svg", ["watch:sprite"]);
-});
-
-// Следит за папкой с изображениями
-gulp.task("watch:images", ["images"], function (done) {
-  server.reload();
-  done();
-});
-
-// Следит за папкой с контентными изображениями
-gulp.task("watch:webp", ["webp"], function (done) {
-  server.reload();
-  done();
-});
-
-// Следит за папкой с иконками для спрайта
-gulp.task("watch:sprite", ["sprite"], function (done) {
+  gulp.watch("source/fonts/*.{ttf,woff,woff2,eot,svg}", ["copy:fonts"]);
+  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/img/*.{png,jpg,svg}", ["images"]);
+  gulp.watch("source/img/content-image/*.{png,jpg}", ["webp"]);
+  gulp.watch("source/img/icons-for-sprite/*.svg", ["sprite"]);
   server.reload();
   done();
 });
@@ -273,6 +262,27 @@ gulp.task("build", function(done) {
     done
   );
 });
+
+
+
+// Запускает таск для разработки (по умолчанию)
+gulp.task("default", function(done) {
+  run(
+    "copy:fonts",
+    "copy:favicon",
+    "copy:favicon:data",
+    "copy:normalize",
+    "copy:polyfill",
+    "style",
+    "scripts",
+    "images",
+    "webp",
+    "sprite",
+    "html",
+    done
+  );
+});
+
 
 
 // Отправка в GH-Pages (ветку gh-pages репозитория)
