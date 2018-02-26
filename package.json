@@ -11,6 +11,7 @@
     "test:style": "stylelint \"source/**/*.scss\" --syntax=scss",
     "test:editorconfig": "editorconfig-cli source/**/*.{html,scss}",
     "test": "npm run test:editorconfig && npm run test:style",
+    "clean": "gulp clean",
     "start": "gulp && gulp serve",
     "build": "cross-env NODE_ENV=production gulp build",
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build && cross-env ./node_modules/.bin/gulp deploy"
