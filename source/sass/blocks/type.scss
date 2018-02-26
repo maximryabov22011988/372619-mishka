@@ -6,8 +6,15 @@
   margin-bottom: 0;
 }
 
+@media (min-width: 365px) and (max-width: $screen-md - 1) {
+  .type__item {
+    margin-bottom: 17px;
+  }
+}
+
 @media (min-width: $screen-md) {
   .type__item {
     margin-bottom: 23px;
   }
 }
+

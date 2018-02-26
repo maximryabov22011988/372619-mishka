@@ -9,6 +9,27 @@
   margin-bottom: 0;
 }
 
+@media (min-width: 480px) and (max-width: $screen-md - 1) {
+  .color {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .color__item {
+    flex-basis: 50%;
+  }
+
+  .color__item:last-child {
+    margin-bottom: 22px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: $screen-md - 1) {
+  .color__item {
+    flex-basis: 33.33%;
+  }
+}
+
 @media (min-width: $screen-md) {
   .color {
     display: flex;
@@ -24,6 +45,12 @@
 
   .color__item:last-child {
     margin-bottom: 22px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: $screen-xl - 1) {
+  .color__item {
+    flex-basis: 33.33%;
   }
 }
 
