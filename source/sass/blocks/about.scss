@@ -104,6 +104,22 @@
   background-repeat: no-repeat;
 }
 
+@media (min-width: 640px) and (max-width: $screen-md - 1) {
+  .about__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about__item {
+    flex-basis: 50%;
+  }
+
+  .about__item:not(.about__item--icon-rocket) .about__text {
+    padding-right: 18%;
+  }
+}
+
 @media (min-width: $screen-md) {
   .about__wrapper {
     display: flex;
@@ -191,6 +207,22 @@
     flex-grow: 1;
     font-size: 20px;
     line-height: 1.1;
+  }
+}
+
+@media (min-width: 890px) and (max-width: 1063px) {
+  .about__item {
+    flex-grow: 0;
+    flex-basis: 310px;
+    margin-right: 15%;
+  }
+}
+
+@media (min-width: 1064px) and (max-width: $screen-xl - 1) {
+  .about__item {
+    flex-grow: 0;
+    flex-basis: 315px;
+    padding-right: 2.5%;
   }
 }
 

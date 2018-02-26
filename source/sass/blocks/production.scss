@@ -99,6 +99,28 @@
   transition: color $active-animation $animation-function;
 }
 
+@media (min-width: 370px) and (max-width: 570px) {
+  .production__link {
+    padding-right: 70%;
+  }
+}
+
+@media (min-width: 571px) and (max-width: $screen-md - 1) {
+  .production__list {
+    flex-direction: row;
+  }
+
+  .production__item {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: $screen-md - 1) {
+  .production__link {
+    padding-right: 50%;
+  }
+}
+
 @media (min-width: $screen-md) {
   .production::after {
     @include pseudo-element();
@@ -150,6 +172,18 @@
   .production__link--icon-toy::before {
     top: 32px;
     right: 34px;
+  }
+}
+
+@media (min-width: 860px) and (max-width: 999px) {
+  .production__link {
+    padding-right: 50%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: $screen-xl - 1) {
+  .production__link {
+    padding-right: 60%;
   }
 }
 
